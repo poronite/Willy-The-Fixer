@@ -6,12 +6,17 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     PlayerInput input;
+    private Rigidbody playerRigidbody;
     Vector2 move;
     public float Speed = 0;
     public float SpeedMultiplier = 0;
+    public float JumpForce = 0;
+    private bool isJumping;
+    
 
     private void Awake()
     {
+        playerRigidbody = gameObject.GetComponent<Rigidbody>();
         SetInputs();
     }
 
@@ -26,6 +31,9 @@ public class Player : MonoBehaviour
         //Sprint
         input.Player.Sprint.performed += context => Speed *= SpeedMultiplier;
         input.Player.Sprint.canceled += context => Speed /= SpeedMultiplier;
+
+        //Jump
+        input.Player.Jump.performed += context => Jump(); 
     }
 
     private void OnEnable()
@@ -36,6 +44,30 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         input.Player.Disable();
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isJumping = true;
+        }
+    }
+
+    public void Jump()
+    {
+        if (isJumping == false)
+        {
+            playerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        }
     }
 
     private void FixedUpdate()
