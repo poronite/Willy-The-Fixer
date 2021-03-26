@@ -7,12 +7,19 @@ public class Player : MonoBehaviour
 {
     PlayerInput input;
     private Rigidbody playerRigidbody;
+
     Vector2 move;
+
     public float Speed = 0;
     public float SpeedMultiplier = 0;
+
     public float JumpForce = 0;
     private bool isJumping;
-    
+
+    public float DashSpeed = 0;
+    public float DashDuration = 0;
+    private float dashTimer = 0;
+    private bool isDashing = false;
 
     private void Awake()
     {
@@ -33,7 +40,10 @@ public class Player : MonoBehaviour
         input.Player.Sprint.canceled += context => Speed /= SpeedMultiplier;
 
         //Jump
-        input.Player.Jump.performed += context => Jump(); 
+        input.Player.Jump.performed += context => Jump();
+
+        //Dash
+        input.Player.Dash.performed += context => StartDash();
     }
 
     private void OnEnable()
@@ -62,6 +72,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Movement()
+    {
+        Vector3 movement = new Vector3(move.x, 0.0f, move.y) * Speed * Time.deltaTime;
+        transform.Translate(movement, Space.World);
+    }
+
     public void Jump()
     {
         if (isJumping == false)
@@ -70,9 +86,34 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void StartDash()
+    {
+        if (isDashing == false)
+        {
+            playerRigidbody.velocity = new Vector3(move.x, 0.0f, move.y) * DashSpeed;
+            dashTimer = 0;
+            isDashing = true;
+        }
+    }
+
+    public void EndDash()
+    {
+        if (isDashing == true)
+        {
+            dashTimer += Time.deltaTime;
+        }
+
+        if (dashTimer >= DashDuration)
+        {
+            playerRigidbody.velocity = Vector3.zero;
+            isDashing = false;
+        }
+    }
+
     private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(move.x, 0.0f, move.y) * Speed * Time.deltaTime;
-        transform.Translate(movement, Space.World);
+        EndDash();
+
+        Movement();
     }
 }
