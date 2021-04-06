@@ -15,11 +15,15 @@ public class Player : MonoBehaviour
 
     public float JumpForce = 0;
     private bool isJumping;
+    public float JumpGravityScale = 1.0f;
+    public float FallGravityScale = 1.0f;
 
     public float DashSpeed = 0;
     public float DashDuration = 0;
     private float dashTimer = 0;
     private bool isDashing = false;
+
+    
 
     private void Awake()
     {
@@ -86,6 +90,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ApplyCustomGravity()
+    {
+        Vector3 gravity = Physics.gravity;
+
+        if (playerRigidbody.velocity.y > 0)
+        {
+            gravity *= JumpGravityScale;
+        }
+
+        if (playerRigidbody.velocity.y < 0)
+        {
+            gravity *= FallGravityScale;
+        }
+
+        playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
+    }
+
     public void StartDash()
     {
         if (isDashing == false)
@@ -101,12 +122,15 @@ public class Player : MonoBehaviour
         if (isDashing == true)
         {
             dashTimer += Time.deltaTime;
-        }
 
-        if (dashTimer >= DashDuration)
-        {
-            playerRigidbody.velocity = Vector3.zero;
-            isDashing = false;
+            if (dashTimer >= DashDuration)
+            {
+                Vector3 CancelDash = playerRigidbody.velocity;
+                CancelDash.x = 0.0f;
+                CancelDash.z = 0.0f;
+                playerRigidbody.velocity = CancelDash;
+                isDashing = false;
+            }
         }
     }
 
@@ -115,5 +139,7 @@ public class Player : MonoBehaviour
         EndDash();
 
         Movement();
+
+        ApplyCustomGravity();
     }
 }
