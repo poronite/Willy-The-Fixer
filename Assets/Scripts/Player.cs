@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    #region Variables
     PlayerInput input;
     private Rigidbody playerRigidbody;
 
@@ -22,9 +23,9 @@ public class Player : MonoBehaviour
     public float DashDuration = 0;
     private float dashTimer = 0;
     private bool isDashing = false;
+    #endregion
 
-    
-
+    #region Inputs
     private void Awake()
     {
         playerRigidbody = gameObject.GetComponent<Rigidbody>();
@@ -49,7 +50,7 @@ public class Player : MonoBehaviour
         //Dash
         input.Player.Dash.performed += context => StartDash();
     }
-
+    
     private void OnEnable()
     {
         input.Player.Enable();
@@ -59,7 +60,9 @@ public class Player : MonoBehaviour
     {
         input.Player.Disable();
     }
+    #endregion
 
+    #region Collisions
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -75,7 +78,9 @@ public class Player : MonoBehaviour
             isJumping = true;
         }
     }
+    #endregion
 
+    #region PlayerMechanics
     public void Movement()
     {
         Vector3 movement = new Vector3(move.x, 0.0f, move.y) * Speed * Time.deltaTime;
@@ -133,6 +138,7 @@ public class Player : MonoBehaviour
             }
         }
     }
+    #endregion
 
     private void FixedUpdate()
     {
