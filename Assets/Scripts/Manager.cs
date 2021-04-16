@@ -29,7 +29,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        targetScene = "Game";
+        targetScene = "UpperZonePiano";
         StartCoroutine(ChangeScene());
     }
     #endregion
