@@ -91,7 +91,6 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
-            isOnCords = false;
         }
 
         //When the player is on the cords
@@ -108,6 +107,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Cords") && isOnCords == true))
         {
             isJumping = true;
+            isOnCords = false;
         }
     }
     #endregion
@@ -173,7 +173,7 @@ public class Player : MonoBehaviour
 
     public void Descend()
     {
-        if (isJumping == false && isOnCords == true)
+        if (isOnCords == true)
         {
             //Same logic as climbing
             Vector3 descendCords = gameObject.transform.position;
@@ -181,6 +181,7 @@ public class Player : MonoBehaviour
             gameObject.transform.position = descendCords;
 
             isJumping = true;
+            isOnCords = false;
         }
     }
 
