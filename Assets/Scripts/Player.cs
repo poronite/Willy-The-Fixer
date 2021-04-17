@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public float DashDuration = 0;
     private float dashTimer = 0;
     private bool isDashing = false;
+    private bool isOnCords = true;
     #endregion
 
     #region Inputs
@@ -49,6 +50,9 @@ public class Player : MonoBehaviour
 
         //Dash
         input.Player.Dash.performed += context => StartDash();
+
+        //Fall
+        input.Player.Descend.performed += context => Descend();
     }
     
     private void OnEnable()
@@ -63,17 +67,45 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Collisions
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //When the player jumps to climb the cords
+        if (collision.gameObject.CompareTag("Cords") && playerRigidbody.velocity.y > 0)
+        {
+            //"Climb" the cords by changing y of the player
+            Vector3 climbCords = gameObject.transform.position;
+            climbCords.y = 15f;
+            gameObject.transform.position = climbCords;
+
+            //Re-use the Vector3 just to cancel the speed of the jump
+            climbCords = playerRigidbody.velocity;
+            climbCords.y = 0.0f;
+            playerRigidbody.velocity = climbCords;
+        }
+    }
+
     private void OnCollisionStay(Collision collision)
     {
+        //When the player is on the ground 
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            isOnCords = false;
+        }
+
+        //When the player is on the cords
+        if (collision.gameObject.CompareTag("Cords"))
+        {
+            isJumping = false;
+            isOnCords = true;
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        //When the player jumps from the ground or cords
+        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Cords") && isOnCords == true))
         {
             isJumping = true;
         }
@@ -130,14 +162,28 @@ public class Player : MonoBehaviour
 
             if (dashTimer >= DashDuration)
             {
-                Vector3 CancelDash = playerRigidbody.velocity;
-                CancelDash.x = 0.0f;
-                CancelDash.z = 0.0f;
-                playerRigidbody.velocity = CancelDash;
+                Vector3 cancelDash = playerRigidbody.velocity;
+                cancelDash.x = 0.0f;
+                cancelDash.z = 0.0f;
+                playerRigidbody.velocity = cancelDash;
                 isDashing = false;
             }
         }
     }
+
+    public void Descend()
+    {
+        if (isJumping == false && isOnCords == true)
+        {
+            //Same logic as climbing
+            Vector3 descendCords = gameObject.transform.position;
+            descendCords.y = 14.3f;
+            gameObject.transform.position = descendCords;
+
+            isJumping = true;
+        }
+    }
+
     #endregion
 
     private void FixedUpdate()

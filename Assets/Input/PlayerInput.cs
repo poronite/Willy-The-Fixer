@@ -49,6 +49,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Descend"",
+                    ""type"": ""Button"",
+                    ""id"": ""262eced0-1511-4f89-8fd8-68ee21230e8a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -181,6 +189,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""981884ea-56ac-4a0a-bc51-a57c1e7d2d39"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Descend"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""81c52d5f-dc0c-4336-a46d-720a5cb96e38"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Descend"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -762,6 +792,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
+        m_Player_Descend = m_Player.FindAction("Descend", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -827,6 +858,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Dash;
+    private readonly InputAction m_Player_Descend;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -835,6 +867,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
+        public InputAction @Descend => m_Wrapper.m_Player_Descend;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -856,6 +889,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                @Descend.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDescend;
+                @Descend.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDescend;
+                @Descend.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDescend;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -872,6 +908,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @Descend.started += instance.OnDescend;
+                @Descend.performed += instance.OnDescend;
+                @Descend.canceled += instance.OnDescend;
             }
         }
     }
@@ -1032,6 +1071,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnDescend(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
