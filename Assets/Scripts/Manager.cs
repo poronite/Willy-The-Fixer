@@ -14,7 +14,6 @@ public class Manager : MonoBehaviour
     public GameObject LoadingText;
     public CanvasGroup LoadingScreenCanvas;
 
-    private string targetScene;
     public float FadeIn;
     public float FadeOut;
     #endregion
@@ -29,13 +28,18 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        targetScene = "UpperZonePiano";
-        StartCoroutine(ChangeScene());
+        ChangeScene("UpperZonePiano");
     }
     #endregion
 
     #region SceneManagement
-    IEnumerator ChangeScene()
+
+    public void ChangeScene(string targetScene)
+    {
+        StartCoroutine(changeSceneCoroutine(targetScene));
+    }
+
+    IEnumerator changeSceneCoroutine(string targetScene)
     {
         LoadingScreen.SetActive(true);
 
