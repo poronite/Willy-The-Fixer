@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Preload.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: cba9af41d527a754a988e2b0ed7d777b
+  - enabled: 1
     path: Assets/Scenes/UpperZonePiano.unity
     guid: d4a99f420708ec24ebffde935e977e91
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: cba9af41d527a754a988e2b0ed7d777b
+    path: Assets/Scenes/LowerZonePiano.unity
+    guid: 4b81a4a05a6b65b4ca2b8174243699a2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e30e56b6b007aea4eb49a31fb9d1c1c7,
       type: 2}
