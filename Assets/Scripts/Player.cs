@@ -8,14 +8,19 @@ public class Player : MonoBehaviour
     #region Variables
     PlayerInput input;
     private Rigidbody playerRigidbody;
+    private Camera MainCamera;
 
     Vector2 move;
+
 
     public float Speed = 0;
     public float SpeedMultiplier = 0;
 
     public float JumpForce = 0;
-    private bool isJumping;
+    private bool onAir;
+    public float GroundThreshhold = 5.0f;
+    private Vector3 groundUp = Vector3.up;
+
     public float JumpGravityScale = 1.0f;
     public float FallGravityScale = 1.0f;
 
@@ -23,6 +28,7 @@ public class Player : MonoBehaviour
     public float DashDuration = 0;
     private float dashTimer = 0;
     private bool isDashing = false;
+
     private bool isOnCords = true;
     #endregion
 
@@ -30,6 +36,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerRigidbody = gameObject.GetComponent<Rigidbody>();
+        MainCamera = Camera.main;
         SetInputs();
     }
 
@@ -90,13 +97,18 @@ public class Player : MonoBehaviour
         //When the player is on the ground 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isJumping = false;
+            float angle = Vector3.Angle(groundUp, collision.contacts[0].normal);
+
+            if (angle < GroundThreshhold)
+            {
+                onAir = false;
+            }
         }
 
         //When the player is on the cords
         if (collision.gameObject.CompareTag("Cords"))
         {
-            isJumping = false;
+            onAir = false;
             isOnCords = true;
         }
     }
@@ -106,7 +118,7 @@ public class Player : MonoBehaviour
         //When the player jumps from the ground or cords
         if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Cords") && isOnCords == true))
         {
-            isJumping = true;
+            onAir = true;
             isOnCords = false;
         }
     }
@@ -115,13 +127,16 @@ public class Player : MonoBehaviour
     #region PlayerMechanics
     public void Movement()
     {
-        Vector3 movement = new Vector3(move.x, 0.0f, move.y) * Speed * Time.deltaTime;
+        Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
+        Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
+
+        Vector3 movement = new Vector3(move.x * horizontal.x, 0.0f, move.y * vertical.z).normalized * Speed * Time.deltaTime;
         transform.Translate(movement, Space.World);
     }
 
     public void Jump()
     {
-        if (isJumping == false)
+        if (onAir == false)
         {
             playerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
@@ -148,7 +163,10 @@ public class Player : MonoBehaviour
     {
         if (isDashing == false)
         {
-            playerRigidbody.velocity = new Vector3(move.x, 0.0f, move.y) * DashSpeed;
+            Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
+            Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
+
+            playerRigidbody.velocity = new Vector3(move.x * horizontal.x, 0.0f, move.y * vertical.z) * DashSpeed;
             dashTimer = 0;
             isDashing = true;
         }
@@ -180,7 +198,7 @@ public class Player : MonoBehaviour
             descendCords.y = 14.3f;
             gameObject.transform.position = descendCords;
 
-            isJumping = true;
+            onAir = true;
             isOnCords = false;
         }
     }
