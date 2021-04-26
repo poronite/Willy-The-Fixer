@@ -6,12 +6,11 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     #region Variables
-    PlayerInput input;
+    public PlayerInput Input;
     private Rigidbody playerRigidbody;
     private Camera MainCamera;
 
     Vector2 move;
-
 
     public float Speed = 0;
     public float SpeedMultiplier = 0;
@@ -30,6 +29,9 @@ public class Player : MonoBehaviour
     private bool isDashing = false;
 
     private bool isOnCords = true;
+
+    private GameObject nearestTune;
+    public GameObject TuneMinigame;
     #endregion
 
     #region Inputs
@@ -42,34 +44,37 @@ public class Player : MonoBehaviour
 
     private void SetInputs()
     {
-        input = new PlayerInput();
+        Input = new PlayerInput();
 
         //Movement
-        input.Player.Move.performed += context => move = context.ReadValue<Vector2>();
-        input.Player.Move.canceled += context => move = Vector2.zero;
+        Input.Player.Move.performed += context => move = context.ReadValue<Vector2>();
+        Input.Player.Move.canceled += context => move = Vector2.zero;
 
         //Sprint
-        input.Player.Sprint.performed += context => Speed *= SpeedMultiplier;
-        input.Player.Sprint.canceled += context => Speed /= SpeedMultiplier;
+        Input.Player.Sprint.performed += context => Speed *= SpeedMultiplier;
+        Input.Player.Sprint.canceled += context => Speed /= SpeedMultiplier;
 
         //Jump
-        input.Player.Jump.performed += context => Jump();
+        Input.Player.Jump.performed += context => Jump();
 
         //Dash
-        input.Player.Dash.performed += context => StartDash();
+        Input.Player.Dash.performed += context => StartDash();
 
         //Fall
-        input.Player.Descend.performed += context => Descend();
+        Input.Player.Descend.performed += context => Descend();
+
+        //Interact
+        Input.Player.Interact.performed += context => Interact();
     }
     
     private void OnEnable()
     {
-        input.Player.Enable();
+        Input.Player.Enable();
     }
 
     private void OnDisable()
     {
-        input.Player.Disable();
+        Input.Player.Disable();
     }
     #endregion
 
@@ -111,6 +116,12 @@ public class Player : MonoBehaviour
             onAir = false;
             isOnCords = true;
         }
+
+        //for tune game
+        if (collision.gameObject.CompareTag("Tune"))
+        {
+            nearestTune = collision.gameObject;
+        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -120,6 +131,12 @@ public class Player : MonoBehaviour
         {
             onAir = true;
             isOnCords = false;
+        }
+
+        //for tune game
+        if (collision.gameObject.CompareTag("Tune"))
+        {
+            nearestTune = null;
         }
     }
     #endregion
@@ -200,6 +217,24 @@ public class Player : MonoBehaviour
 
             onAir = true;
             isOnCords = false;
+        }
+    }
+
+    public void Interact()
+    {
+        switch (nearestTune.tag)
+        {
+            case "Tune":
+                if (nearestTune != null)
+                {
+                    //enter mini game
+                    TuneMinigame.SetActive(true);
+                    Input.asset.FindActionMap("Player").Disable();
+                    TuneMinigame.GetComponent<TuneManager>().TuneMinigame();
+                }
+                break;
+            default:
+                break;
         }
     }
 
