@@ -32,7 +32,7 @@ public class TuneManager : MonoBehaviour
         isCompleted = false;
 
         //code to find control scheme in use
-        if (PlayerInputRef.LastInputDevice == "Keyboard")
+        if (PlayerInputRef.LastInputDevice == "Keyboard" || PlayerInputRef.LastInputDevice == "Mouse")
         {
             Controller.SetActive(false);
             Mouse.SetActive(true);
@@ -51,7 +51,11 @@ public class TuneManager : MonoBehaviour
     {
         PlayerInputRef.Input.asset.FindActionMap("UI").Enable();
 
-        PlayerInputRef.Input.UI.Tune.performed += context => tuneIntensity = context.ReadValue<float>();
+        PlayerInputRef.Input.UI.Tune.performed += context =>
+        {
+            tuneIntensity = context.ReadValue<float>();
+            PlayerInputRef.LastInputDevice = context.control.device.name;
+        };
         PlayerInputRef.Input.UI.Tune.canceled += context => tuneIntensity = 0f;
     }
 
@@ -139,10 +143,17 @@ public class TuneManager : MonoBehaviour
         Debug.Log("Complete");
         PlayerInputRef.Input.asset.FindActionMap("UI").Disable();
 
-        Gamepad.current.SetMotorSpeeds(0.2f, 0.2f);
-        yield return new WaitForSeconds(1.0f);
-        Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
-        yield return new WaitForSeconds(1.0f);
+        if (PlayerInputRef.LastInputDevice == "Keyboard" || PlayerInputRef.LastInputDevice == "Mouse")
+        {
+            yield return new WaitForSeconds(2.0f);
+        }
+        else
+        {
+            Gamepad.current.SetMotorSpeeds(0.2f, 0.2f);
+            yield return new WaitForSeconds(1.0f);
+            Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
+            yield return new WaitForSeconds(1.0f);
+        }
 
         PlayerInputRef.Input.asset.FindActionMap("Player").Enable();
         gameObject.SetActive(false);
