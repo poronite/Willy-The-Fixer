@@ -2,16 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class TuneManager : MonoBehaviour
 {
     #region Variables
     public Player PlayerInputRef;
-    public Text DistanceDebug;
 
     private float tuneIntensity;
     [SerializeField]
-    private float currentNum, targetNum, rangeNum, minNum = 0f, maxNum = 0f;
+    private float currentNum, targetNum = 0f, rangeNum, minNum = 0f, maxNum = 0f;
+    private bool isCompleted;
+
+    public GameObject Mouse;
+    public GameObject Controller;
+    public Image WaveImage;
+    public Image CircleImage;
+    public Animator WaveAnimator;
+    public Animator CircleAnimator;
 
     #endregion
 
@@ -21,7 +29,21 @@ public class TuneManager : MonoBehaviour
         SetInputs();
 
         currentNum = Random.Range(minNum, maxNum + 1);
-        targetNum = Random.Range(minNum, maxNum + 1);
+        isCompleted = false;
+
+        //code to find control scheme in use
+        if (PlayerInputRef.LastInputDevice == "Keyboard")
+        {
+            Controller.SetActive(false);
+            Mouse.SetActive(true);
+            Mouse.GetComponent<Animator>().SetInteger("Input", 0);
+        }
+        else
+        {
+            Mouse.SetActive(false);
+            Controller.SetActive(true);
+            Controller.GetComponent<Animator>().SetInteger("Input", 1);
+        }
     }
 
     #region Inputs
@@ -67,36 +89,66 @@ public class TuneManager : MonoBehaviour
     public void TuningVerification()
     {
         //to calculate distance between current and target
-        rangeNum = Mathf.Abs(currentNum - targetNum);
+        rangeNum = currentNum - targetNum;
 
-        if (rangeNum <= 1)
+        WaveAnimator.SetFloat("RangeTune", rangeNum);
+
+        //Set Color depending on distance to target
+        if (rangeNum <= 1 && rangeNum >= -1 && isCompleted == false)
         {
-            EndTuneMinigame();
+            ChangeColor("#FFFFFF");
+            isCompleted = true;
+            StartCoroutine(EndTuneMinigame());
         }
-        //for now this is for debug
-        else if (rangeNum >= 1 && rangeNum <= maxNum / 10)
+        else if ((rangeNum >= -50 && rangeNum <= -40) || (rangeNum <= 50 && rangeNum >= 40))
         {
-            DistanceDebug.text = "Almost there";
+            ChangeColor("#FF0037");
         }
-        else if (rangeNum >= maxNum / 10 && rangeNum <= maxNum / 3)
+        else if ((rangeNum >= -40 && rangeNum <= -30) || (rangeNum <= 40 && rangeNum >= 30))
         {
-            DistanceDebug.text = "Close";
+            ChangeColor("#FF3369");
         }
-        else if (rangeNum >= maxNum / 3)
+        else if ((rangeNum >= -30 && rangeNum <= -20) || (rangeNum <= 30 && rangeNum >= 20))
         {
-            DistanceDebug.text = "Far";
+            ChangeColor("#FF668E");
+        }
+        else if ((rangeNum >= -20 && rangeNum <= -10) || (rangeNum <= 20 && rangeNum >= 10))
+        {
+            ChangeColor("#FF99B4");
+        }
+        else if ((rangeNum >= -10 && rangeNum <= -1) || (rangeNum <= 10 && rangeNum >= 1))
+        {
+            ChangeColor("#FFCCD9");
         }
     }
 
     #endregion
 
-    public void EndTuneMinigame()
+    public void ChangeColor(string code)
+    {
+        Color color;
+        if (ColorUtility.TryParseHtmlString(code, out color))
+        { 
+            WaveImage.color = color;
+            CircleImage.color = color;
+        }
+    }
+
+    public IEnumerator EndTuneMinigame()
     {
         Debug.Log("Complete");
         PlayerInputRef.Input.asset.FindActionMap("UI").Disable();
+
+        Gamepad.current.SetMotorSpeeds(0.2f, 0.2f);
+        yield return new WaitForSeconds(1.0f);
+        Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
+        yield return new WaitForSeconds(1.0f);
+
         PlayerInputRef.Input.asset.FindActionMap("Player").Enable();
         gameObject.SetActive(false);
     }
+
+    
 
     public void Update()
     {

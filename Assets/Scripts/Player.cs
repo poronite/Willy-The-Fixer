@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
 
     private GameObject nearestTune;
     public GameObject TuneMinigame;
+    public string LastInputDevice;
     #endregion
 
     #region Inputs
@@ -64,7 +65,11 @@ public class Player : MonoBehaviour
         Input.Player.Descend.performed += context => Descend();
 
         //Interact
-        Input.Player.Interact.performed += context => Interact();
+        Input.Player.Interact.performed += context =>
+        {
+            LastInputDevice = context.control.device.name;
+            Interact();
+        };
     }
     
     private void OnEnable()
