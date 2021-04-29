@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -30,7 +31,7 @@ public class Player : MonoBehaviour
 
     private bool isOnCords = true;
 
-    private GameObject nearestTune;
+    private GameObject NearestInteractable;
     public GameObject TuneMinigame;
     public string LastInputDevice;
     #endregion
@@ -99,6 +100,8 @@ public class Player : MonoBehaviour
             climbCords = playerRigidbody.velocity;
             climbCords.y = 0.0f;
             playerRigidbody.velocity = climbCords;
+
+            Manager.ManagerInstance.ChangeCameraOffset(5f);
         }
     }
 
@@ -125,7 +128,7 @@ public class Player : MonoBehaviour
         //for tune game
         if (collision.gameObject.CompareTag("Tune"))
         {
-            nearestTune = collision.gameObject;
+            NearestInteractable = collision.gameObject;
         }
     }
 
@@ -141,7 +144,27 @@ public class Player : MonoBehaviour
         //for tune game
         if (collision.gameObject.CompareTag("Tune"))
         {
-            nearestTune = null;
+            NearestInteractable = null;
+        }
+    }
+
+    private void OnTriggerEnter(Collider exit)
+    {
+        if (exit.gameObject.CompareTag("Exit"))
+        {
+            Input.asset.FindActionMap("Player").Disable();
+
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "UpperZonePiano":
+                    Manager.ManagerInstance.GetComponent<Manager>().ChangeScene("LowerZonePiano");
+                    break;
+                case "LowerZonePiano":
+                    Manager.ManagerInstance.GetComponent<Manager>().ChangeScene("UpperZonePiano");
+                    break;
+                default:
+                    break;
+            }
         }
     }
     #endregion
@@ -220,6 +243,8 @@ public class Player : MonoBehaviour
             descendCords.y = 14.3f;
             gameObject.transform.position = descendCords;
 
+            Manager.ManagerInstance.ChangeCameraOffset(1f);
+
             onAir = true;
             isOnCords = false;
         }
@@ -227,20 +252,26 @@ public class Player : MonoBehaviour
 
     public void Interact()
     {
-        switch (nearestTune.tag)
+        if (NearestInteractable != null)
         {
-            case "Tune":
-                if (nearestTune != null)
-                {
+            switch (NearestInteractable.tag)
+            {
+                case "Tune":
                     //enter mini game
                     TuneMinigame.SetActive(true);
                     Input.asset.FindActionMap("Player").Disable();
                     TuneMinigame.GetComponent<TuneManager>().TuneMinigame();
-                }
-                break;
-            default:
-                break;
+                    break;
+                default:
+                    break;
+            }
         }
+        else
+        {
+            Debug.Log("Nothing to Interact Found");
+            return;
+        }
+        
     }
 
     #endregion

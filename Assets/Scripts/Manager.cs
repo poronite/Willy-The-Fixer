@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 //Source: https://gamedevbeginner.com/how-to-load-a-new-scene-in-unity-with-a-loading-screen/#persistent_loading_object
 
@@ -82,4 +83,11 @@ public class Manager : MonoBehaviour
         LoadingScreenCanvas.alpha = targetValue;
     }
     #endregion
+
+
+    public void ChangeCameraOffset(float height)
+    {
+        CinemachineVirtualCamera virCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.y = height;
+    }
 }
