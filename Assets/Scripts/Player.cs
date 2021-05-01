@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
     private float dashTimer = 0;
     private bool isDashing = false;
 
-    private bool isOnCords = true;
+    private bool isOnStrings = true;
+    private bool hasClimbed = false;
 
     private GameObject NearestInteractable;
     public GameObject TuneMinigame;
@@ -89,17 +90,19 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //When the player jumps to climb the cords
-        if (collision.gameObject.CompareTag("Cords") && playerRigidbody.velocity.y > 0)
+        if (collision.gameObject.CompareTag("Strings") && hasClimbed == false)
         {
+            hasClimbed = true;
+
             //"Climb" the cords by changing y of the player
-            Vector3 climbCords = gameObject.transform.position;
-            climbCords.y = 15f;
-            gameObject.transform.position = climbCords;
+            Vector3 climbStrings = gameObject.transform.position;
+            climbStrings.y = 15f;
+            gameObject.transform.position = climbStrings;
 
             //Re-use the Vector3 just to cancel the speed of the jump
-            climbCords = playerRigidbody.velocity;
-            climbCords.y = 0.0f;
-            playerRigidbody.velocity = climbCords;
+            climbStrings = playerRigidbody.velocity; 
+            climbStrings.y = 0.0f;
+            playerRigidbody.velocity = climbStrings;
 
             Manager.ManagerInstance.ChangeCameraOffset(5f);
         }
@@ -119,10 +122,10 @@ public class Player : MonoBehaviour
         }
 
         //When the player is on the cords
-        if (collision.gameObject.CompareTag("Cords"))
+        if (collision.gameObject.CompareTag("Strings"))
         {
             onAir = false;
-            isOnCords = true;
+            isOnStrings = true;
         }
 
         //for tune game
@@ -135,10 +138,10 @@ public class Player : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         //When the player jumps from the ground or cords
-        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Cords") && isOnCords == true))
+        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Strings") && isOnStrings == true))
         {
             onAir = true;
-            isOnCords = false;
+            isOnStrings = false;
         }
 
         //for tune game
@@ -175,7 +178,13 @@ public class Player : MonoBehaviour
         Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
         Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
 
-        Vector3 movement = new Vector3(move.x * horizontal.x, 0.0f, move.y * vertical.z).normalized * Speed * Time.deltaTime;
+        Vector3 movement = (move.x * horizontal + move.y * vertical).normalized * Speed * Time.deltaTime;
+
+        if (movement != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15f);
+        }
+
         transform.Translate(movement, Space.World);
     }
 
@@ -236,17 +245,18 @@ public class Player : MonoBehaviour
 
     public void Descend()
     {
-        if (isOnCords == true)
+        if (isOnStrings == true)
         {
             //Same logic as climbing
             Vector3 descendCords = gameObject.transform.position;
-            descendCords.y = 14.3f;
+            descendCords.y = 13.5f;
             gameObject.transform.position = descendCords;
 
             Manager.ManagerInstance.ChangeCameraOffset(1f);
 
             onAir = true;
-            isOnCords = false;
+            isOnStrings = false;
+            hasClimbed = false;
         }
     }
 
