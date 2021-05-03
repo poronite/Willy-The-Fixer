@@ -8,6 +8,10 @@ TagManager:
   - Tune
   - Exit
   - Strings
+  - AI
+  - Wall
+  - VirtualCamera
+  - HideHole
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,30 @@
+tree("Root")
+	tree("AI")
+
+tree("AI")
+	fallback
+		tree("isHiding")
+		tree("HideFromPlayer")
+		tree("GoToTarget")
+
+tree("isHiding")
+	fallback
+		isHiding
+		
+
+tree("HideFromPlayer")
+	sequence
+		hasSeenPlayer
+		HideFromPlayer
+		Wait 10.0
+		StopRunningAway
+		LookBehind
+		while
+			not isSeeing
+			Wait 15.0						
+				
+
+tree("GoToTarget")
+	sequence
+		GoToTarget
+

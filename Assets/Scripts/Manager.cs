@@ -87,7 +87,8 @@ public class Manager : MonoBehaviour
 
     public void ChangeCameraOffset(float height)
     {
-        CinemachineVirtualCamera virCamera = FindObjectOfType<CinemachineVirtualCamera>();
+        CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        //CinemachineVirtualCamera virCamera = FindObjectOfType<CinemachineVirtualCamera>(); Previous line of code
         virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.y = height;
     }
 }
