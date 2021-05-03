@@ -11,7 +11,7 @@ public class PlayerDetection : MonoBehaviour
     [SerializeField]
     private float maxSightDistance = 0, coneOfVision = 0;
 
-    public bool AwarePlayer, SeeingPlayer;
+    public bool SeeingPlayer;
 
     private void Awake()
     {
@@ -26,8 +26,6 @@ public class PlayerDetection : MonoBehaviour
 
         if (Physics.Raycast(transform.position, aiToWilly, out hit, maxSightDistance))
         {
-            Debug.DrawRay(transform.position, aiToWilly, Color.red, maxSightDistance);
-
             if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
                 Vector3 aiFront = transform.forward;
@@ -39,8 +37,6 @@ public class PlayerDetection : MonoBehaviour
                 {
                     SeeingPlayer = true;
                 }
-
-                AwarePlayer = true;
             }
             else if (hit.collider == null || !hit.collider.CompareTag("Player"))
             {

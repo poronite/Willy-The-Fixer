@@ -15,7 +15,7 @@ public class AIActions : MonoBehaviour
     private NavMeshAgent agent = null;
 
     private bool Hiding;
-    private MeshRenderer AIRenderer;
+    private Transform AIRenderer;
     private CapsuleCollider AICollider;
 
     private List<GameObject> hideHoles = new List<GameObject>();
@@ -23,7 +23,7 @@ public class AIActions : MonoBehaviour
     private void Awake()
     {
         hideHoles.AddRange(GameObject.FindGameObjectsWithTag("HideHole"));
-        AIRenderer = gameObject.GetComponent<MeshRenderer>();
+        AIRenderer = gameObject.transform.GetChild(0);
         AICollider = gameObject.GetComponent<CapsuleCollider>();
     }
 
@@ -138,14 +138,14 @@ public class AIActions : MonoBehaviour
         int choice = Random.Range(1, hideHoles.Count);
         Transform spawnPoint = hideHoles[choice].gameObject.transform.GetChild(0).GetComponentInChildren<Transform>();
 
-        AIRenderer.enabled = false;
+        AIRenderer.gameObject.SetActive(false);
         AICollider.enabled = false;
 
         agent.Warp(new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z));
 
         yield return new WaitForSeconds(hidingTime);
 
-        AIRenderer.enabled = true;
+        AIRenderer.gameObject.SetActive(true);
         AICollider.enabled = true;
         Hiding = false;
 

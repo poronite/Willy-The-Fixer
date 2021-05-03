@@ -128,10 +128,9 @@ public class Player : MonoBehaviour
             isOnStrings = true;
         }
 
-        //for tune game
-        if (collision.gameObject.CompareTag("Tune"))
+        if (collision.gameObject.CompareTag("AI") && isDashing == true)
         {
-            NearestInteractable = collision.gameObject;
+            Destroy(collision.gameObject);
         }
     }
 
@@ -170,6 +169,16 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        //for tune game
+        if (other.gameObject.CompareTag("Tune"))
+        {
+            NearestInteractable = other.gameObject;
+        }
+    }
+
     #endregion
 
     #region PlayerMechanics
