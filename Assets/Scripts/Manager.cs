@@ -29,7 +29,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        ChangeScene("UpperZonePiano");
+        ChangeScene("LowerZonePiano");
     }
     #endregion
 

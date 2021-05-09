@@ -60,7 +60,7 @@ public class AIActions : MonoBehaviour
     }
 
     [Task]
-    void GoToTarget()
+    void GoToTarget() //go destroy stuff
     {
         agent.speed = relaxedSpeed;
         agent.isStopped = false;

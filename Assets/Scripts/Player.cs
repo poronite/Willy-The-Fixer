@@ -11,24 +11,14 @@ public class Player : MonoBehaviour
     private Rigidbody playerRigidbody;
     private Camera MainCamera;
 
-    Vector2 move;
+    private Vector2 move;
 
-    public float Speed = 0;
-    public float SpeedMultiplier = 0;
+    [SerializeField]
+    private float Speed = 0, SpeedMultiplier = 0, JumpForce = 0, GroundThreshhold = 5.0f, JumpGravityScale = 1.0f, FallGravityScale = 1.0f, DashSpeed = 0, DashDuration = 0;
 
-    public float JumpForce = 0;
     private bool onAir;
-    public float GroundThreshhold = 5.0f;
-    private Vector3 groundUp = Vector3.up;
-
-    public float JumpGravityScale = 1.0f;
-    public float FallGravityScale = 1.0f;
-
-    public float DashSpeed = 0;
-    public float DashDuration = 0;
     private float dashTimer = 0;
     private bool isDashing = false;
-
     private bool isOnStrings = true;
     private bool hasClimbed = false;
 
@@ -113,7 +103,7 @@ public class Player : MonoBehaviour
         //When the player is on the ground 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            float angle = Vector3.Angle(groundUp, collision.contacts[0].normal);
+            float angle = Vector3.Angle(Vector3.up, collision.contacts[0].normal);
 
             if (angle < GroundThreshhold)
             {
@@ -152,6 +142,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider exit)
     {
+        //to change between zones of the piano
         if (exit.gameObject.CompareTag("Exit"))
         {
             Input.asset.FindActionMap("Player").Disable();
@@ -276,10 +267,7 @@ public class Player : MonoBehaviour
             switch (NearestInteractable.tag)
             {
                 case "Tune":
-                    //enter mini game
-                    TuneMinigame.SetActive(true);
-                    Input.asset.FindActionMap("Player").Disable();
-                    TuneMinigame.GetComponent<TuneManager>().TuneMinigame();
+                    startTuneMinigame();
                     break;
                 default:
                     break;
@@ -291,6 +279,14 @@ public class Player : MonoBehaviour
             return;
         }
         
+    }
+
+    private void startTuneMinigame()
+    {
+        //enter mini game
+        TuneMinigame.SetActive(true);
+        Input.asset.FindActionMap("Player").Disable();
+        TuneMinigame.GetComponent<TuneManager>().TuneMinigame();
     }
 
     #endregion

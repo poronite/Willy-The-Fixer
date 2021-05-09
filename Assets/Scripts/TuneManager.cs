@@ -56,6 +56,7 @@ public class TuneManager : MonoBehaviour
             tuneIntensity = context.ReadValue<float>();
             PlayerInputRef.LastInputDevice = context.control.device.name;
         };
+
         PlayerInputRef.Input.UI.Tune.canceled += context => tuneIntensity = 0f;
     }
 
@@ -76,6 +77,7 @@ public class TuneManager : MonoBehaviour
 
     public void Tuning()
     {
+        //currentNum can vary between minNum and maxNum
         if (currentNum >= minNum && currentNum <= maxNum)
         {
             currentNum += tuneIntensity;

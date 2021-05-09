@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Dot product for AI cone of vision: http://blog.wolfire.com/2009/07/linear-algebra-for-game-developers-part-2/
 
 public class PlayerDetection : MonoBehaviour
 {
@@ -20,6 +19,7 @@ public class PlayerDetection : MonoBehaviour
 
     private void Update()
     {
+        //send a raycast in player direction and check if player is in AI field of view
         RaycastHit hit;
 
         Vector3 aiToWilly = (Player.transform.position - transform.position).normalized;
