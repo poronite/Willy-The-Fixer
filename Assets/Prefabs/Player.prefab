@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2428833456862036231}
-  - component: {fileID: 4221618701774352941}
+  - component: {fileID: -2005055806983300592}
   - component: {fileID: 8763472641065831939}
   - component: {fileID: 2428833456862036233}
   - component: {fileID: 2428833456862036230}
@@ -35,7 +35,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &4221618701774352941
+--- !u!136 &-2005055806983300592
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,10 +45,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.09164356
-  m_Height: 0.9856494
+  m_Radius: 0.1
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: -0.0045038015, y: 0.4905289, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &8763472641065831939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,8 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f8f7c50eb972842a41e1900496ad23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2.5
-  SpeedMultiplier: 2
+  Acceleration: 60
+  maxSpeed: 10
+  SprintMultiplier: 2
   JumpForce: 12
   GroundThreshhold: 20
   JumpGravityScale: 3

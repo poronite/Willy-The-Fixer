@@ -14,10 +14,19 @@ public class Player : MonoBehaviour
     private Vector2 move;
 
     [SerializeField]
-    private float Speed = 0, SpeedMultiplier = 0, JumpForce = 0, GroundThreshhold = 5.0f, JumpGravityScale = 1.0f, FallGravityScale = 1.0f, DashSpeed = 0, DashDuration = 0;
+    private float Acceleration = 0,
+    maxSpeed = 0,
+    SprintMultiplier = 0, 
+    JumpForce = 0, 
+    GroundThreshhold = 5.0f, 
+    JumpGravityScale = 1.0f, 
+    FallGravityScale = 1.0f, 
+    DashSpeed = 0, 
+    DashDuration = 0;
 
     private bool onAir;
     private float dashTimer = 0;
+    private bool isSprinting = false;
     private bool isDashing = false;
     private bool isOnStrings = true;
     private bool hasClimbed = false;
@@ -44,8 +53,8 @@ public class Player : MonoBehaviour
         Input.Player.Move.canceled += context => move = Vector2.zero;
 
         //Sprint
-        Input.Player.Sprint.performed += context => Speed *= SpeedMultiplier;
-        Input.Player.Sprint.canceled += context => Speed /= SpeedMultiplier;
+        Input.Player.Sprint.performed += context => isSprinting = true;
+        Input.Player.Sprint.canceled += context => isSprinting = false;
 
         //Jump
         Input.Player.Jump.performed += context => Jump();
@@ -178,20 +187,34 @@ public class Player : MonoBehaviour
         //Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
         //Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
 
-        Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * Speed * Time.deltaTime;
+        float finalAcceleration = Acceleration;
+
+        if (isSprinting)
+        {
+            finalAcceleration *= SprintMultiplier;
+        }
+
+        Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * finalAcceleration;
+
 
         if (movement != Vector3.zero)
         {
             playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.15f);
         }
 
-        //playerRigidbody.AddForce(movement, ForceMode.Impulse);
+        playerRigidbody.AddForce(movement);
 
-        playerRigidbody.position += movement;
+        Vector3 velocity = playerRigidbody.velocity;
 
-        //playerRigidbody.MovePosition(playerRigidbody.position + movement);
+        float verticalVelocity = velocity.y;
 
-        //transform.Translate(movement, Space.World);
+        velocity.y = 0;
+
+        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+
+        velocity.y = verticalVelocity;
+
+        playerRigidbody.velocity = velocity;
     }
 
     public void Jump()
