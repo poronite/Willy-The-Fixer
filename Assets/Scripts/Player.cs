@@ -187,34 +187,37 @@ public class Player : MonoBehaviour
         //Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
         //Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
 
-        float finalAcceleration = Acceleration;
-
-        if (isSprinting)
+        if (!isDashing)
         {
-            finalAcceleration *= SprintMultiplier;
-        }
+            float finalAcceleration = Acceleration;
 
-        Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * finalAcceleration;
+            if (isSprinting)
+            {
+                finalAcceleration *= SprintMultiplier;
+            }
+
+            Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * finalAcceleration;
 
 
-        if (movement != Vector3.zero)
-        {
-            playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.15f);
-        }
+            if (movement != Vector3.zero)
+            {
+                playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.15f);
+            }
 
-        playerRigidbody.AddForce(movement);
+            playerRigidbody.AddForce(movement);
 
-        Vector3 velocity = playerRigidbody.velocity;
+            Vector3 velocity = playerRigidbody.velocity;
 
-        float verticalVelocity = velocity.y;
+            float verticalVelocity = velocity.y;
 
-        velocity.y = 0;
+            velocity.y = 0;
 
-        velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+            velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
 
-        velocity.y = verticalVelocity;
+            velocity.y = verticalVelocity;
 
-        playerRigidbody.velocity = velocity;
+            playerRigidbody.velocity = velocity;
+        } 
     }
 
     public void Jump()
@@ -231,12 +234,12 @@ public class Player : MonoBehaviour
 
         if (playerRigidbody.velocity.y > 0)
         {
-            gravity *= JumpGravityScale;
+            gravity*= JumpGravityScale;
         }
 
         if (playerRigidbody.velocity.y < 0)
         {
-            gravity *= FallGravityScale;
+            gravity*= FallGravityScale;
         }
 
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
