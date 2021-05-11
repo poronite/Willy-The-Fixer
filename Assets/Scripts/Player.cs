@@ -103,7 +103,7 @@ public class Player : MonoBehaviour
         //When the player is on the ground 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            float angle = Vector3.Angle(Vector3.up, collision.contacts[0].normal);
+            float angle = Vector3.Angle(Vector3.up, collision.GetContact(0).normal);
 
             if (angle < GroundThreshhold)
             {
@@ -175,17 +175,23 @@ public class Player : MonoBehaviour
     #region PlayerMechanics
     public void Movement()
     {
-        Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
-        Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
+        //Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
+        //Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
 
-        Vector3 movement = (move.x * horizontal + move.y * vertical).normalized * Speed * Time.deltaTime;
+        Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * Speed * Time.deltaTime;
 
         if (movement != Vector3.zero)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.15f);
+            playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.15f);
         }
 
-        transform.Translate(movement, Space.World);
+        //playerRigidbody.AddForce(movement, ForceMode.Impulse);
+
+        playerRigidbody.position += movement;
+
+        //playerRigidbody.MovePosition(playerRigidbody.position + movement);
+
+        //transform.Translate(movement, Space.World);
     }
 
     public void Jump()
@@ -217,10 +223,12 @@ public class Player : MonoBehaviour
     {
         if (isDashing == false)
         {
-            Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
-            Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
+            //Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
+            //Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
 
-            playerRigidbody.velocity = new Vector3(move.x * horizontal.x, 0.0f, move.y * vertical.z) * DashSpeed;
+            playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * DashSpeed, ForceMode.Impulse);
+
+            //playerRigidbody.velocity = new Vector3(-move.x, 0.0f, -move.y) * DashSpeed;
             dashTimer = 0;
             isDashing = true;
         }

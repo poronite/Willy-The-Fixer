@@ -46,9 +46,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.09164356
-  m_Height: 0.98310435
+  m_Height: 0.9856494
   m_Direction: 1
-  m_Center: {x: -0.0045038015, y: 0.49180144, z: 0}
+  m_Center: {x: -0.0045038015, y: 0.4905289, z: 0}
 --- !u!54 &8763472641065831939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
 --- !u!114 &2428833456862036233
@@ -111,7 +111,7 @@ MonoBehaviour:
   Speed: 2.5
   SpeedMultiplier: 2
   JumpForce: 12
-  GroundThreshhold: 5
+  GroundThreshhold: 20
   JumpGravityScale: 3
   FallGravityScale: 5
   DashSpeed: 15
