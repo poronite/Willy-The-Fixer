@@ -393,8 +393,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../WillyTheFixerFMOD/WillyTheFixer/WillyTheFixer.fspro
-  sourceBankPath: ..\WillyTheFixerFMOD\WillyTheFixer\Build
+  sourceProjectPath: Assets/AudioFMOD/WillyTheFixer.fspro
+  sourceBankPath: Assets\AudioFMOD\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -413,8 +413,7 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks:
-  - Master
+  MasterBanks: []
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
