@@ -164,11 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f97523d3208cb74ab95d65bab2eb16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingScreen: {fileID: 1424846007}
-  LoadingText: {fileID: 646681241}
-  LoadingScreenCanvas: {fileID: 1424846011}
-  FadeIn: 1
-  FadeOut: 1
+  fadeInLoadingScreen: 1
+  fadeOutLoadingScreen: 1
+  loadingScreen: {fileID: 1424846007}
+  loadingText: {fileID: 646681241}
+  canvasLoadingScreen: {fileID: 1424846011}
 --- !u!1 &646681241
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 1424846008}
   - component: {fileID: 1424846011}
   m_Layer: 0
-  m_Name: Loading Screen
+  m_Name: LoadingScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

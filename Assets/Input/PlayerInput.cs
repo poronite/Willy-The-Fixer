@@ -329,14 +329,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Quaternion"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""Tune"",
-                    ""type"": ""Value"",
-                    ""id"": ""542b8641-e43c-461f-8949-884395589758"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -757,10 +749,26 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
+                }
+            ]
+        },
+        {
+            ""name"": ""TuneMinigame"",
+            ""id"": ""9f75cf30-16e8-4e30-8d8a-e40d00591163"",
+            ""actions"": [
+                {
+                    ""name"": ""Tune"",
+                    ""type"": ""Value"",
+                    ""id"": ""aef2af6c-4705-4a53-903f-ea85f1918497"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""aef0aac5-6409-4595-bb9e-8a7b711e8eba"",
+                    ""id"": ""b95a4ff8-17fb-429b-a29f-ea58d2cdd25e"",
                     ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
                     ""processors"": ""Clamp(min=-1,max=1)"",
@@ -771,7 +779,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6aa55024-308b-4146-ada9-6cf639affc57"",
+                    ""id"": ""34aac827-b8df-4a42-ae94-8398682800fe"",
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": ""Clamp(max=-0.1)"",
@@ -782,12 +790,201 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b6ecbe44-af31-47a0-9baa-88b3ee12a27d"",
+                    ""id"": ""d2f41f7b-1c57-44b0-8307-19790741c366"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": ""Clamp(max=0.1)"",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Tune"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""RepairMinigame"",
+            ""id"": ""a6b68b4e-2b73-48c2-944e-a542695001bc"",
+            ""actions"": [
+                {
+                    ""name"": ""Repair"",
+                    ""type"": ""Button"",
+                    ""id"": ""cd93e7f2-6635-4e82-ab51-d2cddc5e99eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""a91c7c16-79ec-4abe-9adf-a9c7ad2a877c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""117a42ff-d29e-4c18-bdb2-5bf27aa05adb"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Repair"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83b9e337-af06-4529-a18e-3cd5c70399a5"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Repair"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c6e07a11-2381-4744-8fa4-7019f0e1e278"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b7412ffd-1790-418f-a5c7-53dbf514a1ea"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7bf38086-9995-4725-a106-3839259ccb5b"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed988d72-4757-4ec9-b584-0e7de38e5467"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47cb26d1-92e7-434e-8bcd-6ec1e1a08ffa"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""71d29e5f-8973-4fe6-87e3-351cbe96cca8"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4da6ee71-0bbb-41bb-8201-8ee124839003"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""181fde40-f2cb-4719-90a0-94ea8cb99d9c"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""51176a09-1b91-4a88-8ca3-36d13cc8c626"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c440b61e-23f9-4984-be70-ee0c685d1e96"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f6882e2-0ec9-41de-8035-d8021cf038f1"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b4c4c50e-2378-46fe-8a89-1d8d5c60c577"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""538606d1-0129-4183-8009-fcb2ad2dd97f"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -877,7 +1074,13 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-        m_UI_Tune = m_UI.FindAction("Tune", throwIfNotFound: true);
+        // TuneMinigame
+        m_TuneMinigame = asset.FindActionMap("TuneMinigame", throwIfNotFound: true);
+        m_TuneMinigame_Tune = m_TuneMinigame.FindAction("Tune", throwIfNotFound: true);
+        // RepairMinigame
+        m_RepairMinigame = asset.FindActionMap("RepairMinigame", throwIfNotFound: true);
+        m_RepairMinigame_Repair = m_RepairMinigame.FindAction("Repair", throwIfNotFound: true);
+        m_RepairMinigame_Cancel = m_RepairMinigame.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1010,7 +1213,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
-    private readonly InputAction m_UI_Tune;
     public struct UIActions
     {
         private @PlayerInput m_Wrapper;
@@ -1025,7 +1227,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
-        public InputAction @Tune => m_Wrapper.m_UI_Tune;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1065,9 +1266,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @TrackedDeviceOrientation.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTrackedDeviceOrientation;
-                @Tune.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTune;
-                @Tune.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTune;
-                @Tune.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTune;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -1102,13 +1300,84 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
                 @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
+            }
+        }
+    }
+    public UIActions @UI => new UIActions(this);
+
+    // TuneMinigame
+    private readonly InputActionMap m_TuneMinigame;
+    private ITuneMinigameActions m_TuneMinigameActionsCallbackInterface;
+    private readonly InputAction m_TuneMinigame_Tune;
+    public struct TuneMinigameActions
+    {
+        private @PlayerInput m_Wrapper;
+        public TuneMinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Tune => m_Wrapper.m_TuneMinigame_Tune;
+        public InputActionMap Get() { return m_Wrapper.m_TuneMinigame; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TuneMinigameActions set) { return set.Get(); }
+        public void SetCallbacks(ITuneMinigameActions instance)
+        {
+            if (m_Wrapper.m_TuneMinigameActionsCallbackInterface != null)
+            {
+                @Tune.started -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnTune;
+                @Tune.performed -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnTune;
+                @Tune.canceled -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnTune;
+            }
+            m_Wrapper.m_TuneMinigameActionsCallbackInterface = instance;
+            if (instance != null)
+            {
                 @Tune.started += instance.OnTune;
                 @Tune.performed += instance.OnTune;
                 @Tune.canceled += instance.OnTune;
             }
         }
     }
-    public UIActions @UI => new UIActions(this);
+    public TuneMinigameActions @TuneMinigame => new TuneMinigameActions(this);
+
+    // RepairMinigame
+    private readonly InputActionMap m_RepairMinigame;
+    private IRepairMinigameActions m_RepairMinigameActionsCallbackInterface;
+    private readonly InputAction m_RepairMinigame_Repair;
+    private readonly InputAction m_RepairMinigame_Cancel;
+    public struct RepairMinigameActions
+    {
+        private @PlayerInput m_Wrapper;
+        public RepairMinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Repair => m_Wrapper.m_RepairMinigame_Repair;
+        public InputAction @Cancel => m_Wrapper.m_RepairMinigame_Cancel;
+        public InputActionMap Get() { return m_Wrapper.m_RepairMinigame; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(RepairMinigameActions set) { return set.Get(); }
+        public void SetCallbacks(IRepairMinigameActions instance)
+        {
+            if (m_Wrapper.m_RepairMinigameActionsCallbackInterface != null)
+            {
+                @Repair.started -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
+                @Repair.performed -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
+                @Repair.canceled -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
+                @Cancel.started -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
+            }
+            m_Wrapper.m_RepairMinigameActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Repair.started += instance.OnRepair;
+                @Repair.performed += instance.OnRepair;
+                @Repair.canceled += instance.OnRepair;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
+            }
+        }
+    }
+    public RepairMinigameActions @RepairMinigame => new RepairMinigameActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1175,6 +1444,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface ITuneMinigameActions
+    {
         void OnTune(InputAction.CallbackContext context);
+    }
+    public interface IRepairMinigameActions
+    {
+        void OnRepair(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }

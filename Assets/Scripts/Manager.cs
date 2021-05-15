@@ -10,13 +10,17 @@ using Cinemachine;
 public class Manager : MonoBehaviour
 {
     #region Variables
-    public static Manager ManagerInstance = null;
-    public GameObject LoadingScreen;
-    public GameObject LoadingText;
-    public CanvasGroup LoadingScreenCanvas;
+    [SerializeField]
+    private float fadeInLoadingScreen = 0.0f,
+    fadeOutLoadingScreen = 0.0f;
 
-    public float FadeIn;
-    public float FadeOut;
+    [SerializeField]
+    private GameObject loadingScreen = null, loadingText = null;
+
+    [SerializeField]
+    private CanvasGroup canvasLoadingScreen = null;
+
+    public static Manager ManagerInstance = null;
     #endregion
 
     #region Awake&Start
@@ -24,12 +28,12 @@ public class Manager : MonoBehaviour
     {
         ManagerInstance = this;
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(LoadingScreen);
+        DontDestroyOnLoad(loadingScreen);
     }
 
     private void Start()
     {
-        ChangeScene("LowerZonePiano");
+        ChangeScene("UpperZonePiano");
     }
     #endregion
 
@@ -42,45 +46,49 @@ public class Manager : MonoBehaviour
 
     IEnumerator changeSceneCoroutine(string targetScene)
     {
-        LoadingScreen.SetActive(true);
+        //activate LoadingScreen gameobject and start fading in
+        loadingScreen.SetActive(true);
 
-        if (SceneManager.GetActiveScene().name == "Preload")
+        if (SceneManager.GetActiveScene().name == "Preload") //this is here because Preload scene is a empty scene
         {
-            LoadingScreenCanvas.alpha = 1;
+            canvasLoadingScreen.alpha = 1;
         }
         else
         {
-            yield return StartCoroutine(FadeLoadingScreen(1, FadeIn));
+            yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen));
         }
 
-        LoadingText.SetActive(true);
+        loadingText.SetActive(true);
 
+        //start loading
         AsyncOperation operation = SceneManager.LoadSceneAsync(targetScene);
         while (!operation.isDone)
         {
             yield return null;
         }
 
-        LoadingText.SetActive(false);
+        loadingText.SetActive(false);
 
-        yield return StartCoroutine(FadeLoadingScreen(0, FadeOut));
+        //end loading and start fading out
+        yield return StartCoroutine(FadeLoadingScreen(0, fadeOutLoadingScreen));
 
-        LoadingScreen.SetActive(false);
+        loadingScreen.SetActive(false);
     }
 
     IEnumerator FadeLoadingScreen(float targetValue, float duration)
     {
-        float startValue = LoadingScreenCanvas.alpha;
+        float startValue = canvasLoadingScreen.alpha;
         float time = 0;
 
         while (time < duration)
         {
-            LoadingScreenCanvas.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
+            canvasLoadingScreen.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
-        LoadingScreenCanvas.alpha = targetValue;
+        //this is here to guarantee that the alpha is 1 (or 0) instead of a very close float value
+        canvasLoadingScreen.alpha = targetValue; 
     }
     #endregion
 
@@ -88,7 +96,6 @@ public class Manager : MonoBehaviour
     public void ChangeCameraOffset(float height)
     {
         CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
-        //CinemachineVirtualCamera virCamera = FindObjectOfType<CinemachineVirtualCamera>(); Previous line of code
         virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.y = height;
     }
 }

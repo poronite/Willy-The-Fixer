@@ -842,18 +842,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89faa0087752e154cbe66dd4e4b2feeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 616216454}
-  currentNum: 0
   targetNum: 50
-  rangeNum: 0
   minNum: 0
   maxNum: 100
-  Mouse: {fileID: 652337110}
-  Controller: {fileID: 663581102}
-  WaveImage: {fileID: 701372145}
-  CircleImage: {fileID: 274214966}
-  WaveAnimator: {fileID: 701372144}
-  CircleAnimator: {fileID: 274214965}
+  playerInputRef: {fileID: 616216454}
+  mouse: {fileID: 652337110}
+  controller: {fileID: 663581102}
+  waveImage: {fileID: 701372145}
+  circleImage: {fileID: 274214966}
+  waveAnimator: {fileID: 701372144}
 --- !u!1 &399641515
 GameObject:
   m_ObjectHideFlags: 0
@@ -12824,16 +12821,6 @@ PrefabInstance:
     - target: {fileID: 2428833456862036233, guid: e46f571f0acc03c4bb7e816fc71fde45,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428833456862036233, guid: e46f571f0acc03c4bb7e816fc71fde45,
-        type: 3}
-      propertyPath: m_UIInputModule
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428833456862036233, guid: e46f571f0acc03c4bb7e816fc71fde45,
-        type: 3}
-      propertyPath: m_NotificationBehavior
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2428833456862036233, guid: e46f571f0acc03c4bb7e816fc71fde45,

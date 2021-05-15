@@ -7,46 +7,50 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     #region Variables
-    public PlayerInput Input;
-    private Rigidbody playerRigidbody;
-    private Camera MainCamera;
-
-    private Vector2 move;
 
     [SerializeField]
     private float Acceleration = 0,
     maxSpeed = 0,
-    SprintMultiplier = 0, 
-    JumpForce = 0, 
-    GroundThreshhold = 5.0f, 
-    JumpGravityScale = 1.0f, 
-    FallGravityScale = 1.0f, 
-    DashSpeed = 0, 
+    SprintMultiplier = 0,
+    JumpForce = 0,
+    GroundThreshhold = 5.0f,
+    JumpGravityScale = 1.0f,
+    FallGravityScale = 1.0f,
+    DashSpeed = 0,
     DashDuration = 0;
 
-    private bool onAir;
-    private float dashTimer = 0;
-    private bool isSprinting = false;
-    private bool isDashing = false;
-    private bool isOnStrings = true;
-    private bool hasClimbed = false;
+    private bool onAir = false,
+    isSprinting = false,
+    isDashing = false,
+    isOnStrings = false,
+    hasClimbed = false;
 
+    private Rigidbody playerRigidbody;
+    private Vector2 move;
+    private float dashTimer = 0;
     private GameObject NearestInteractable;
+
+    public PlayerInput Input;
     public GameObject TuneMinigame;
+
+    [HideInInspector]
     public string LastInputDevice;
     #endregion
 
-    #region Inputs
     private void Awake()
     {
         playerRigidbody = gameObject.GetComponent<Rigidbody>();
-        MainCamera = Camera.main;
         SetInputs();
     }
 
+    #region Inputs
     private void SetInputs()
     {
         Input = new PlayerInput();
+
+        Input.Player.Enable();
+        Input.TuneMinigame.Disable();
+        Input.RepairMinigame.Disable();
 
         //Movement
         Input.Player.Move.performed += context => move = context.ReadValue<Vector2>();
@@ -59,7 +63,7 @@ public class Player : MonoBehaviour
         //Jump
         Input.Player.Jump.performed += context => Jump();
 
-        //Dash
+        //Dash/Roll
         Input.Player.Dash.performed += context => StartDash();
 
         //Fall
@@ -72,7 +76,7 @@ public class Player : MonoBehaviour
             Interact();
         };
     }
-    
+
     private void OnEnable()
     {
         Input.Player.Enable();
@@ -80,8 +84,9 @@ public class Player : MonoBehaviour
 
     private void OnDisable()
     {
-        Input.Player.Disable();
+        Input.Player.Disable();        
     }
+
     #endregion
 
     #region Collisions
@@ -91,7 +96,7 @@ public class Player : MonoBehaviour
         //When the player jumps to climb the cords
         if (collision.gameObject.CompareTag("Strings") && hasClimbed == false)
         {
-            hasClimbed = true;
+            hasClimbed = true; //this is to prevent the player from bugging
 
             //"Climb" the cords by changing y of the player
             Vector3 climbStrings = gameObject.transform.position;
@@ -99,7 +104,7 @@ public class Player : MonoBehaviour
             gameObject.transform.position = climbStrings;
 
             //Re-use the Vector3 just to cancel the speed of the jump
-            climbStrings = playerRigidbody.velocity; 
+            climbStrings = playerRigidbody.velocity;
             climbStrings.y = 0.0f;
             playerRigidbody.velocity = climbStrings;
 
@@ -127,6 +132,7 @@ public class Player : MonoBehaviour
             isOnStrings = true;
         }
 
+        //catch Yama
         if (collision.gameObject.CompareTag("AI") && isDashing == true)
         {
             Destroy(collision.gameObject);
@@ -141,12 +147,6 @@ public class Player : MonoBehaviour
             onAir = true;
             isOnStrings = false;
         }
-
-        //for tune game
-        if (collision.gameObject.CompareTag("Tune"))
-        {
-            NearestInteractable = null;
-        }
     }
 
     private void OnTriggerEnter(Collider exit)
@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
         //to change between zones of the piano
         if (exit.gameObject.CompareTag("Exit"))
         {
-            Input.asset.FindActionMap("Player").Disable();
+            Input.Player.Disable();
 
             switch (SceneManager.GetActiveScene().name)
             {
@@ -172,10 +172,17 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        //for tune game
-        if (other.gameObject.CompareTag("Tune"))
+        if (other.gameObject.CompareTag("Tune") || other.gameObject.CompareTag("Repair"))
         {
             NearestInteractable = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Tune") || other.gameObject.CompareTag("Repair"))
+        {
+            NearestInteractable = null;
         }
     }
 
@@ -184,10 +191,7 @@ public class Player : MonoBehaviour
     #region PlayerMechanics
     public void Movement()
     {
-        //Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
-        //Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
-
-        if (!isDashing)
+        if (!isDashing) //otherwise the dash would stop too soon
         {
             float finalAcceleration = Acceleration;
 
@@ -196,16 +200,19 @@ public class Player : MonoBehaviour
                 finalAcceleration *= SprintMultiplier;
             }
 
+            //Set direction and speed of movement
             Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * finalAcceleration;
 
-
+            //rotate the player to the movement direction
             if (movement != Vector3.zero)
             {
                 playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.15f);
             }
 
+            //move the player
             playerRigidbody.AddForce(movement);
 
+            //clamp the movement otherwise too intense
             Vector3 velocity = playerRigidbody.velocity;
 
             float verticalVelocity = velocity.y;
@@ -217,7 +224,7 @@ public class Player : MonoBehaviour
             velocity.y = verticalVelocity;
 
             playerRigidbody.velocity = velocity;
-        } 
+        }
     }
 
     public void Jump()
@@ -234,12 +241,12 @@ public class Player : MonoBehaviour
 
         if (playerRigidbody.velocity.y > 0)
         {
-            gravity*= JumpGravityScale;
+            gravity *= JumpGravityScale;
         }
 
         if (playerRigidbody.velocity.y < 0)
         {
-            gravity*= FallGravityScale;
+            gravity *= FallGravityScale;
         }
 
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
@@ -247,14 +254,12 @@ public class Player : MonoBehaviour
 
     public void StartDash()
     {
-        if (isDashing == false)
+        if (!isDashing)
         {
-            //Vector3 horizontal = Vector3.Cross(-MainCamera.transform.forward, playerRigidbody.transform.up).normalized;
-            //Vector3 vertical = Vector3.Cross(horizontal, Vector3.up).normalized;
-
+            //dash movement
             playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * DashSpeed, ForceMode.Impulse);
 
-            //playerRigidbody.velocity = new Vector3(-move.x, 0.0f, -move.y) * DashSpeed;
+            //start dash timer
             dashTimer = 0;
             isDashing = true;
         }
@@ -262,12 +267,14 @@ public class Player : MonoBehaviour
 
     public void EndDash()
     {
-        if (isDashing == true)
+        if (isDashing)
         {
+            //in the middle of dash
             dashTimer += Time.deltaTime;
 
             if (dashTimer >= DashDuration)
             {
+                //end dash
                 Vector3 cancelDash = playerRigidbody.velocity;
                 cancelDash.x = 0.0f;
                 cancelDash.z = 0.0f;
@@ -286,7 +293,7 @@ public class Player : MonoBehaviour
             descendCords.y = 13.5f;
             gameObject.transform.position = descendCords;
 
-            Manager.ManagerInstance.ChangeCameraOffset(1f);
+            Manager.ManagerInstance.ChangeCameraOffset(1f); //Change perspetive
 
             onAir = true;
             isOnStrings = false;
@@ -303,6 +310,9 @@ public class Player : MonoBehaviour
                 case "Tune":
                     startTuneMinigame();
                     break;
+                case "Repair":
+                    RepairMinigame();
+                    break;
                 default:
                     break;
             }
@@ -312,15 +322,18 @@ public class Player : MonoBehaviour
             Debug.Log("Nothing to Interact Found");
             return;
         }
-        
+
     }
 
     private void startTuneMinigame()
     {
-        //enter mini game
         TuneMinigame.SetActive(true);
-        Input.asset.FindActionMap("Player").Disable();
         TuneMinigame.GetComponent<TuneManager>().TuneMinigame();
+    }
+
+    private void RepairMinigame()
+    {
+        NearestInteractable.GetComponent<RepairDestroy>().StartRepairMinigame();
     }
 
     #endregion

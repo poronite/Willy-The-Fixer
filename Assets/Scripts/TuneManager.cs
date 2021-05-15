@@ -7,20 +7,29 @@ using UnityEngine.InputSystem;
 public class TuneManager : MonoBehaviour
 {
     #region Variables
-    public Player PlayerInputRef;
 
-    private float tuneIntensity;
     [SerializeField]
-    private float currentNum, targetNum = 0f, rangeNum, minNum = 0f, maxNum = 0f;
+    private float targetNum = 0f, //value that the player must reach to successfully tune the pin
+    minNum = 0f, //lower tune limit
+    maxNum = 0f; //upper tune limit
+
+    [SerializeField]
+    private Player playerInputRef = null;
+
+    [SerializeField]
+    private GameObject mouse = null, controller = null;
+
+    [SerializeField]
+    private Image waveImage = null, circleImage = null;
+    
+    [SerializeField]
+    private Animator waveAnimator = null;
+
+    private float currentNum, //value that the player will be moving
+    rangeNum, //distance between currentNum and targetNum
+    tuneIntensity; //amount to move each time player presses the button
+
     private bool isCompleted;
-
-    public GameObject Mouse;
-    public GameObject Controller;
-    public Image WaveImage;
-    public Image CircleImage;
-    public Animator WaveAnimator;
-    public Animator CircleAnimator;
-
     #endregion
 
 
@@ -28,60 +37,49 @@ public class TuneManager : MonoBehaviour
     {
         SetInputs();
 
+        //setup the tuning session
         currentNum = Random.Range(minNum, maxNum + 1);
         isCompleted = false;
 
         //code to find control scheme in use
-        if (PlayerInputRef.LastInputDevice == "Keyboard" || PlayerInputRef.LastInputDevice == "Mouse")
+        if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
         {
-            Controller.SetActive(false);
-            Mouse.SetActive(true);
-            Mouse.GetComponent<Animator>().SetInteger("Input", 0);
+            controller.SetActive(false);
+            mouse.SetActive(true);
+            mouse.GetComponent<Animator>().SetInteger("Input", 0);
         }
         else
         {
-            Mouse.SetActive(false);
-            Controller.SetActive(true);
-            Controller.GetComponent<Animator>().SetInteger("Input", 1);
+            mouse.SetActive(false);
+            controller.SetActive(true);
+            controller.GetComponent<Animator>().SetInteger("Input", 1);
         }
     }
 
-    #region Inputs
     private void SetInputs()
     {
-        PlayerInputRef.Input.asset.FindActionMap("UI").Enable();
+        playerInputRef.Input.Player.Disable();
+        playerInputRef.Input.TuneMinigame.Enable();
 
-        PlayerInputRef.Input.UI.Tune.performed += context =>
+        playerInputRef.Input.TuneMinigame.Tune.performed += context =>
         {
             tuneIntensity = context.ReadValue<float>();
-            PlayerInputRef.LastInputDevice = context.control.device.name;
+            playerInputRef.LastInputDevice = context.control.device.name;
         };
 
-        PlayerInputRef.Input.UI.Tune.canceled += context => tuneIntensity = 0f;
+        playerInputRef.Input.TuneMinigame.Tune.canceled += context => tuneIntensity = 0f;
     }
-
-
-    private void OnEnable()
-    {
-        PlayerInputRef.Input.UI.Enable();
-    }
-
-    private void OnDisable()
-    {
-        PlayerInputRef.Input.UI.Disable();
-    }
-
-    #endregion
 
     #region TuneGameplay
 
     public void Tuning()
     {
-        //currentNum can vary between minNum and maxNum
-        if (currentNum >= minNum && currentNum <= maxNum)
+        //inside limits
+        if (currentNum >= minNum && currentNum <= maxNum) 
         {
             currentNum += tuneIntensity;
         }
+        //prevent from going outside the limits
         else if (currentNum < minNum)
         {
             currentNum = minNum;
@@ -94,10 +92,11 @@ public class TuneManager : MonoBehaviour
 
     public void TuningVerification()
     {
-        //to calculate distance between current and target
+        //calculate distance between current and target
         rangeNum = currentNum - targetNum;
 
-        WaveAnimator.SetFloat("RangeTune", rangeNum);
+        //small wave animation that is in the middle of the circle
+        waveAnimator.SetFloat("RangeTune", rangeNum);
 
         //Set Color depending on distance to target
         if (rangeNum <= 1 && rangeNum >= -1 && isCompleted == false)
@@ -130,22 +129,22 @@ public class TuneManager : MonoBehaviour
 
     #endregion
 
-    public void ChangeColor(string code)
+    public void ChangeColor(string code) //hex > rgb
     {
         Color color;
         if (ColorUtility.TryParseHtmlString(code, out color))
         { 
-            WaveImage.color = color;
-            CircleImage.color = color;
+            waveImage.color = color;
+            circleImage.color = color;
         }
     }
 
     public IEnumerator EndTuneMinigame()
     {
         Debug.Log("Complete");
-        PlayerInputRef.Input.asset.FindActionMap("UI").Disable();
+        playerInputRef.Input.TuneMinigame.Disable();
 
-        if (PlayerInputRef.LastInputDevice == "Keyboard" || PlayerInputRef.LastInputDevice == "Mouse")
+        if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
         {
             yield return new WaitForSeconds(2.0f);
         }
@@ -157,7 +156,7 @@ public class TuneManager : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
         }
 
-        PlayerInputRef.Input.asset.FindActionMap("Player").Enable();
+        playerInputRef.Input.Player.Enable();
         gameObject.SetActive(false);
     }
 
