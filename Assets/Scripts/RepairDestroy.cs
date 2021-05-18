@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class RepairDestroy : MonoBehaviour
@@ -8,9 +9,18 @@ public class RepairDestroy : MonoBehaviour
     #region Variables
     [SerializeField]
     private Player PlayerInputRef = null;
+    [SerializeField]
+    private Slider QuickTimeSlider = null;
+    [SerializeField]
+    private Image SliderKnob = null;
 
-    private float repairProgress = 0.0f;
+    private float repairProgress, 
+    timeLeft, 
+    clickableAreaStart, 
+    clickableAreaEnd;
+
     private bool fixingFase = false;
+    private bool successFase = false;
     private Animator TestAnimator;
 
     public bool IsRepaired = false;
@@ -20,8 +30,14 @@ public class RepairDestroy : MonoBehaviour
     {
         if (!IsRepaired)
         {
+            repairProgress = 0.0f;
             TestAnimator = GetComponent<Animator>();
             SetInputs();
+
+            QuickTimeSlider.gameObject.SetActive(true);
+
+            //just to trigger the event at the start instead of playing animation all the way to the next checkpoint
+            TriggerRepairFase();
         }
     }
 
@@ -32,9 +48,13 @@ public class RepairDestroy : MonoBehaviour
 
         PlayerInputRef.Input.RepairMinigame.Repair.performed += context => 
         {
-            if (!fixingFase)
+            if (fixingFase && (timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd))
             {
-                TriggerRepairFase();
+                successFase = true;
+            }
+            else
+            {
+                CancelRepair();
             }
         };
 
@@ -43,18 +63,18 @@ public class RepairDestroy : MonoBehaviour
 
     private void TriggerRepairFase()
     {
+        StopCoroutine("QuickTimeEvent");
         TestAnimator.enabled = true;
         TestAnimator.SetTrigger("Repair");
 
         //play animation from checkpoint
         TestAnimator.Play("repairTest", 0, repairProgress);
-
-        //prevent player from spamming button
-        fixingFase = true;
     }
 
     private void CancelRepair()
     {
+        StopCoroutine("QuickTimeEvent");
+        QuickTimeSlider.gameObject.SetActive(false);
         PlayerInputRef.Input.RepairMinigame.Disable();
         PlayerInputRef.Input.Player.Enable();
     }
@@ -71,9 +91,54 @@ public class RepairDestroy : MonoBehaviour
         //stop animation
         TestAnimator.enabled = false;
         TestAnimator.ResetTrigger("Repair");
+        successFase = false;
+        StartCoroutine("QuickTimeEvent");
+    }
 
-        //allow player to press again
-        fixingFase = false;
+    private IEnumerator QuickTimeEvent()
+    {
+        float speed = 2f;
+
+        timeLeft = 5f;
+        QuickTimeSlider.maxValue = timeLeft;
+        QuickTimeSlider.value = timeLeft;
+
+        clickableAreaStart = Random.Range(1f, timeLeft - 0.5f);
+        clickableAreaEnd = clickableAreaStart - 1f;
+
+        //player is able to press button
+        fixingFase = true;
+
+        while (timeLeft >= 0)
+        {
+            timeLeft -= Time.deltaTime * speed;
+            QuickTimeSlider.value = Mathf.Lerp(QuickTimeSlider.value, timeLeft, QuickTimeSlider.value / timeLeft);
+
+            //change color of knob to show that button can be pressed
+            if (fixingFase && (timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd))
+            {
+                SliderKnob.color = Color.green;
+            }
+            else
+            {
+                SliderKnob.color = Color.red;
+            }
+
+            if (successFase == true)
+            {
+                fixingFase = false;
+                TriggerRepairFase();
+            }
+
+            yield return null;
+        }
+
+        if (successFase == false && timeLeft <= 0f)
+        {
+            //after x seconds player can't press button
+            fixingFase = false;
+            CancelRepair();
+        }
     }
 
     public void CompleteRepair()
