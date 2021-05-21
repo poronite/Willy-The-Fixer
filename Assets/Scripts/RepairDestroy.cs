@@ -48,7 +48,7 @@ public class RepairDestroy : MonoBehaviour
 
         PlayerInputRef.Input.RepairMinigame.Repair.performed += context => 
         {
-            if (fixingFase && (timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd))
+            if (fixingFase && timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd)
             {
                 successFase = true;
             }
@@ -64,6 +64,7 @@ public class RepairDestroy : MonoBehaviour
     private void TriggerRepairFase()
     {
         StopCoroutine("QuickTimeEvent");
+        QuickTimeSlider.gameObject.SetActive(false);
         TestAnimator.enabled = true;
         TestAnimator.SetTrigger("Repair");
 
@@ -92,6 +93,7 @@ public class RepairDestroy : MonoBehaviour
         TestAnimator.enabled = false;
         TestAnimator.ResetTrigger("Repair");
         successFase = false;
+        QuickTimeSlider.gameObject.SetActive(true);
         StartCoroutine("QuickTimeEvent");
     }
 

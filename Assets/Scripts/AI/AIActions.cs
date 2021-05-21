@@ -65,7 +65,9 @@ public class AIActions : MonoBehaviour
         agent.speed = relaxedSpeed;
         agent.isStopped = false;
 
-        agent.SetDestination(new Vector3(0.0f, transform.position.y, 0.0f));
+        GameObject target = GameObject.FindGameObjectWithTag("TestAI");
+
+        agent.SetDestination(new Vector3(target.transform.position.x, target.transform.position.y, target.transform.position.z));
 
         Task.current.Succeed();
     }
