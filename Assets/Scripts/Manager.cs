@@ -21,6 +21,17 @@ public class Manager : MonoBehaviour
     private CanvasGroup canvasLoadingScreen = null;
 
     public static Manager ManagerInstance = null;
+
+    private bool hasEnteredUpperZone = false;
+    public List<bool> RepairedPins;
+    public List<bool> RepairedStrings;
+    public List<GameObject> Pins;
+    public List<GameObject> Strings;
+
+    private bool hasEnteredLowerZone = false;
+    public List<bool> RepairedKeys;
+    public List<GameObject> Keys;
+
     #endregion
 
     #region Awake&Start
@@ -29,6 +40,7 @@ public class Manager : MonoBehaviour
         ManagerInstance = this;
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(loadingScreen);
+        SceneManager.activeSceneChanged += OnSceneChange;
     }
 
     private void Start()
@@ -89,6 +101,55 @@ public class Manager : MonoBehaviour
 
         //this is here to guarantee that the alpha is 1 (or 0) instead of a very close float value
         canvasLoadingScreen.alpha = targetValue; 
+    }
+
+    private void OnSceneChange(Scene currentScene, Scene destinationScene)
+    {
+        switch (destinationScene.name)
+        {
+            case "MainMenu":
+                hasEnteredUpperZone = false;
+                hasEnteredLowerZone = false;
+                RepairedPins.Clear();
+                RepairedStrings.Clear();
+                RepairedKeys.Clear();
+                break;
+            case "UpperZonePiano":
+                Pins.AddRange(GameObject.FindGameObjectsWithTag("Pin"));
+                //Strings.AddRange(GameObject.FindGameObjectsWithTag("Strings"));
+
+                if (!hasEnteredUpperZone)
+                {
+                    hasEnteredUpperZone = true;
+
+                    foreach (GameObject pin in Pins)
+                    {
+                        RepairedPins.Add(pin.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5);
+                    }
+
+                    //add strings
+                }
+
+                //add rest of logic
+
+                break;
+            case "LowerZonePiano":
+                if (hasEnteredLowerZone == false)
+                {
+                    hasEnteredLowerZone = true;
+
+                    foreach (GameObject key in Keys)
+                    {
+                        RepairedKeys.Add(key.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5);
+                    }                    
+                }
+
+                //add rest of logic
+
+                break;
+            default:
+                break;
+        }
     }
     #endregion
 

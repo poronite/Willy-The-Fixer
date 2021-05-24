@@ -22,13 +22,11 @@ public class RepairDestroy : MonoBehaviour
     private bool fixingFase = false;
     private bool successFase = false;
     private Animator TestAnimator;
-
-    public bool IsRepaired = false;
     #endregion
 
     public void StartRepairMinigame()
     {
-        if (!IsRepaired)
+        if (!gameObject.GetComponent<PianoComponent>().IsRepaired == true)
         {
             repairProgress = 0.0f;
             TestAnimator = GetComponent<Animator>();
@@ -91,8 +89,9 @@ public class RepairDestroy : MonoBehaviour
 
         //stop animation
         TestAnimator.enabled = false;
-        TestAnimator.ResetTrigger("Repair");
         successFase = false;
+
+        //start quicktime event again
         QuickTimeSlider.gameObject.SetActive(true);
         StartCoroutine("QuickTimeEvent");
     }
@@ -146,14 +145,14 @@ public class RepairDestroy : MonoBehaviour
     public void CompleteRepair()
     {
         Debug.Log("Complete Repair");
-        IsRepaired = true;
+        gameObject.GetComponent<PianoComponent>().IsRepaired = true;
         TestAnimator.SetBool("isRepaired", true);
         CancelRepair();
     }
 
     public void CompleteDestroy()
     {
-        IsRepaired = false;
+        gameObject.GetComponent<PianoComponent>().IsRepaired = false;
         repairProgress = 0.0f;
         TestAnimator.SetBool("isRepaired", false);
     }

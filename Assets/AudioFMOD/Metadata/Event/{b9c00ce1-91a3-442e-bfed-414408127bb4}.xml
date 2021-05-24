@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{0b1ff326-3023-4b0b-a6f5-d3614db7e7de}</destination>
+			<destination>{abce3c1a-1894-4f98-9c62-e9e4a6a3841f}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{4b7be271-555c-48b5-b9f5-eb79378fb5fc}</destination>
@@ -65,6 +66,10 @@
 	<object class="EventAutomatableProperties" id="{86cecdc3-890e-47e9-a54b-5fcf2467dad6}" />
 	<object class="MarkerTrack" id="{c81df263-6432-45a6-ba7d-81bb5907540f}" />
 	<object class="GroupTrack" id="{b65818d8-c3fa-418a-ab9a-f4692a585154}">
+		<relationship name="modules">
+			<destination>{96761d69-4079-4a47-b9ec-a4ed10c83317}</destination>
+			<destination>{dbcbe1d4-2963-4f40-8a88-ddc455dd02ea}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{ca2e0bad-5994-4c85-b1c2-cce751ac4acf}</destination>
 		</relationship>
@@ -77,6 +82,15 @@
 	<object class="ActionSheet" id="{0b1ff326-3023-4b0b-a6f5-d3614db7e7de}">
 		<relationship name="modules">
 			<destination>{0bad0b99-d086-4fdb-bb26-5d8023b9210d}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{abce3c1a-1894-4f98-9c62-e9e4a6a3841f}">
+		<relationship name="modules">
+			<destination>{96761d69-4079-4a47-b9ec-a4ed10c83317}</destination>
+			<destination>{dbcbe1d4-2963-4f40-8a88-ddc455dd02ea}</destination>
+		</relationship>
+		<relationship name="preset">
+			<destination>{89e0b978-6188-46d7-a7c2-7c084b979f7a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{1ad59346-d543-4ee8-a13f-47ec738e5dc0}">
@@ -97,6 +111,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{4f30545a-6ad9-4792-991b-00ea58966003}" />
+	<object class="MultiSound" id="{96761d69-4079-4a47-b9ec-a4ed10c83317}" />
+	<object class="MultiSound" id="{dbcbe1d4-2963-4f40-8a88-ddc455dd02ea}">
+		<property name="start">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="EventMixerGroup" id="{ca2e0bad-5994-4c85-b1c2-cce751ac4acf}">
 		<property name="name">
 			<value>Audio 1</value>

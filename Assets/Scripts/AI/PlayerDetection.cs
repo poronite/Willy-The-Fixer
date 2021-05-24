@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class PlayerDetection : MonoBehaviour
 {
-    public GameObject Player;
+    private GameObject player;
 
     [SerializeField]
     private float maxSightDistance = 0, coneOfVision = 0;
 
     public bool SeeingPlayer;
 
-    private void Awake()
+    private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
     }
 
     private void Update()
@@ -22,7 +22,7 @@ public class PlayerDetection : MonoBehaviour
         //send a raycast in player direction and check if player is in AI field of view
         RaycastHit hit;
 
-        Vector3 aiToWilly = (Player.transform.position - transform.position).normalized;
+        Vector3 aiToWilly = (player.transform.position - transform.position).normalized;
 
         if (Physics.Raycast(transform.position, aiToWilly, out hit, maxSightDistance))
         {

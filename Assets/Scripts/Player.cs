@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
             //rotate the player to the movement direction
             if (movement != Vector3.zero)
             {
-                playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.15f);
+                playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.3f);
             }
 
             //move the player
@@ -229,7 +229,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (onAir == false)
+        if (!onAir)
         {
             playerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
@@ -239,14 +239,17 @@ public class Player : MonoBehaviour
     {
         Vector3 gravity = Physics.gravity;
 
-        if (playerRigidbody.velocity.y > 0)
+        if (onAir)
         {
-            gravity *= JumpGravityScale;
-        }
+            if (playerRigidbody.velocity.y > 0)
+            {
+                gravity *= JumpGravityScale;
+            }
 
-        if (playerRigidbody.velocity.y < 0)
-        {
-            gravity *= FallGravityScale;
+            if (playerRigidbody.velocity.y < 0)
+            {
+                gravity *= FallGravityScale;
+            } 
         }
 
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
@@ -307,10 +310,10 @@ public class Player : MonoBehaviour
         {
             switch (NearestInteractable.tag)
             {
-                case "Tune":
+                case "Pin":
                     startTuneMinigame();
                     break;
-                case "Repair":
+                case "Key":
                     RepairMinigame();
                     break;
                 default:

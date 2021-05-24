@@ -5,15 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Tune
   - Exit
   - Strings
   - AI
   - Wall
   - VirtualCamera
   - HideHole
-  - Repair
   - TestAI
+  - Pin
+  - Key
   layers:
   - Default
   - TransparentFX
