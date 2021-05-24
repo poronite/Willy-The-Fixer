@@ -21,7 +21,7 @@ public class RepairDestroy : MonoBehaviour
 
     private bool fixingFase = false;
     private bool successFase = false;
-    private Animator TestAnimator;
+    private Animator KeyAnimator;
     #endregion
 
     public void StartRepairMinigame()
@@ -29,7 +29,7 @@ public class RepairDestroy : MonoBehaviour
         if (!gameObject.GetComponent<PianoComponent>().IsRepaired == true)
         {
             repairProgress = 0.0f;
-            TestAnimator = GetComponent<Animator>();
+            KeyAnimator = GetComponent<Animator>();
             SetInputs();
 
             QuickTimeSlider.gameObject.SetActive(true);
@@ -63,11 +63,11 @@ public class RepairDestroy : MonoBehaviour
     {
         StopCoroutine("QuickTimeEvent");
         QuickTimeSlider.gameObject.SetActive(false);
-        TestAnimator.enabled = true;
-        TestAnimator.SetTrigger("Repair");
+        KeyAnimator.enabled = true;
+        KeyAnimator.SetTrigger("Repair");
 
         //play animation from checkpoint
-        TestAnimator.Play("repairTest", 0, repairProgress);
+        KeyAnimator.Play("Repair", 0, repairProgress);
     }
 
     private void CancelRepair()
@@ -81,14 +81,14 @@ public class RepairDestroy : MonoBehaviour
     public void FaseComplete()
     {
         //get current animation
-        AnimatorStateInfo currentAnimation = TestAnimator.GetCurrentAnimatorStateInfo(0);
+        AnimatorStateInfo currentAnimation = KeyAnimator.GetCurrentAnimatorStateInfo(0);
 
         //get repair progress and add 1 frame to it 
         //(so that it doesn't trigger the same event next time it plays)
         repairProgress = currentAnimation.normalizedTime + (1 / (currentAnimation.length * 60));
 
         //stop animation
-        TestAnimator.enabled = false;
+        KeyAnimator.enabled = false;
         successFase = false;
 
         //start quicktime event again
@@ -145,15 +145,15 @@ public class RepairDestroy : MonoBehaviour
     public void CompleteRepair()
     {
         Debug.Log("Complete Repair");
-        gameObject.GetComponent<PianoComponent>().IsRepaired = true;
-        TestAnimator.SetBool("isRepaired", true);
+        gameObject.GetComponent<PianoComponent>().RepairComponent();
+        KeyAnimator.SetBool("isRepaired", true);
         CancelRepair();
     }
 
     public void CompleteDestroy()
     {
-        gameObject.GetComponent<PianoComponent>().IsRepaired = false;
+        gameObject.GetComponent<PianoComponent>().DestroyComponent();
         repairProgress = 0.0f;
-        TestAnimator.SetBool("isRepaired", false);
+        KeyAnimator.SetBool("isRepaired", false);
     }
 }

@@ -23,13 +23,13 @@ public class Manager : MonoBehaviour
     public static Manager ManagerInstance = null;
 
     private bool hasEnteredUpperZone = false;
-    public List<bool> RepairedPins;
-    public List<bool> RepairedStrings;
+    public int NumRepairedPins;
+    public int NumRepairedStrings;
     public List<GameObject> Pins;
     public List<GameObject> Strings;
 
     private bool hasEnteredLowerZone = false;
-    public List<bool> RepairedKeys;
+    public int NumRepairedKeys;
     public List<GameObject> Keys;
 
     #endregion
@@ -40,7 +40,7 @@ public class Manager : MonoBehaviour
         ManagerInstance = this;
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(loadingScreen);
-        SceneManager.activeSceneChanged += OnSceneChange;
+        SceneManager.sceneLoaded += OnSceneChange;
     }
 
     private void Start()
@@ -103,34 +103,49 @@ public class Manager : MonoBehaviour
         canvasLoadingScreen.alpha = targetValue; 
     }
 
-    private void OnSceneChange(Scene currentScene, Scene destinationScene)
+    private void OnSceneChange(Scene destinationScene, LoadSceneMode mode)
     {
         switch (destinationScene.name)
         {
             case "MainMenu":
+                //reset just in case player starts a new game
                 hasEnteredUpperZone = false;
                 hasEnteredLowerZone = false;
-                RepairedPins.Clear();
-                RepairedStrings.Clear();
-                RepairedKeys.Clear();
+                NumRepairedPins = 0;
+                NumRepairedStrings = 0;
+                NumRepairedKeys = 0;
                 break;
             case "UpperZonePiano":
                 Pins.AddRange(GameObject.FindGameObjectsWithTag("Pin"));
                 //Strings.AddRange(GameObject.FindGameObjectsWithTag("Strings"));
 
+                //when entering scene for the first time
                 if (!hasEnteredUpperZone)
                 {
                     hasEnteredUpperZone = true;
 
                     foreach (GameObject pin in Pins)
                     {
-                        RepairedPins.Add(pin.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5);
+                        pin.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5;
+                        NumRepairedPins++;
                     }
 
                     //add strings
                 }
 
-                //add rest of logic
+                //when entering a scene normally
+                int numPinsRepaired = NumRepairedPins;
+
+                foreach (GameObject pin in Pins)
+                {
+                    if (numPinsRepaired > 0)
+                    {
+                        pin.GetComponent<PianoComponent>().IsRepaired = true;
+                        numPinsRepaired--;
+                    }
+                }
+
+                //add rest of logic for the strings
 
                 break;
             case "LowerZonePiano":
@@ -140,8 +155,20 @@ public class Manager : MonoBehaviour
 
                     foreach (GameObject key in Keys)
                     {
-                        RepairedKeys.Add(key.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5);
+                        key.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5;
+                        NumRepairedKeys++;
                     }                    
+                }
+
+                int numKeysRepaired = NumRepairedKeys;
+
+                foreach (GameObject key in Keys)
+                {
+                    if (numKeysRepaired > 0)
+                    {
+                        key.GetComponent<PianoComponent>().IsRepaired = true;
+                        numKeysRepaired--;
+                    }
                 }
 
                 //add rest of logic

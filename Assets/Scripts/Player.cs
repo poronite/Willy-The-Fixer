@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Tune") || other.gameObject.CompareTag("Repair"))
+        if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
         {
             NearestInteractable = other.gameObject;
         }
@@ -180,7 +180,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Tune") || other.gameObject.CompareTag("Repair"))
+        if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
         {
             NearestInteractable = null;
         }
