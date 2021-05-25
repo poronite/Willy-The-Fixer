@@ -22,11 +22,13 @@ public class RepairDestroy : MonoBehaviour
     private bool fixingFase = false;
     private bool successFase = false;
     private Animator KeyAnimator;
+    private PianoComponent KeyStatus;
     #endregion
 
     public void StartRepairMinigame()
     {
-        if (!gameObject.GetComponent<PianoComponent>().IsRepaired == true)
+        KeyStatus = gameObject.GetComponent<PianoComponent>();
+        if (!KeyStatus.IsRepaired)
         {
             repairProgress = 0.0f;
             KeyAnimator = GetComponent<Animator>();
@@ -145,14 +147,14 @@ public class RepairDestroy : MonoBehaviour
     public void CompleteRepair()
     {
         Debug.Log("Complete Repair");
-        gameObject.GetComponent<PianoComponent>().RepairComponent();
+        KeyStatus.RepairComponent();
         KeyAnimator.SetBool("isRepaired", true);
         CancelRepair();
     }
 
     public void CompleteDestroy()
     {
-        gameObject.GetComponent<PianoComponent>().DestroyComponent();
+        KeyStatus.DestroyComponent();
         repairProgress = 0.0f;
         KeyAnimator.SetBool("isRepaired", false);
     }

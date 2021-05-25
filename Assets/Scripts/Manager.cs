@@ -23,14 +23,14 @@ public class Manager : MonoBehaviour
     public static Manager ManagerInstance = null;
 
     private bool hasEnteredUpperZone = false;
-    public int NumRepairedPins;
-    public int NumRepairedStrings;
-    public List<GameObject> Pins;
-    public List<GameObject> Strings;
+    public bool[] RepairedPins;
+    public bool[] RepairedStrings;
+    public GameObject[] Pins;
+    public GameObject[] Strings;
 
     private bool hasEnteredLowerZone = false;
-    public int NumRepairedKeys;
-    public List<GameObject> Keys;
+    public bool[] RepairedKeys = new bool[88];
+    public GameObject[] Keys = new GameObject[88];
 
     #endregion
 
@@ -111,71 +111,54 @@ public class Manager : MonoBehaviour
                 //reset just in case player starts a new game
                 hasEnteredUpperZone = false;
                 hasEnteredLowerZone = false;
-                NumRepairedPins = 0;
-                NumRepairedStrings = 0;
-                NumRepairedKeys = 0;
                 break;
             case "UpperZonePiano":
-                Pins.AddRange(GameObject.FindGameObjectsWithTag("Pin"));
-                //Strings.AddRange(GameObject.FindGameObjectsWithTag("Strings"));
+                //pins
+                GameObject.FindGameObjectsWithTag("Pin").CopyTo(Pins, 0);
+                SortPianoComponentsArrays(Pins, RepairedPins, hasEnteredUpperZone);
 
-                //when entering scene for the first time
-                if (!hasEnteredUpperZone)
-                {
-                    hasEnteredUpperZone = true;
+                //strings
+                //GameObject.FindGameObjectsWithTag("Strings").CopyTo(Strings, 0);
+                //SortPianoComponentsArrays(Strings, RepairedStrings, hasEnteredUpperZone);
 
-                    foreach (GameObject pin in Pins)
-                    {
-                        pin.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5;
-                        NumRepairedPins++;
-                    }
-
-                    //add strings
-                }
-
-                //when entering a scene normally
-                int numPinsRepaired = NumRepairedPins;
-
-                foreach (GameObject pin in Pins)
-                {
-                    if (numPinsRepaired > 0)
-                    {
-                        pin.GetComponent<PianoComponent>().IsRepaired = true;
-                        numPinsRepaired--;
-                    }
-                }
-
-                //add rest of logic for the strings
-
+                hasEnteredUpperZone = true;
                 break;
             case "LowerZonePiano":
-                if (hasEnteredLowerZone == false)
-                {
-                    hasEnteredLowerZone = true;
+                //keys
+                GameObject.FindGameObjectsWithTag("Key").CopyTo(Keys, 0);
+                SortPianoComponentsArrays(Keys, RepairedKeys, hasEnteredLowerZone);
 
-                    foreach (GameObject key in Keys)
-                    {
-                        key.GetComponent<PianoComponent>().IsRepaired = Random.value > 0.5;
-                        NumRepairedKeys++;
-                    }                    
-                }
-
-                int numKeysRepaired = NumRepairedKeys;
-
-                foreach (GameObject key in Keys)
-                {
-                    if (numKeysRepaired > 0)
-                    {
-                        key.GetComponent<PianoComponent>().IsRepaired = true;
-                        numKeysRepaired--;
-                    }
-                }
-
-                //add rest of logic
-
+                hasEnteredLowerZone = true;
                 break;
             default:
                 break;
+        }
+    }
+
+    private void SortPianoComponentsArrays(GameObject[] components, bool[] repairedComponents, bool firstTimeInZone)
+    {
+        if (firstTimeInZone) //when entering scene for the first time
+        {
+            for (int i = 0; i < components.Length; i++)
+            {
+                PianoComponent componentStats = Keys[i].GetComponent<PianoComponent>();
+                componentStats.IsRepaired = Random.value > 0.5;
+                if (componentStats.IsRepaired)
+                {
+                    repairedComponents[i] = true;
+                }
+                else
+                {
+                    repairedComponents[i] = false;
+                }
+            }
+        }
+        else //when entering the scene normally
+        {
+            for (int i = 0; i < components.Length; i++)
+            {
+                components[i].GetComponent<PianoComponent>().IsRepaired = repairedComponents[i];
+            }
         }
     }
     #endregion
