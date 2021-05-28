@@ -24,9 +24,7 @@ public class Manager : MonoBehaviour
 
     private bool hasEnteredUpperZone = false;
     public bool[] RepairedPins;
-    public bool[] RepairedStrings;
     public GameObject[] Pins;
-    public GameObject[] Strings;
 
     private bool hasEnteredLowerZone = false;
     public bool[] RepairedKeys = new bool[88];
@@ -116,10 +114,6 @@ public class Manager : MonoBehaviour
                 //pins
                 GameObject.FindGameObjectsWithTag("Pin").CopyTo(Pins, 0);
                 SortPianoComponentsArrays(Pins, RepairedPins, hasEnteredUpperZone);
-
-                //strings
-                //GameObject.FindGameObjectsWithTag("Strings").CopyTo(Strings, 0);
-                //SortPianoComponentsArrays(Strings, RepairedStrings, hasEnteredUpperZone);
 
                 hasEnteredUpperZone = true;
                 break;

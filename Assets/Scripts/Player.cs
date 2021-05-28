@@ -28,7 +28,8 @@ public class Player : MonoBehaviour
     private Rigidbody playerRigidbody;
     private Vector2 move;
     private float dashTimer = 0;
-    private GameObject NearestInteractable;
+    private List<GameObject> nearbyInteractables = new List<GameObject>();
+    private GameObject nearestInteractable;
 
     public PlayerInput Input;
     public GameObject TuneMinigame;
@@ -94,7 +95,7 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //When the player jumps to climb the cords
-        if (collision.gameObject.CompareTag("Strings") && hasClimbed == false)
+        if (collision.gameObject.CompareTag("Strings") && !hasClimbed)
         {
             hasClimbed = true; //this is to prevent the player from bugging
 
@@ -133,7 +134,7 @@ public class Player : MonoBehaviour
         }
 
         //catch Yama
-        if (collision.gameObject.CompareTag("AI") && isDashing == true)
+        if (collision.gameObject.CompareTag("AI") && isDashing)
         {
             Destroy(collision.gameObject);
         }
@@ -142,17 +143,21 @@ public class Player : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         //When the player jumps from the ground or cords
-        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Strings") && isOnStrings == true))
+        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Strings") && isOnStrings))
         {
             onAir = true;
             isOnStrings = false;
         }
     }
 
-    private void OnTriggerEnter(Collider exit)
+    private void OnTriggerEnter(Collider other)
     {
-        //to change between zones of the piano
-        if (exit.gameObject.CompareTag("Exit"))
+        if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
+        {
+            Debug.Log(other.name);
+            nearbyInteractables.Add(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("Exit"))
         {
             Input.Player.Disable();
 
@@ -168,21 +173,16 @@ public class Player : MonoBehaviour
                     break;
             }
         }
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
-        {
-            NearestInteractable = other.gameObject;
-        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
         {
-            NearestInteractable = null;
+            Debug.Log(other.name);
+            nearbyInteractables.Remove(other.gameObject);
         }
     }
 
@@ -229,7 +229,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (!onAir)
+        if (!onAir && !isDashing)
         {
             playerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
@@ -239,17 +239,14 @@ public class Player : MonoBehaviour
     {
         Vector3 gravity = Physics.gravity;
 
-        if (onAir)
+        if (playerRigidbody.velocity.y > 0)
         {
-            if (playerRigidbody.velocity.y > 0)
-            {
-                gravity *= JumpGravityScale;
-            }
+            gravity *= JumpGravityScale;
+        }
 
-            if (playerRigidbody.velocity.y < 0)
-            {
-                gravity *= FallGravityScale;
-            } 
+        if (playerRigidbody.velocity.y < 0)
+        {
+            gravity *= FallGravityScale;
         }
 
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
@@ -257,7 +254,7 @@ public class Player : MonoBehaviour
 
     public void StartDash()
     {
-        if (!isDashing)
+        if (!isDashing && !onAir)
         {
             //dash movement
             playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * DashSpeed, ForceMode.Impulse);
@@ -289,7 +286,7 @@ public class Player : MonoBehaviour
 
     public void Descend()
     {
-        if (isOnStrings == true)
+        if (isOnStrings)
         {
             //Same logic as climbing
             Vector3 descendCords = gameObject.transform.position;
@@ -306,9 +303,22 @@ public class Player : MonoBehaviour
 
     public void Interact()
     {
-        if (NearestInteractable != null)
+        float nearestDistance = Mathf.Infinity;
+
+        foreach (GameObject interactable in nearbyInteractables)
         {
-            switch (NearestInteractable.tag)
+            float distanceInteractable = (interactable.transform.position - transform.position).sqrMagnitude;
+
+            if (distanceInteractable < nearestDistance)
+            {
+                nearestDistance = distanceInteractable;
+                nearestInteractable = interactable;
+            }
+        }
+
+        if (nearestInteractable != null)
+        {
+            switch (nearestInteractable.tag)
             {
                 case "Pin":
                     startTuneMinigame();
@@ -325,7 +335,6 @@ public class Player : MonoBehaviour
             Debug.Log("Nothing to Interact Found");
             return;
         }
-
     }
 
     private void startTuneMinigame()
@@ -336,7 +345,7 @@ public class Player : MonoBehaviour
 
     private void RepairMinigame()
     {
-        NearestInteractable.GetComponent<RepairDestroy>().StartRepairMinigame();
+        nearestInteractable.GetComponent<RepairDestroy>().StartRepairMinigame();
     }
 
     #endregion

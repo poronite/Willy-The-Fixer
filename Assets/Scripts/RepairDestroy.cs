@@ -34,10 +34,10 @@ public class RepairDestroy : MonoBehaviour
             KeyAnimator = GetComponent<Animator>();
             SetInputs();
 
-            QuickTimeSlider.gameObject.SetActive(true);
+            KeyAnimator.Play("ResetRepair");
 
-            //just to trigger the event at the start instead of playing animation all the way to the next checkpoint
-            TriggerRepairFase();
+            QuickTimeSlider.gameObject.SetActive(true);
+            StartCoroutine("QuickTimeEvent");
         }
     }
 
@@ -52,7 +52,7 @@ public class RepairDestroy : MonoBehaviour
             {
                 successFase = true;
             }
-            else
+            else if (fixingFase && timeLeft > clickableAreaStart && timeLeft < clickableAreaEnd)
             {
                 CancelRepair();
             }
@@ -66,7 +66,6 @@ public class RepairDestroy : MonoBehaviour
         StopCoroutine("QuickTimeEvent");
         QuickTimeSlider.gameObject.SetActive(false);
         KeyAnimator.enabled = true;
-        KeyAnimator.SetTrigger("Repair");
 
         //play animation from checkpoint
         KeyAnimator.Play("Repair", 0, repairProgress);
@@ -75,6 +74,7 @@ public class RepairDestroy : MonoBehaviour
     private void CancelRepair()
     {
         StopCoroutine("QuickTimeEvent");
+        KeyAnimator.Play("ResetRepair");
         QuickTimeSlider.gameObject.SetActive(false);
         PlayerInputRef.Input.RepairMinigame.Disable();
         PlayerInputRef.Input.Player.Enable();
@@ -148,6 +148,7 @@ public class RepairDestroy : MonoBehaviour
     {
         Debug.Log("Complete Repair");
         KeyStatus.RepairComponent();
+        KeyAnimator.Play("ResetDestroy");
         KeyAnimator.SetBool("isRepaired", true);
         CancelRepair();
     }
