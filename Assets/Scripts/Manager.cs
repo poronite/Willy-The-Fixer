@@ -22,12 +22,13 @@ public class Manager : MonoBehaviour
 
     public static Manager ManagerInstance = null;
 
+    //the RepairedPins/Keys arrays are used to store the status of the Pins/Keys when going to another scene
     private bool hasEnteredUpperZone = false;
-    public bool[] RepairedPins;
-    public GameObject[] Pins;
+    public bool[] RepairedPins = new bool[218];
+    public GameObject[] Pins = new GameObject[218];
 
     private bool hasEnteredLowerZone = false;
-    public bool[] RepairedKeys = new bool[88];
+    public bool[] RepairedKeys = new bool[88]; 
     public GameObject[] Keys = new GameObject[88];
 
     #endregion
@@ -131,19 +132,22 @@ public class Manager : MonoBehaviour
 
     private void SortPianoComponentsArrays(GameObject[] components, bool[] repairedComponents, bool firstTimeInZone)
     {
-        if (firstTimeInZone) //when entering scene for the first time
+        if (!firstTimeInZone) //when entering scene for the first time
         {
             for (int i = 0; i < components.Length; i++)
             {
                 PianoComponent componentStats = Keys[i].GetComponent<PianoComponent>();
-                componentStats.IsRepaired = Random.value > 0.5;
+                componentStats.index = i;
+                componentStats.IsRepaired = Random.value > 0.3;
                 if (componentStats.IsRepaired)
                 {
                     repairedComponents[i] = true;
+                    componentStats.SetRepair();
                 }
                 else
                 {
                     repairedComponents[i] = false;
+                    componentStats.SetDestroy();
                 }
             }
         }

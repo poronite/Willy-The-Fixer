@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: T_9C-T_10B_ResetRepair
+  m_Name: T_9C-T_10B_SetDestroy
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0

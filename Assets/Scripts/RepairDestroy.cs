@@ -34,7 +34,7 @@ public class RepairDestroy : MonoBehaviour
             KeyAnimator = GetComponent<Animator>();
             SetInputs();
 
-            KeyAnimator.Play("ResetRepair");
+            KeyAnimator.Play("SetDestroy", 0);
 
             QuickTimeSlider.gameObject.SetActive(true);
             StartCoroutine("QuickTimeEvent");
@@ -74,7 +74,7 @@ public class RepairDestroy : MonoBehaviour
     private void CancelRepair()
     {
         StopCoroutine("QuickTimeEvent");
-        KeyAnimator.Play("ResetRepair");
+        KeyAnimator.Play("SetDestroy", 0);
         QuickTimeSlider.gameObject.SetActive(false);
         PlayerInputRef.Input.RepairMinigame.Disable();
         PlayerInputRef.Input.Player.Enable();
@@ -146,17 +146,14 @@ public class RepairDestroy : MonoBehaviour
 
     public void CompleteRepair()
     {
-        Debug.Log("Complete Repair");
-        KeyStatus.RepairComponent();
-        KeyAnimator.Play("ResetDestroy");
-        KeyAnimator.SetBool("isRepaired", true);
         CancelRepair();
+        KeyStatus.RepairComponent();
     }
 
     public void CompleteDestroy()
     {
         KeyStatus.DestroyComponent();
+        
         repairProgress = 0.0f;
-        KeyAnimator.SetBool("isRepaired", false);
     }
 }
