@@ -84,10 +84,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b5c4689f635db44950130610581dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   maxSightDistance: 50
   coneOfVision: 100
   SeeingPlayer: 0
+  AwareOfPlayer: 0
 --- !u!114 &2668663800737681441
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -111,7 +111,7 @@ MonoBehaviour:
   Acceleration: 40
   maxSpeed: 6
   SprintMultiplier: 2
-  JumpForce: 12
+  JumpForce: 15
   GroundThreshhold: 20
   JumpGravityScale: 3
   FallGravityScale: 5

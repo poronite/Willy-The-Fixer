@@ -14,7 +14,7 @@ public class AIActions : MonoBehaviour
     [SerializeField]
     private NavMeshAgent agent = null;
 
-    private bool Hiding;
+    private bool runningAwaySucceded, hiding;
     private Transform AIRenderer;
     private CapsuleCollider AICollider;
 
@@ -47,13 +47,25 @@ public class AIActions : MonoBehaviour
     }
 
     [Task]
+    bool isAware()
+    {
+        return Detection.AwareOfPlayer;
+    }
+
+    [Task]
+    void ForgetPlayer()
+    {
+        Detection.AwareOfPlayer = false;
+    }
+
+    [Task]
     void isHiding()
     {
-        if (Hiding == true)
+        if (hiding == true)
         {
             Task.current.Succeed();
         }
-        else if(Hiding == false)
+        else if(hiding == false)
         {
             Task.current.Fail();
         }
@@ -75,9 +87,10 @@ public class AIActions : MonoBehaviour
     [Task]
     void HideFromPlayer()
     {
+        runningAwaySucceded = false;
         agent.speed = runAwaySpeed;
 
-        float distance = 9999999f;
+        float distance = Mathf.Infinity;
         int currentHole = 0;
 
         for (int i = 0; i < hideHoles.Count; i++)
@@ -91,9 +104,21 @@ public class AIActions : MonoBehaviour
             }
         }
 
+        Debug.Log($"Hole: {currentHole}");
         agent.SetDestination(hideHoles[currentHole].transform.position);
 
+        StartCoroutine(RunningAway());
+
         Task.current.Succeed();
+    }
+
+    private IEnumerator RunningAway()
+    {
+        while (runningAwaySucceded == false)
+        {
+            Debug.Log("Running Away...");
+            yield return null;
+        }
     }
 
     [Task]
@@ -130,13 +155,14 @@ public class AIActions : MonoBehaviour
     {
         if (other.CompareTag("HideHole"))
         {
+            runningAwaySucceded = true;
             StartCoroutine(teleportAI());
         }
     }
 
     private IEnumerator teleportAI()
     {
-        Hiding = true;
+        hiding = true;
         int choice = Random.Range(1, hideHoles.Count);
         Transform spawnPoint = hideHoles[choice].gameObject.transform.GetChild(0).GetComponentInChildren<Transform>();
 
@@ -149,7 +175,7 @@ public class AIActions : MonoBehaviour
 
         AIRenderer.gameObject.SetActive(true);
         AICollider.enabled = true;
-        Hiding = false;
+        hiding = false;
 
         yield return null;
     }

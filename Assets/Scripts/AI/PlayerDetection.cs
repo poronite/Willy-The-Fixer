@@ -10,7 +10,7 @@ public class PlayerDetection : MonoBehaviour
     [SerializeField]
     private float maxSightDistance = 0, coneOfVision = 0;
 
-    public bool SeeingPlayer;
+    public bool SeeingPlayer, AwareOfPlayer;
 
     private void Start()
     {
@@ -36,6 +36,7 @@ public class PlayerDetection : MonoBehaviour
                 if (angle <= coneOfVision / 2)
                 {
                     SeeingPlayer = true;
+                    AwareOfPlayer = true;
                 }
             }
             else if (hit.collider == null || !hit.collider.CompareTag("Player"))

@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
             climbStrings.y = 0.0f;
             playerRigidbody.velocity = climbStrings;
 
-            Manager.ManagerInstance.ChangeCameraOffset(5f);
+            Manager.ManagerInstance.ChangeCameraY(5f);
         }
     }
 
@@ -293,7 +293,7 @@ public class Player : MonoBehaviour
             descendCords.y = 13.5f;
             gameObject.transform.position = descendCords;
 
-            Manager.ManagerInstance.ChangeCameraOffset(1f); //Change perspetive
+            Manager.ManagerInstance.ChangeCameraY(1f); //Change perspetive
 
             onAir = true;
             isOnStrings = false;

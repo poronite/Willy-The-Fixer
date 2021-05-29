@@ -161,10 +161,31 @@ public class Manager : MonoBehaviour
     }
     #endregion
 
-
-    public void ChangeCameraOffset(float height)
+    #region Camera
+    public void ChangeCameraX(float x)
     {
         CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
-        virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.y = height;
+        virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.x = x;
     }
+
+    public void ChangeCameraY(float y)
+    {
+        CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.y = y;
+    }
+
+    public void ChangeCameraZ(float z)
+    {
+        CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.z = z;
+    }
+
+    public void ChangeCameraTarget(GameObject target)
+    {
+        CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
+        virCamera.Follow = target.transform;
+        virCamera.LookAt = target.transform;
+    }
+
+    #endregion
 }

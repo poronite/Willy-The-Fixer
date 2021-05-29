@@ -34,6 +34,10 @@ public class RepairDestroy : MonoBehaviour
             KeyAnimator = GetComponent<Animator>();
             SetInputs();
 
+            Manager.ManagerInstance.ChangeCameraTarget(gameObject);
+            Manager.ManagerInstance.ChangeCameraX(3f);
+            Manager.ManagerInstance.ChangeCameraY(5f);
+
             KeyAnimator.Play("SetDestroy", 0);
 
             QuickTimeSlider.gameObject.SetActive(true);
@@ -75,6 +79,11 @@ public class RepairDestroy : MonoBehaviour
     {
         StopCoroutine("QuickTimeEvent");
         KeyAnimator.Play("SetDestroy", 0);
+        
+        Manager.ManagerInstance.ChangeCameraTarget(PlayerInputRef.gameObject);
+        Manager.ManagerInstance.ChangeCameraX(0f);
+        Manager.ManagerInstance.ChangeCameraY(5f);
+
         QuickTimeSlider.gameObject.SetActive(false);
         PlayerInputRef.Input.RepairMinigame.Disable();
         PlayerInputRef.Input.Player.Enable();
