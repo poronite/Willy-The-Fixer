@@ -19,6 +19,7 @@ public class PianoComponent : MonoBehaviour
     {
         IsRepaired = true;
         Manager.ManagerInstance.RepairedKeys[index] = true;
+        GameObject.FindObjectOfType<Waypoint>().AssignSuggestion();
     }
 
     public void DestroyComponent()
@@ -38,6 +39,4 @@ public class PianoComponent : MonoBehaviour
     {
         KeyAnimator.Play("SetDestroy", 0);
     }
-
-    
 }

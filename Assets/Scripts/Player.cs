@@ -9,15 +9,15 @@ public class Player : MonoBehaviour
     #region Variables
 
     [SerializeField]
-    private float Acceleration = 0,
+    private float acceleration = 0,
     maxSpeed = 0,
-    SprintMultiplier = 0,
-    JumpForce = 0,
-    GroundThreshhold = 5.0f,
-    JumpGravityScale = 1.0f,
-    FallGravityScale = 1.0f,
-    DashSpeed = 0,
-    DashDuration = 0;
+    sprintMultiplier = 0,
+    jumpForce = 0,
+    groundThreshhold = 5.0f,
+    jumpGravityScale = 1.0f,
+    fallGravityScale = 1.0f,
+    dashSpeed = 0,
+    dashDuration = 0;
 
     private bool onAir = false,
     isSprinting = false,
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
         {
             float angle = Vector3.Angle(Vector3.up, collision.GetContact(0).normal);
 
-            if (angle < GroundThreshhold)
+            if (angle < groundThreshhold)
             {
                 onAir = false;
             }
@@ -204,11 +204,11 @@ public class Player : MonoBehaviour
     {
         if (!isDashing) //otherwise the dash would stop too soon
         {
-            float finalAcceleration = Acceleration;
+            float finalAcceleration = acceleration;
 
             if (isSprinting)
             {
-                finalAcceleration *= SprintMultiplier;
+                finalAcceleration *= sprintMultiplier;
             }
 
             //Set direction and speed of movement
@@ -242,7 +242,7 @@ public class Player : MonoBehaviour
     {
         if (!onAir && !isDashing)
         {
-            playerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
@@ -252,12 +252,12 @@ public class Player : MonoBehaviour
 
         if (playerRigidbody.velocity.y > 0)
         {
-            gravity *= JumpGravityScale;
+            gravity *= jumpGravityScale;
         }
 
         if (playerRigidbody.velocity.y < 0)
         {
-            gravity *= FallGravityScale;
+            gravity *= fallGravityScale;
         }
 
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
@@ -268,7 +268,7 @@ public class Player : MonoBehaviour
         if (!isDashing && !onAir)
         {
             //dash movement
-            playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * DashSpeed, ForceMode.Impulse);
+            playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * dashSpeed, ForceMode.Impulse);
 
             //start dash timer
             dashTimer = 0;
@@ -283,7 +283,7 @@ public class Player : MonoBehaviour
             //in the middle of dash
             dashTimer += Time.deltaTime;
 
-            if (dashTimer >= DashDuration)
+            if (dashTimer >= dashDuration)
             {
                 //end dash
                 Vector3 cancelDash = playerRigidbody.velocity;
@@ -351,7 +351,7 @@ public class Player : MonoBehaviour
     private void startTuneMinigame()
     {
         TuneMinigame.SetActive(true);
-        TuneMinigame.GetComponent<TuneManager>().TuneMinigame();
+        TuneMinigame.GetComponent<TuneManager>().TuneMinigame(nearestInteractable);
     }
 
     private void RepairMinigame()

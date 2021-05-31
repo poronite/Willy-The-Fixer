@@ -30,11 +30,15 @@ public class TuneManager : MonoBehaviour
     tuneIntensity; //amount to move each time player presses the button
 
     private bool isCompleted;
+
+    private GameObject PinToTune;
     #endregion
 
 
-    public void TuneMinigame()
+    public void TuneMinigame(GameObject pin)
     {
+        PinToTune = pin;
+
         SetInputs();
 
         //setup the tuning session
@@ -142,6 +146,8 @@ public class TuneManager : MonoBehaviour
     public IEnumerator EndTuneMinigame()
     {
         Debug.Log("Complete");
+        PinToTune.GetComponent<PianoComponent>().RepairComponent();
+
         playerInputRef.Input.TuneMinigame.Disable();
 
         if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
