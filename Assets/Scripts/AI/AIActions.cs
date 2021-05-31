@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using Panda;
 
 public class AIActions : MonoBehaviour
 {
     public PlayerDetection Detection;
+    public GameObject Target;
 
     [SerializeField]
     private float relaxedSpeed = 0, runAwaySpeed = 0, hidingTime = 0;
@@ -15,6 +17,8 @@ public class AIActions : MonoBehaviour
     private NavMeshAgent agent = null;
 
     private bool runningAwaySucceded, hiding;
+    public bool ReachedTarget;
+
     private Transform AIRenderer;
     private CapsuleCollider AICollider;
 
@@ -28,9 +32,9 @@ public class AIActions : MonoBehaviour
     }
 
     [Task]
-    void hasSeenPlayer()
+    void HasSeenPlayer()
     {
-        if (Detection.SeeingPlayer == true)
+        if (Detection.SeeingPlayer)
         {
             Task.current.Succeed();
         }
@@ -41,13 +45,13 @@ public class AIActions : MonoBehaviour
     }
 
     [Task]
-    bool isSeeing()
+    bool IsSeeing()
     {
         return Detection.SeeingPlayer;
     }
 
     [Task]
-    bool isAware()
+    bool IsAware()
     {
         return Detection.AwareOfPlayer;
     }
@@ -59,27 +63,108 @@ public class AIActions : MonoBehaviour
     }
 
     [Task]
-    void isHiding()
+    void IsHiding()
     {
-        if (hiding == true)
+        if (hiding)
         {
             Task.current.Succeed();
         }
-        else if(hiding == false)
+        else if(!hiding)
         {
             Task.current.Fail();
         }
     }
 
     [Task]
-    void GoToTarget() //go destroy stuff
+    void GoToTarget() //go to target
     {
         agent.speed = relaxedSpeed;
         agent.isStopped = false;
+        ReachedTarget = false;
 
-        GameObject target = GameObject.FindGameObjectWithTag("TestAI");
+        bool everythingDestroyed = true;
+        string pianoZone = SceneManager.GetActiveScene().name;
+        List<GameObject> targets = new List<GameObject>();
+        List<bool> targetsStatus = new List<bool>();
+        List<GameObject> potentialTargets = new List<GameObject>();
 
-        agent.SetDestination(new Vector3(target.transform.position.x, target.transform.position.y, target.transform.position.z));
+        //choose list of targets based on scene
+        switch (pianoZone)
+        {
+            case "UpperZonePiano":
+                targets.AddRange(Manager.ManagerInstance.Pins);
+                targetsStatus.AddRange(Manager.ManagerInstance.RepairedPins);
+                break;
+            case "LowerZonePiano":
+                targets.AddRange(Manager.ManagerInstance.Keys);
+                targetsStatus.AddRange(Manager.ManagerInstance.RepairedKeys);
+                break;
+            default:
+                break;
+        }
+
+        //get available targets
+        for (int i = 0; i < targetsStatus.Count; i++)
+        {
+            if (targetsStatus[i])
+            {
+                potentialTargets.Add(targets[i]);
+                everythingDestroyed = false;
+            }
+        }
+
+        //if there are targets everythingDestroyed is false so AI gets a target
+        if (!everythingDestroyed)
+        {
+            Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
+            agent.SetDestination(new Vector3(Target.transform.position.x, Target.transform.position.y, Target.transform.position.z));
+            Task.current.Fail();
+        }
+        else
+        {
+            Task.current.Succeed();
+        }
+        //depending on whether they change zone after everything is destroyed change this
+    }
+
+    [Task]
+    void HasReachedTarget()
+    {
+        if (!ReachedTarget)
+        {
+            Task.current.Succeed();
+        }
+        else
+        {
+            Task.current.Fail();
+        }
+    }
+
+    [Task]
+    void DestroyTarget()
+    {
+        //get status of target
+        PianoComponent target = Target.GetComponent<PianoComponent>();
+
+        if (!target.IsRepaired)
+        {
+            Debug.Log("Target already destroyed.");
+            Task.current.Fail();
+        }
+
+        //play yama destroy animation
+
+        //stop yama destroy animation
+
+        //destroy component
+        if (target.CompareTag("Key"))
+        {
+            target.KeyAnimator.Play("Destroy", 0);
+        }
+        else
+        {
+            target.DestroyComponent();
+        }
 
         Task.current.Succeed();
     }
@@ -114,7 +199,7 @@ public class AIActions : MonoBehaviour
 
     private IEnumerator RunningAway()
     {
-        while (runningAwaySucceded == false)
+        while (!runningAwaySucceded)
         {
             Debug.Log("Running Away...");
             yield return null;
@@ -124,23 +209,28 @@ public class AIActions : MonoBehaviour
     [Task]
     void LookBehind()
     {
-        StartCoroutine(RotateView(0.35f));
+        StartCoroutine(RotateView(1f, 2f)); 
 
         Task.current.Succeed();
     }
 
-    private IEnumerator RotateView(float duration)
+    //this is when the Yama is looking behind to see if Willy is after him
+    private IEnumerator RotateView(float duration, float speed) 
     {
         Quaternion startRotation = Quaternion.Euler(transform.forward);
         Vector3 endRotation = -transform.forward;
         float t = 0.0f;
 
-        while (t < duration)
+        //perform rotation
+        while (t <= duration)
         {
             transform.rotation = Quaternion.Slerp(startRotation, Quaternion.LookRotation(endRotation), t/duration);
+            t += Time.deltaTime * speed;
             yield return null;
-            t += Time.deltaTime;
         }
+
+        //to guarantee that the yama rotates completely
+        transform.rotation = Quaternion.Slerp(startRotation, Quaternion.LookRotation(endRotation), 1); 
     }
 
     [Task]
@@ -156,11 +246,16 @@ public class AIActions : MonoBehaviour
         if (other.CompareTag("HideHole"))
         {
             runningAwaySucceded = true;
-            StartCoroutine(teleportAI());
+            StartCoroutine(TeleportAI());
+        }
+
+        if (other.gameObject == Target)
+        {
+            ReachedTarget = true;
         }
     }
 
-    private IEnumerator teleportAI()
+    private IEnumerator TeleportAI()
     {
         hiding = true;
         int choice = Random.Range(1, hideHoles.Count);

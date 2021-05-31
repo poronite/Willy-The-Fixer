@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PianoComponent : MonoBehaviour
 {
-    private Animator KeyAnimator;
+    public Animator KeyAnimator;
 
     public bool IsRepaired = false;
     public int index = 0;
@@ -19,15 +19,14 @@ public class PianoComponent : MonoBehaviour
     {
         IsRepaired = true;
         Manager.ManagerInstance.RepairedKeys[index] = true;
-        SetRepair();
     }
 
     public void DestroyComponent()
     {
         IsRepaired = false;
         Manager.ManagerInstance.RepairedKeys[index] = false;
-        SetDestroy();
     }
+
 
     //just to guarantee that the models appearance match their status
     public void SetRepair()

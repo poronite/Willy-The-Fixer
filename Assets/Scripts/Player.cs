@@ -137,6 +137,17 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("AI") && isDashing)
         {
             Destroy(collision.gameObject);
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "UpperZonePiano":
+                    Manager.ManagerInstance.NumUpperZoneYamas--;
+                    break;
+                case "LowerZonePiano":
+                    Manager.ManagerInstance.NumLowerZoneYamas--;
+                    break;
+                default:
+                    break;
+            }            
         }
     }
 

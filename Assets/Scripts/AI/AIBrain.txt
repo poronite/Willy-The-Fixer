@@ -3,18 +3,18 @@ tree("Root")
 
 tree("AI")
 	fallback
-		tree("isHiding")
+		tree("IsHiding")
 		tree("HideFromPlayer")
-		tree("GoToTarget")
+		tree("GoDestroy")
 
-tree("isHiding")
+tree("IsHiding")
 	fallback
-		isHiding
+		IsHiding
 		
 
 tree("HideFromPlayer")
 	sequence
-		hasSeenPlayer
+		HasSeenPlayer
 		race
 			HideFromPlayer
 			sequence
@@ -22,13 +22,16 @@ tree("HideFromPlayer")
 				StopRunningAway
 				LookBehind
 				while
-					not isSeeing
+					not IsSeeing
 					sequence
 						Wait 15.0
 						ForgetPlayer
 				
 
-tree("GoToTarget")
-	sequence
+tree("GoDestroy")
+	fallback
 		GoToTarget
+		repeat
+			HasReachedTarget
+		DestroyTarget
 

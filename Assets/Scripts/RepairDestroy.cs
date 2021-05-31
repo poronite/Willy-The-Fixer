@@ -158,11 +158,4 @@ public class RepairDestroy : MonoBehaviour
         CancelRepair();
         KeyStatus.RepairComponent();
     }
-
-    public void CompleteDestroy()
-    {
-        KeyStatus.DestroyComponent();
-        
-        repairProgress = 0.0f;
-    }
 }

@@ -22,14 +22,20 @@ public class Manager : MonoBehaviour
 
     public static Manager ManagerInstance = null;
 
+    public GameObject YamaPrefab;
+
     //the RepairedPins/Keys arrays are used to store the status of the Pins/Keys when going to another scene
     private bool hasEnteredUpperZone = false;
-    public bool[] RepairedPins = new bool[218];
-    public GameObject[] Pins = new GameObject[218];
+    public bool[] RepairedPins = new bool[233];
+    public GameObject[] Pins = new GameObject[233];
+    public int NumUpperZoneYamas;
 
     private bool hasEnteredLowerZone = false;
     public bool[] RepairedKeys = new bool[88]; 
     public GameObject[] Keys = new GameObject[88];
+    public int NumLowerZoneYamas;
+
+    private GameObject[] spawnPoints = new GameObject[2];
 
     #endregion
 
@@ -114,14 +120,14 @@ public class Manager : MonoBehaviour
             case "UpperZonePiano":
                 //pins
                 GameObject.FindGameObjectsWithTag("Pin").CopyTo(Pins, 0);
-                SortPianoComponentsArrays(Pins, RepairedPins, hasEnteredUpperZone);
+                SetupLevel(Pins, RepairedPins, hasEnteredUpperZone, NumUpperZoneYamas);
 
                 hasEnteredUpperZone = true;
                 break;
             case "LowerZonePiano":
                 //keys
                 GameObject.FindGameObjectsWithTag("Key").CopyTo(Keys, 0);
-                SortPianoComponentsArrays(Keys, RepairedKeys, hasEnteredLowerZone);
+                SetupLevel(Keys, RepairedKeys, hasEnteredLowerZone, NumLowerZoneYamas);
 
                 hasEnteredLowerZone = true;
                 break;
@@ -130,7 +136,7 @@ public class Manager : MonoBehaviour
         }
     }
 
-    private void SortPianoComponentsArrays(GameObject[] components, bool[] repairedComponents, bool firstTimeInZone)
+    private void SetupLevel(GameObject[] components, bool[] repairedComponents, bool firstTimeInZone, int numYamas)
     {
         if (!firstTimeInZone) //when entering scene for the first time
         {
@@ -138,7 +144,7 @@ public class Manager : MonoBehaviour
             {
                 PianoComponent componentStats = Keys[i].GetComponent<PianoComponent>();
                 componentStats.index = i;
-                componentStats.IsRepaired = Random.value > 0.3;
+                componentStats.IsRepaired = Random.value > 0.7;
                 if (componentStats.IsRepaired)
                 {
                     repairedComponents[i] = true;
@@ -150,12 +156,26 @@ public class Manager : MonoBehaviour
                     componentStats.SetDestroy();
                 }
             }
+
+            numYamas = 2;
         }
         else //when entering the scene normally
         {
             for (int i = 0; i < components.Length; i++)
             {
                 components[i].GetComponent<PianoComponent>().IsRepaired = repairedComponents[i];
+            }
+        }
+
+        //get spawnPoints
+        GameObject.FindGameObjectsWithTag("SpawnPoint").CopyTo(spawnPoints, 0);
+
+        //spawn the enemies
+        if (numYamas > 0)
+        {
+            for (int i = 0; i < numYamas; i++)
+            {
+                Instantiate(YamaPrefab, spawnPoints[i].transform);
             }
         }
     }
