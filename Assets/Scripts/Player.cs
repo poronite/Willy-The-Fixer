@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -11,28 +9,26 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float acceleration = 0,
     maxSpeed = 0,
-    sprintMultiplier = 0,
     jumpForce = 0,
     groundThreshhold = 5.0f,
     jumpGravityScale = 1.0f,
     fallGravityScale = 1.0f,
-    dashSpeed = 0,
-    dashDuration = 0;
+    rollForce = 0,
+    rollDuration = 0;
 
     private bool onAir = false,
-    isSprinting = false,
-    isDashing = false,
+    isRolling = false,
     isOnStrings = false,
     hasClimbed = false;
 
     private Rigidbody playerRigidbody;
     private Vector2 move;
-    private float dashTimer = 0;
+    private float rollTimer = 0;
     private List<GameObject> nearbyInteractables = new List<GameObject>();
     private GameObject nearestInteractable;
 
     public PlayerInput Input;
-    public GameObject TuneMinigame;
+    public GameObject TuneMinigameUI;
 
     [HideInInspector]
     public string LastInputDevice;
@@ -57,15 +53,11 @@ public class Player : MonoBehaviour
         Input.Player.Move.performed += context => move = context.ReadValue<Vector2>();
         Input.Player.Move.canceled += context => move = Vector2.zero;
 
-        //Sprint
-        Input.Player.Sprint.performed += context => isSprinting = true;
-        Input.Player.Sprint.canceled += context => isSprinting = false;
-
         //Jump
         Input.Player.Jump.performed += context => Jump();
 
-        //Dash/Roll
-        Input.Player.Dash.performed += context => StartDash();
+        //Roll
+        Input.Player.Roll.performed += context => StartRoll();
 
         //Fall
         Input.Player.Descend.performed += context => Descend();
@@ -134,7 +126,7 @@ public class Player : MonoBehaviour
         }
 
         //catch Yama
-        if (collision.gameObject.CompareTag("AI") && isDashing)
+        if (collision.gameObject.CompareTag("AI") && isRolling)
         {
             Destroy(collision.gameObject);
             switch (SceneManager.GetActiveScene().name)
@@ -202,17 +194,10 @@ public class Player : MonoBehaviour
     #region PlayerMechanics
     public void Movement()
     {
-        if (!isDashing) //otherwise the dash would stop too soon
+        if (!isRolling) //otherwise the dash would stop too soon
         {
-            float finalAcceleration = acceleration;
-
-            if (isSprinting)
-            {
-                finalAcceleration *= sprintMultiplier;
-            }
-
             //Set direction and speed of movement
-            Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * finalAcceleration;
+            Vector3 movement = new Vector3(-move.x, 0.0f, -move.y).normalized * acceleration;
 
             //rotate the player to the movement direction
             if (movement != Vector3.zero)
@@ -240,7 +225,7 @@ public class Player : MonoBehaviour
 
     public void Jump()
     {
-        if (!onAir && !isDashing)
+        if (!onAir && !isRolling) //can't jump while rolling
         {
             playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
@@ -263,34 +248,34 @@ public class Player : MonoBehaviour
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
     }
 
-    public void StartDash()
+    public void StartRoll()
     {
-        if (!isDashing && !onAir)
+        if (!isRolling && !onAir) //can't roll while jumping
         {
-            //dash movement
-            playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * dashSpeed, ForceMode.Impulse);
+            //roll movement
+            playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * rollForce, ForceMode.Impulse);
 
-            //start dash timer
-            dashTimer = 0;
-            isDashing = true;
+            //start roll timer
+            rollTimer = 0;
+            isRolling = true;
         }
     }
 
     public void EndDash()
     {
-        if (isDashing)
+        if (isRolling)
         {
             //in the middle of dash
-            dashTimer += Time.deltaTime;
+            rollTimer += Time.deltaTime;
 
-            if (dashTimer >= dashDuration)
+            if (rollTimer >= rollDuration)
             {
                 //end dash
-                Vector3 cancelDash = playerRigidbody.velocity;
-                cancelDash.x = 0.0f;
-                cancelDash.z = 0.0f;
-                playerRigidbody.velocity = cancelDash;
-                isDashing = false;
+                Vector3 cancelRoll = playerRigidbody.velocity;
+                cancelRoll.x = 0.0f;
+                cancelRoll.z = 0.0f;
+                playerRigidbody.velocity = cancelRoll;
+                isRolling = false;
             }
         }
     }
@@ -332,10 +317,10 @@ public class Player : MonoBehaviour
             switch (nearestInteractable.tag)
             {
                 case "Pin":
-                    startTuneMinigame();
+                    TuneMinigame();
                     break;
                 case "Key":
-                    RepairMinigame();
+                    KeyMinigame();
                     break;
                 default:
                     break;
@@ -344,19 +329,18 @@ public class Player : MonoBehaviour
         else
         {
             Debug.Log("Nothing to Interact Found");
-            return;
         }
     }
 
-    private void startTuneMinigame()
+    private void TuneMinigame()
     {
-        TuneMinigame.SetActive(true);
-        TuneMinigame.GetComponent<TuneManager>().TuneMinigame(nearestInteractable);
+        TuneMinigameUI.SetActive(true);
+        TuneMinigameUI.GetComponent<TuneManager>().StartTuneMinigame(nearestInteractable);
     }
 
-    private void RepairMinigame()
+    private void KeyMinigame()
     {
-        nearestInteractable.GetComponent<RepairDestroy>().StartRepairMinigame();
+        nearestInteractable.GetComponent<RepairDestroy>().StartKeyMinigame();
     }
 
     #endregion

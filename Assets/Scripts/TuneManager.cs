@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
@@ -35,7 +34,7 @@ public class TuneManager : MonoBehaviour
     #endregion
 
 
-    public void TuneMinigame(GameObject pin)
+    public void StartTuneMinigame(GameObject pin)
     {
         PinToTune = pin;
 

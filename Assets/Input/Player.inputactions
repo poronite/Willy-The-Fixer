@@ -14,14 +14,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Sprint",
-                    "type": "Button",
-                    "id": "9a990e77-25ad-4823-b093-15786f1c38cb",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "b3b6450f-3cbd-4eee-b6f4-8867e1f6e423",
@@ -30,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Dash",
+                    "name": "Roll",
                     "type": "Button",
                     "id": "8d2cda20-3430-4222-980d-1c121bbae324",
                     "expectedControlType": "Button",
@@ -123,28 +115,6 @@
                 },
                 {
                     "name": "",
-                    "id": "2c6036ab-105d-487e-be4d-5b56d3eee25d",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f2cf8e68-2f5d-458f-9645-ae414de8e532",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "697d306e-ee33-4892-930c-8ccc2167addb",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -172,7 +142,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Dash",
+                    "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -183,7 +153,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Dash",
+                    "action": "Roll",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -878,17 +848,6 @@
                 },
                 {
                     "name": "",
-                    "id": "47cb26d1-92e7-434e-8bcd-6ec1e1a08ffa",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "71d29e5f-8973-4fe6-87e3-351cbe96cca8",
                     "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
@@ -960,17 +919,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "538606d1-0129-4183-8009-fcb2ad2dd97f",
-                    "path": "<Gamepad>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

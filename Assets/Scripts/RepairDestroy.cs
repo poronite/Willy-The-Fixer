@@ -25,7 +25,7 @@ public class RepairDestroy : MonoBehaviour
     private PianoComponent KeyStatus;
     #endregion
 
-    public void StartRepairMinigame()
+    public void StartKeyMinigame()
     {
         KeyStatus = gameObject.GetComponent<PianoComponent>();
         if (!KeyStatus.IsRepaired)
@@ -77,9 +77,14 @@ public class RepairDestroy : MonoBehaviour
 
     private void CancelRepair()
     {
-        StopCoroutine("QuickTimeEvent");
         KeyAnimator.Play("SetDestroy", 0);
-        
+        StopMinigame();       
+    }
+
+    private void StopMinigame()
+    {
+        StopCoroutine("QuickTimeEvent");
+
         Manager.ManagerInstance.ChangeCameraTarget(PlayerInputRef.gameObject);
         Manager.ManagerInstance.ChangeCameraX(0f);
         Manager.ManagerInstance.ChangeCameraY(5f);
@@ -155,7 +160,7 @@ public class RepairDestroy : MonoBehaviour
 
     public void CompleteRepair()
     {
-        CancelRepair();
+        StopMinigame();
         KeyStatus.RepairComponent();
     }
 }

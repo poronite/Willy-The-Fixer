@@ -85,7 +85,6 @@ public class AIActions : MonoBehaviour
         bool everythingDestroyed = true;
         string pianoZone = SceneManager.GetActiveScene().name;
         List<GameObject> targets = new List<GameObject>();
-        List<bool> targetsStatus = new List<bool>();
         List<GameObject> potentialTargets = new List<GameObject>();
 
         //choose list of targets based on scene
@@ -93,20 +92,18 @@ public class AIActions : MonoBehaviour
         {
             case "UpperZonePiano":
                 targets.AddRange(Manager.ManagerInstance.Pins);
-                targetsStatus.AddRange(Manager.ManagerInstance.RepairedPins);
                 break;
             case "LowerZonePiano":
                 targets.AddRange(Manager.ManagerInstance.Keys);
-                targetsStatus.AddRange(Manager.ManagerInstance.RepairedKeys);
                 break;
             default:
                 break;
         }
 
         //get available targets
-        for (int i = 0; i < targetsStatus.Count; i++)
+        for (int i = 0; i < targets.Count; i++)
         {
-            if (targetsStatus[i])
+            if (targets[i].GetComponent<PianoComponent>().IsRepaired)
             {
                 potentialTargets.Add(targets[i]);
                 everythingDestroyed = false;
@@ -117,24 +114,35 @@ public class AIActions : MonoBehaviour
         if (!everythingDestroyed)
         {
             Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
-            agent.SetDestination(new Vector3(Target.transform.position.x, Target.transform.position.y, Target.transform.position.z));
+
+            //in order to guarantee that ReachedTarget becomes true when the AI gets close to the target,
+            //the AI has to move closer to the collider,
+            //which collider it doesn't matter both have similar X,
+            //just need the collider's center's X to add to the target's position
+            //because some keys have pivots far to the object and the collider
+            float targetCollider = Target.GetComponent<BoxCollider>().center.x; 
+
+            Vector3 targetRealPosition = new Vector3(Target.transform.position.x + targetCollider, Target.transform.position.y, Target.transform.position.z);
+
+            agent.SetDestination(targetRealPosition);
             Task.current.Fail();
         }
         else
         {
+            //depending on whether they change zone after everything is destroyed change this
             Task.current.Succeed();
         }
-        //depending on whether they change zone after everything is destroyed change this
     }
 
     [Task]
     void HasReachedTarget()
     {
+        //if not reached target succeed so that the repeat continues
         if (!ReachedTarget)
         {
             Task.current.Succeed();
         }
-        else
+        else //else fail in order to break out of the repeat
         {
             Task.current.Fail();
         }
@@ -146,6 +154,7 @@ public class AIActions : MonoBehaviour
         //get status of target
         PianoComponent target = Target.GetComponent<PianoComponent>();
 
+        //in case target gets destroyed by another yama before being destroyed
         if (!target.IsRepaired)
         {
             Debug.Log("Target already destroyed.");

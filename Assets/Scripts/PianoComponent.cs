@@ -19,6 +19,7 @@ public class PianoComponent : MonoBehaviour
     {
         IsRepaired = true;
         Manager.ManagerInstance.RepairedKeys[index] = true;
+        SetRepair();
         GameObject.FindObjectOfType<Waypoint>().AssignSuggestion();
     }
 
