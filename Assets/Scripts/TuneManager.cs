@@ -30,32 +30,35 @@ public class TuneManager : MonoBehaviour
 
     private bool isCompleted;
 
-    private GameObject PinToTune;
+    private PianoComponent PinStatus;
     #endregion
 
 
     public void StartTuneMinigame(GameObject pin)
     {
-        PinToTune = pin;
+        PinStatus = pin.GetComponent<PianoComponent>();
 
-        SetInputs();
-
-        //setup the tuning session
-        currentNum = Random.Range(minNum, maxNum + 1);
-        isCompleted = false;
-
-        //code to find control scheme in use
-        if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
+        if (!PinStatus.IsRepaired)
         {
-            controller.SetActive(false);
-            mouse.SetActive(true);
-            mouse.GetComponent<Animator>().SetInteger("Input", 0);
-        }
-        else
-        {
-            mouse.SetActive(false);
-            controller.SetActive(true);
-            controller.GetComponent<Animator>().SetInteger("Input", 1);
+            SetInputs();
+
+            //setup the tuning session
+            currentNum = Random.Range(minNum, maxNum + 1);
+            isCompleted = false;
+
+            //code to find control scheme in use
+            if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
+            {
+                controller.SetActive(false);
+                mouse.SetActive(true);
+                mouse.GetComponent<Animator>().SetInteger("Input", 0);
+            }
+            else
+            {
+                mouse.SetActive(false);
+                controller.SetActive(true);
+                controller.GetComponent<Animator>().SetInteger("Input", 1);
+            }
         }
     }
 
@@ -145,7 +148,7 @@ public class TuneManager : MonoBehaviour
     public IEnumerator EndTuneMinigame()
     {
         Debug.Log("Complete");
-        PinToTune.GetComponent<PianoComponent>().RepairComponent();
+        PinStatus.RepairComponent();
 
         playerInputRef.Input.TuneMinigame.Disable();
 

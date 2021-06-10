@@ -11,13 +11,29 @@ public class PianoComponent : MonoBehaviour
     public void RepairComponent()
     {
         IsRepaired = true;
-        Manager.ManagerInstance.RepairedKeys[index] = true;
+        UpdateComponentArray();
+
         FindObjectOfType<Waypoint>().AssignSuggestion();
     }
 
     public void DestroyComponent()
     {
         IsRepaired = false;
-        Manager.ManagerInstance.RepairedKeys[index] = false;
+        UpdateComponentArray();
+    }
+
+    private void UpdateComponentArray()
+    {
+        switch (gameObject.tag)
+        {
+            case "Pin":
+                Manager.ManagerInstance.RepairedPins[index] = IsRepaired;
+                break;
+            case "Key":
+                Manager.ManagerInstance.RepairedKeys[index] = IsRepaired;
+                break;
+            default:
+                break;
+        }
     }
 }

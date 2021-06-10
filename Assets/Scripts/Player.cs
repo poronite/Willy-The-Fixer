@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
 
             //"Climb" the cords by changing y of the player
             Vector3 climbStrings = gameObject.transform.position;
-            climbStrings.y = 15f;
+            climbStrings.y = 2.5f;
             gameObject.transform.position = climbStrings;
 
             //Re-use the Vector3 just to cancel the speed of the jump
@@ -286,7 +286,7 @@ public class Player : MonoBehaviour
         {
             //Same logic as climbing
             Vector3 descendCords = gameObject.transform.position;
-            descendCords.y = 13.5f;
+            descendCords.y = 0.4f;
             gameObject.transform.position = descendCords;
 
             Manager.ManagerInstance.ChangeCameraY(1f); //Change perspetive
@@ -334,8 +334,11 @@ public class Player : MonoBehaviour
 
     private void TuneMinigame()
     {
-        TuneMinigameUI.SetActive(true);
-        TuneMinigameUI.GetComponent<TuneManager>().StartTuneMinigame(nearestInteractable);
+        if (!nearestInteractable.GetComponent<PianoComponent>().IsRepaired)
+        {
+            TuneMinigameUI.SetActive(true);
+            TuneMinigameUI.GetComponent<TuneManager>().StartTuneMinigame(nearestInteractable);
+        }
     }
 
     private void KeyMinigame()
