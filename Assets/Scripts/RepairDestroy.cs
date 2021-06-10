@@ -21,9 +21,14 @@ public class RepairDestroy : MonoBehaviour
 
     private bool fixingFase = false;
     private bool successFase = false;
-    private Animator KeyAnimator;
+    public Animator KeyAnimator;
     private PianoComponent KeyStatus;
     #endregion
+
+    private void Awake()
+    {
+        KeyAnimator = GetComponent<Animator>();
+    }
 
     public void StartKeyMinigame()
     {
@@ -31,7 +36,7 @@ public class RepairDestroy : MonoBehaviour
         if (!KeyStatus.IsRepaired)
         {
             repairProgress = 0.0f;
-            KeyAnimator = GetComponent<Animator>();
+            
             SetInputs();
 
             Manager.ManagerInstance.ChangeCameraTarget(gameObject);
@@ -162,5 +167,16 @@ public class RepairDestroy : MonoBehaviour
     {
         StopMinigame();
         KeyStatus.RepairComponent();
+    }
+
+    //just to guarantee that the models appearance match their status
+    public void SetRepair()
+    {
+        KeyAnimator.Play("SetRepair", 0);
+    }
+
+    public void SetDestroy()
+    {
+        KeyAnimator.Play("SetDestroy", 0);
     }
 }

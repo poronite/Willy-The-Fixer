@@ -33,5 +33,8 @@ tree("GoDestroy")
 		GoToTarget
 		repeat
 			HasReachedTarget
+		ReadyDestroy
+		not
+			Wait 5.0
 		DestroyTarget
 

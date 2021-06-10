@@ -115,7 +115,9 @@ public class Manager : MonoBehaviour
             case "MainMenu":
                 //reset just in case player starts a new game
                 hasEnteredUpperZone = false;
+                NumUpperZoneYamas = 2;
                 hasEnteredLowerZone = false;
+                NumLowerZoneYamas = 2;
                 break;
             case "UpperZonePiano":
                 //pins
@@ -142,22 +144,26 @@ public class Manager : MonoBehaviour
         {
             for (int i = 0; i < components.Length; i++)
             {
-                PianoComponent componentStats = Keys[i].GetComponent<PianoComponent>();
+                PianoComponent componentStats = components[i].GetComponent<PianoComponent>();
                 componentStats.index = i;
                 componentStats.IsRepaired = Random.value > 0.7;
                 if (componentStats.IsRepaired)
                 {
                     repairedComponents[i] = true;
-                    componentStats.SetRepair();
+                    if (components[i].CompareTag("Key"))
+                    {
+                        components[i].GetComponent<RepairDestroy>().SetRepair();
+                    } 
                 }
                 else
                 {
                     repairedComponents[i] = false;
-                    componentStats.SetDestroy();
+                    if (components[i].CompareTag("Key"))
+                    {
+                        components[i].GetComponent<RepairDestroy>().SetDestroy();
+                    }
                 }
             }
-
-            numYamas = 2;
         }
         else //when entering the scene normally
         {

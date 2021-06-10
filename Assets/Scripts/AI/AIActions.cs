@@ -149,6 +149,15 @@ public class AIActions : MonoBehaviour
     }
 
     [Task]
+    void ReadyDestroy()
+    {
+        //play yama destroy animation
+
+        Task.current.Fail();
+    }
+
+
+    [Task]
     void DestroyTarget()
     {
         //get status of target
@@ -161,19 +170,17 @@ public class AIActions : MonoBehaviour
             Task.current.Fail();
         }
 
-        //play yama destroy animation
-
-        //stop yama destroy animation
-
         //destroy component
         if (target.CompareTag("Key"))
         {
-            target.KeyAnimator.Play("Destroy", 0);
+            target.gameObject.GetComponent<RepairDestroy>().KeyAnimator.Play("Destroy", 0);
         }
         else
         {
             target.DestroyComponent();
         }
+
+        //stop yama destroy animation
 
         Task.current.Succeed();
     }

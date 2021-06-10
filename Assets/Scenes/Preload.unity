@@ -406,7 +406,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  NumUpperZoneYamas: 0
+  NumUpperZoneYamas: 2
   RepairedKeys: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Keys:
   - {fileID: 0}
@@ -497,7 +497,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  NumLowerZoneYamas: 0
+  NumLowerZoneYamas: 2
 --- !u!1 &646681241
 GameObject:
   m_ObjectHideFlags: 0
