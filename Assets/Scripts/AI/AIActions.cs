@@ -16,7 +16,7 @@ public class AIActions : MonoBehaviour
     [SerializeField]
     private NavMeshAgent agent = null;
 
-    private bool runningAwaySucceded, hiding;
+    private bool hiding;
     public bool ReachedTarget;
 
     private Transform AIRenderer;
@@ -29,19 +29,6 @@ public class AIActions : MonoBehaviour
         hideHoles.AddRange(GameObject.FindGameObjectsWithTag("HideHole"));
         AIRenderer = gameObject.transform.GetChild(0);
         AICollider = gameObject.GetComponent<CapsuleCollider>();
-    }
-
-    [Task]
-    void HasSeenPlayer()
-    {
-        if (Detection.SeeingPlayer)
-        {
-            Task.current.Succeed();
-        }
-        else
-        {
-            Task.current.Fail();
-        }
     }
 
     [Task]
@@ -115,16 +102,7 @@ public class AIActions : MonoBehaviour
         {
             Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
 
-            //in order to guarantee that ReachedTarget becomes true when the AI gets close to the target,
-            //the AI has to move closer to the collider,
-            //which collider it doesn't matter both have similar X,
-            //just need the collider's center's X to add to the target's position
-            //because some keys have pivots far to the object and the collider
-            float targetCollider = Target.GetComponent<BoxCollider>().center.x; 
-
-            Vector3 targetRealPosition = new Vector3(Target.transform.position.x + targetCollider, Target.transform.position.y, Target.transform.position.z);
-
-            agent.SetDestination(targetRealPosition);
+            agent.SetDestination(Target.GetComponent<PianoComponent>().ComponentRealPosition);
             Task.current.Fail();
         }
         else
@@ -151,6 +129,9 @@ public class AIActions : MonoBehaviour
     [Task]
     void ReadyDestroy()
     {
+        agent.isStopped = true;
+        transform.LookAt(Target.GetComponent<PianoComponent>().ComponentRealPosition);
+
         //play yama destroy animation
 
         Task.current.Fail();
@@ -188,7 +169,7 @@ public class AIActions : MonoBehaviour
     [Task]
     void HideFromPlayer()
     {
-        runningAwaySucceded = false;
+        agent.isStopped = false;
         agent.speed = runAwaySpeed;
 
         float distance = Mathf.Infinity;
@@ -208,18 +189,7 @@ public class AIActions : MonoBehaviour
         Debug.Log($"Hole: {currentHole}");
         agent.SetDestination(hideHoles[currentHole].transform.position);
 
-        StartCoroutine(RunningAway());
-
         Task.current.Succeed();
-    }
-
-    private IEnumerator RunningAway()
-    {
-        while (!runningAwaySucceded)
-        {
-            Debug.Log("Running Away...");
-            yield return null;
-        }
     }
 
     [Task]
@@ -261,7 +231,6 @@ public class AIActions : MonoBehaviour
     {
         if (other.CompareTag("HideHole"))
         {
-            runningAwaySucceded = true;
             StartCoroutine(TeleportAI());
         }
 
@@ -287,6 +256,7 @@ public class AIActions : MonoBehaviour
         AIRenderer.gameObject.SetActive(true);
         AICollider.enabled = true;
         hiding = false;
+        Detection.AwareOfPlayer = false;
 
         yield return null;
     }

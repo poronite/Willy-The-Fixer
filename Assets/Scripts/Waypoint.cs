@@ -10,6 +10,8 @@ public class Waypoint : MonoBehaviour
     [SerializeField] //testing purposes
     private GameObject repairSuggestion = null;
 
+    private Vector3 repairSuggestionPosition;
+
     private void Start()
     {
         AssignSuggestion();
@@ -44,31 +46,46 @@ public class Waypoint : MonoBehaviour
             }
         }
 
+        float lowestDistance = Mathf.Infinity;
+
         //if there's at least something destroyed, suggest something to repair
         if (!everythingRepaired)
         {
-            float lowestDistance = Mathf.Infinity;
-
             foreach (GameObject suggestion in potentialSuggestions)
             {
-                float distanceToObject = (suggestion.transform.position - Player.transform.position).sqrMagnitude;
+                float distanceToObject = (suggestion.GetComponent<PianoComponent>().ComponentRealPosition - Player.transform.position).sqrMagnitude;
 
                 if (distanceToObject < lowestDistance)
                 {
                     lowestDistance = distanceToObject;
                     repairSuggestion = suggestion;
+                    repairSuggestionPosition = repairSuggestion.GetComponent<PianoComponent>().ComponentRealPosition;
                 }
             }
         }
         else
         {
             //suggest to go to the other scene
+            List<GameObject> exits = new List<GameObject>();
+
+            exits.AddRange(GameObject.FindGameObjectsWithTag("Exit"));
+
+            foreach (GameObject exit in exits)
+            {
+                float distanceToExit = (exit.transform.position - Player.transform.position).sqrMagnitude;
+                if (distanceToExit < lowestDistance)
+                {
+                    lowestDistance = distanceToExit;
+                    repairSuggestion = exit;
+                    repairSuggestionPosition = repairSuggestion.transform.position;
+                }
+            }
         }
     }
 
     void Update()
     {
         //the one line of code that gets the work done
-        transform.LookAt(new Vector3(repairSuggestion.transform.position.x, transform.position.y, repairSuggestion.transform.position.z));
+        transform.LookAt(repairSuggestionPosition);
     }
 }

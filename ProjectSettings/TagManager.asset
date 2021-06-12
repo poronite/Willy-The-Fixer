@@ -15,6 +15,7 @@ TagManager:
   - Pin
   - Key
   - SpawnPoint
+  - Pause
   layers:
   - Default
   - TransparentFX

@@ -50,7 +50,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        ChangeScene("LowerZonePiano");
+        ChangeScene("MainMenu");
     }
     #endregion
 

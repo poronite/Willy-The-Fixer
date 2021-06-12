@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158591570}
   - component: {fileID: 158591571}
+  - component: {fileID: 158591572}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -168,6 +169,7 @@ MonoBehaviour:
   fadeOutLoadingScreen: 1
   loadingScreen: {fileID: 1424846007}
   loadingText: {fileID: 646681241}
+  pauseMenu: {fileID: 0}
   canvasLoadingScreen: {fileID: 1424846011}
   YamaPrefab: {fileID: 2668663800737681436, guid: 7a7660e941cff924e9c9bb8496824bb3,
     type: 3}
@@ -498,6 +500,37 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   NumLowerZoneYamas: 2
+--- !u!114 &158591572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158591569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: bbba0fbc1d54ac14eb7ca8df12f1ee1e,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &646681241
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_Color: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

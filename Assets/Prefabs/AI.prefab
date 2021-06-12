@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b5c4689f635db44950130610581dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSightDistance: 50
+  maxSightDistance: 20
   coneOfVision: 100
   SeeingPlayer: 0
   AwareOfPlayer: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Detection: {fileID: 2668663800737681446}
   Target: {fileID: 0}
-  relaxedSpeed: 3
-  runAwaySpeed: 6
+  relaxedSpeed: 2
+  runAwaySpeed: 4
   hidingTime: 8
   agent: {fileID: 2668663800737681440}
   ReachedTarget: 0

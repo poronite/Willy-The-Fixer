@@ -15,12 +15,14 @@ public class PlayerDetection : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //send a raycast in player direction and check if player is in AI field of view
         RaycastHit hit;
 
         Vector3 aiToWilly = (player.transform.position - transform.position).normalized;
+
+        Debug.DrawLine(transform.position, new Vector3(transform.position.x + maxSightDistance, transform.position.y, transform.position.z), Color.red, Time.deltaTime);
 
         if (Physics.Raycast(transform.position, aiToWilly, out hit, maxSightDistance))
         {
@@ -28,10 +30,12 @@ public class PlayerDetection : MonoBehaviour
             {
                 Vector3 aiFront = transform.forward;
 
-                float angle = Vector3.Angle(aiFront, aiToWilly);                                
+                float angle = Vector3.Angle(aiToWilly, aiFront);
+
+                Debug.Log(angle);
 
                 //is AI seeing player?
-                if (angle <= coneOfVision / 2)
+                if (angle <= coneOfVision)
                 {
                     SeeingPlayer = true;
                     AwareOfPlayer = true;

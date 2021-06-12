@@ -14,27 +14,30 @@ tree("IsHiding")
 
 tree("HideFromPlayer")
 	sequence
-		HasSeenPlayer
-		race
-			HideFromPlayer
+		while
+			IsAware
 			sequence
+				HideFromPlayer
 				Wait 10.0
 				StopRunningAway
-				LookBehind
+				LookBehind		
 				while
 					not IsSeeing
 					sequence
 						Wait 15.0
-						ForgetPlayer
+						ForgetPlayer		
+					
 				
 
 tree("GoDestroy")
-	fallback
-		GoToTarget
-		repeat
-			HasReachedTarget
-		ReadyDestroy
-		not
-			Wait 5.0
-		DestroyTarget
+	while
+		not IsAware
+		fallback
+			GoToTarget
+			repeat
+				HasReachedTarget
+			ReadyDestroy
+			not
+				Wait 5.0
+			DestroyTarget
 

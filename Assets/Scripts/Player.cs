@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private bool onAir = false,
     isRolling = false,
     isOnStrings = false,
-    hasClimbed = false;
+    isPaused = false;
 
     private Rigidbody playerRigidbody;
     private Vector2 move;
@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 
     public PlayerInput Input;
     public GameObject TuneMinigameUI;
+    public GameObject PauseMenu;
 
     [HideInInspector]
     public string LastInputDevice;
@@ -68,6 +69,23 @@ public class Player : MonoBehaviour
             LastInputDevice = context.control.device.name;
             Interact();
         };
+
+        Input.Player.Pause.performed += context =>
+        {
+            if (SceneManager.GetActiveScene().name != "MainMenu")
+            {
+                if (isPaused)
+                {
+                    isPaused = false;
+                    ResumeGame();
+                }
+                else
+                {
+                    isPaused = true;
+                    PauseGame();
+                }                
+            }
+        };
     }
 
     private void OnEnable()
@@ -87,10 +105,8 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //When the player jumps to climb the cords
-        if (collision.gameObject.CompareTag("Strings") && !hasClimbed)
+        if (collision.gameObject.CompareTag("Strings") && gameObject.transform.position.y + 0.7f < 1.7f)
         {
-            hasClimbed = true; //this is to prevent the player from bugging
-
             //"Climb" the cords by changing y of the player
             Vector3 climbStrings = gameObject.transform.position;
             climbStrings.y = 2.5f;
@@ -292,8 +308,7 @@ public class Player : MonoBehaviour
             Manager.ManagerInstance.ChangeCameraY(1f); //Change perspetive
 
             onAir = true;
-            isOnStrings = false;
-            hasClimbed = false;
+            isOnStrings = false;            
         }
     }
 
@@ -344,6 +359,17 @@ public class Player : MonoBehaviour
     private void KeyMinigame()
     {
         nearestInteractable.GetComponent<RepairDestroy>().StartKeyMinigame();
+    }
+
+    public void PauseGame()
+    {
+        PauseMenu.SetActive(true);
+        PauseMenu.GetComponent<PauseMenu>().PauseGame();
+    }
+
+    public void ResumeGame()
+    {
+        PauseMenu.GetComponent<PauseMenu>().ResumeGame();
     }
 
     #endregion
