@@ -16,6 +16,8 @@ TagManager:
   - Key
   - SpawnPoint
   - Pause
+  - ChangePerspective
+  - PreventDescend
   layers:
   - Default
   - TransparentFX

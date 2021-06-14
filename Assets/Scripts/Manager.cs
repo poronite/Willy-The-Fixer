@@ -142,14 +142,26 @@ public class Manager : MonoBehaviour
     {
         if (!firstTimeInZone) //when entering scene for the first time
         {
+            int numBrokenParts = 0;
+
             for (int i = 0; i < components.Length; i++)
             {
                 PianoComponent componentStats = components[i].GetComponent<PianoComponent>();
                 componentStats.index = i;
-                componentStats.IsRepaired = Random.value > 0.7;
+
+                if (numBrokenParts == 15)
+                {
+                    componentStats.IsRepaired = Random.value > 0.5;
+                }
+                else
+                {
+                    componentStats.IsRepaired = true;
+                }
+                
                 if (componentStats.IsRepaired)
                 {
                     repairedComponents[i] = true;
+
                     if (components[i].CompareTag("Key"))
                     {
                         components[i].GetComponent<RepairDestroy>().SetRepair();
@@ -157,7 +169,10 @@ public class Manager : MonoBehaviour
                 }
                 else
                 {
+                    numBrokenParts++;
+
                     repairedComponents[i] = false;
+
                     if (components[i].CompareTag("Key"))
                     {
                         components[i].GetComponent<RepairDestroy>().SetDestroy();

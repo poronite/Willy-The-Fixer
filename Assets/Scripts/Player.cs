@@ -19,7 +19,10 @@ public class Player : MonoBehaviour
     private bool onAir = false,
     isRolling = false,
     isOnStrings = false,
+    canDescend = true,
     isPaused = false;
+
+    public bool leavingZone = false;
 
     private Rigidbody playerRigidbody;
     private Vector2 move;
@@ -105,7 +108,7 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //When the player jumps to climb the cords
-        if (collision.gameObject.CompareTag("Strings") && gameObject.transform.position.y + 0.7f < 1.7f)
+        if (collision.gameObject.CompareTag("Strings") && gameObject.transform.position.y + 0.7f < 2.0f)
         {
             //"Climb" the cords by changing y of the player
             Vector3 climbStrings = gameObject.transform.position;
@@ -116,8 +119,6 @@ public class Player : MonoBehaviour
             climbStrings = playerRigidbody.velocity;
             climbStrings.y = 0.0f;
             playerRigidbody.velocity = climbStrings;
-
-            Manager.ManagerInstance.ChangeCameraY(5f);
         }
     }
 
@@ -171,37 +172,66 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
+        switch (other.gameObject.tag)
         {
-            Debug.Log(other.name);
-            nearbyInteractables.Add(other.gameObject);
-        }
-        else if (other.gameObject.CompareTag("Exit"))
-        {
-            Input.Player.Disable();
+            case "Pin":
+            case "Key":
+                nearbyInteractables.Add(other.gameObject);
+                break;
+            case "ChangePerspective":
+                if (leavingZone == false)
+                {
+                    switch (other.name)
+                    {
+                        case "AboveStrings":
+                            Manager.ManagerInstance.ChangeCameraY(5f);
+                            break;
+                        case "BelowStrings":
+                            Manager.ManagerInstance.ChangeCameraY(1f);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                break;
+            case "Exit":
+                leavingZone = true;
 
-            switch (SceneManager.GetActiveScene().name)
-            {
-                case "UpperZonePiano":
-                    Manager.ManagerInstance.GetComponent<Manager>().ChangeScene("LowerZonePiano");
-                    break;
-                case "LowerZonePiano":
-                    Manager.ManagerInstance.GetComponent<Manager>().ChangeScene("UpperZonePiano");
-                    break;
-                default:
-                    break;
-            }
-        }
+                Input.Player.Disable();
 
-        
+                switch (SceneManager.GetActiveScene().name)
+                {
+                    case "UpperZonePiano":
+                        Manager.ManagerInstance.GetComponent<Manager>().ChangeScene("LowerZonePiano");
+                        break;
+                    case "LowerZonePiano":
+                        Manager.ManagerInstance.GetComponent<Manager>().ChangeScene("UpperZonePiano");
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case "PreventDescend":
+                canDescend = false;
+                break;
+            default:
+                break;
+        }        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Pin") || other.gameObject.CompareTag("Key"))
+        switch (other.gameObject.tag)
         {
-            Debug.Log(other.name);
-            nearbyInteractables.Remove(other.gameObject);
+            case "Pin":
+            case "Key":
+                nearbyInteractables.Remove(other.gameObject);
+                break;
+            case "PreventDescend":
+                canDescend = true;
+                break;
+            default:
+                break;
         }
     }
 
@@ -298,14 +328,12 @@ public class Player : MonoBehaviour
 
     public void Descend()
     {
-        if (isOnStrings)
+        if (isOnStrings && canDescend)
         {
             //Same logic as climbing
             Vector3 descendCords = gameObject.transform.position;
             descendCords.y = 0.4f;
             gameObject.transform.position = descendCords;
-
-            Manager.ManagerInstance.ChangeCameraY(1f); //Change perspetive
 
             onAir = true;
             isOnStrings = false;            

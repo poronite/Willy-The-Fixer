@@ -173,10 +173,12 @@ public class RepairDestroy : MonoBehaviour
     public void SetRepair()
     {
         KeyAnimator.Play("SetRepair", 0);
+        KeyStatus.ComponentMaterial.material = KeyStatus.RepairedMaterial;
     }
 
     public void SetDestroy()
     {
         KeyAnimator.Play("SetDestroy", 0);
+        KeyStatus.ComponentMaterial.material = KeyStatus.DestroyedMaterial;
     }
 }

@@ -98,7 +98,8 @@ public class AIActions : MonoBehaviour
         }
 
         //if there are targets everythingDestroyed is false so AI gets a target
-        if (!everythingDestroyed)
+        //the AI moves to another scene if 15 pins or keys are destroyed
+        if (!everythingDestroyed || potentialTargets.Count > targets.Count - 15)
         {
             Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
 
@@ -107,7 +108,11 @@ public class AIActions : MonoBehaviour
         }
         else
         {
-            //depending on whether they change zone after everything is destroyed change this
+            //move to another scene
+            List<GameObject> exits = new List<GameObject>();
+            exits.AddRange(GameObject.FindGameObjectsWithTag("Exit"));
+            Target = exits[Random.Range(0, exits.Count)];
+            agent.SetDestination(Target.transform.position);            
             Task.current.Succeed();
         }
     }
@@ -232,6 +237,25 @@ public class AIActions : MonoBehaviour
         if (other.CompareTag("HideHole"))
         {
             StartCoroutine(TeleportAI());
+        }
+
+        if (other.CompareTag("Exit"))
+        {
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "UpperZonePiano":
+                    Manager.ManagerInstance.NumUpperZoneYamas--;
+                    Manager.ManagerInstance.NumLowerZoneYamas++;
+                    break;
+                case "LowerZonePiano":
+                    Manager.ManagerInstance.NumLowerZoneYamas--;
+                    Manager.ManagerInstance.NumUpperZoneYamas++;
+                    break;
+                default:
+                    break;
+            }
+
+            Destroy(gameObject);
         }
 
         if (other.gameObject == Target)
