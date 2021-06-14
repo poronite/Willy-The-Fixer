@@ -144,12 +144,27 @@ public class Manager : MonoBehaviour
         {
             int numBrokenParts = 0;
 
+            int maxInitialBrokenParts = 0;
+
+            //define maximum number of parts that can break at the start of the game
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "UpperZonePiano":
+                    maxInitialBrokenParts = 15;
+                    break;
+                case "LowerZonePiano":
+                    maxInitialBrokenParts = 5;
+                    break;
+                default:
+                    break;
+            }
+
             for (int i = 0; i < components.Length; i++)
             {
                 PianoComponent componentStats = components[i].GetComponent<PianoComponent>();
                 componentStats.index = i;
 
-                if (numBrokenParts == 15)
+                if (numBrokenParts <= maxInitialBrokenParts)
                 {
                     componentStats.IsRepaired = Random.value > 0.5;
                 }
@@ -165,7 +180,11 @@ public class Manager : MonoBehaviour
                     if (components[i].CompareTag("Key"))
                     {
                         components[i].GetComponent<RepairDestroy>().SetRepair();
-                    } 
+                    }
+                    else
+                    {
+                        componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
+                    }
                 }
                 else
                 {
@@ -177,6 +196,10 @@ public class Manager : MonoBehaviour
                     {
                         components[i].GetComponent<RepairDestroy>().SetDestroy();
                     }
+                    else
+                    {
+                        componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
+                    }
                 }
             }
         }
@@ -184,7 +207,32 @@ public class Manager : MonoBehaviour
         {
             for (int i = 0; i < components.Length; i++)
             {
-                components[i].GetComponent<PianoComponent>().IsRepaired = repairedComponents[i];
+                PianoComponent componentStats = components[i].GetComponent<PianoComponent>();
+                componentStats.index = i;
+                componentStats.IsRepaired = repairedComponents[i];
+
+                if (componentStats.IsRepaired)
+                {
+                    if (components[i].CompareTag("Key"))
+                    {
+                        components[i].GetComponent<RepairDestroy>().SetRepair();
+                    }
+                    else
+                    {
+                        componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
+                    }
+                }
+                else
+                {
+                    if (components[i].CompareTag("Key"))
+                    {
+                        components[i].GetComponent<RepairDestroy>().SetDestroy();
+                    }
+                    else
+                    {
+                        componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
+                    }
+                }
             }
         }
 

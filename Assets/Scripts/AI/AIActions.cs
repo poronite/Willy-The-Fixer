@@ -97,9 +97,24 @@ public class AIActions : MonoBehaviour
             }
         }
 
+        //define maximum number of parts of the piano that the AI can break depending on the scene
+        int limitOfBrokenParts = 0;
+
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "UpperZonePiano":
+                limitOfBrokenParts = 30;
+                break;
+            case "LowerZonePiano":
+                limitOfBrokenParts = 15;
+                break;
+            default:
+                break;
+        }
+
         //if there are targets everythingDestroyed is false so AI gets a target
-        //the AI moves to another scene if 15 pins or keys are destroyed
-        if (!everythingDestroyed || potentialTargets.Count > targets.Count - 15)
+        //the AI moves to another scene if 30 pins or keys are destroyed
+        if (!everythingDestroyed || potentialTargets.Count > potentialTargets.Count - limitOfBrokenParts)
         {
             Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
 

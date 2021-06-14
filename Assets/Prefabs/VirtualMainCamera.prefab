@@ -188,7 +188,7 @@ MonoBehaviour:
   m_CameraRadius: 0.1
   m_Strategy: 1
   m_MaximumEffort: 4
-  m_SmoothingTime: 1.105
-  m_Damping: 2.04
-  m_DampingWhenOccluded: 1.63
+  m_SmoothingTime: 1.058
+  m_Damping: 1.27
+  m_DampingWhenOccluded: 0.59
   m_OptimalTargetDistance: 0

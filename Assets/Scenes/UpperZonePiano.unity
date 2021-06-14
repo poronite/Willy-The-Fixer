@@ -162,6 +162,133 @@ Transform:
   m_Father: {fileID: 799456352}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &173514807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173514808}
+  m_Layer: 0
+  m_Name: ExitLinks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173514808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173514807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 611307169}
+  - {fileID: 1787233611}
+  - {fileID: 1257654389}
+  - {fileID: 301028472}
+  - {fileID: 1899734818}
+  - {fileID: 220529418}
+  - {fileID: 610461681}
+  m_Father: {fileID: 799456352}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &220529417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.083
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.385
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.468
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &220529418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 220529417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &222477386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,6 +618,96 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1001 &301028471
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &301028472 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 301028471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &349491101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -984,6 +1201,186 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6077044598713538994, guid: 80c079507be0b0542aa5a853295469ea,
     type: 3}
   m_PrefabInstance: {fileID: 582963562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &610461680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.708
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.007
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.385
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -33.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &610461681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 610461680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &611307168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &611307169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 611307168}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &616216454 stripped
 MonoBehaviour:
@@ -1820,6 +2217,7 @@ Transform:
   m_Children:
   - {fileID: 636027871}
   - {fileID: 35054344}
+  - {fileID: 173514808}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19379,6 +19777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19435,6 +19836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19491,6 +19895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19547,6 +19954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19603,6 +20013,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19659,6 +20072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19715,6 +20131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19771,6 +20190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19827,6 +20249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19883,6 +20308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19939,6 +20367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -19995,6 +20426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20051,6 +20485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20107,6 +20544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20163,6 +20603,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20219,6 +20662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20275,6 +20721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20331,6 +20780,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20387,6 +20839,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20443,6 +20898,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20499,6 +20957,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20555,6 +21016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20611,6 +21075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20667,6 +21134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20723,6 +21193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20779,6 +21252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20835,6 +21311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20891,6 +21370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -20947,6 +21429,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21003,6 +21488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21059,6 +21547,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21115,6 +21606,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21171,6 +21665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21227,6 +21724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21283,6 +21783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21339,6 +21842,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21395,6 +21901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21451,6 +21960,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21507,6 +22019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21563,6 +22078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21619,6 +22137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21675,6 +22196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21731,6 +22255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21787,6 +22314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21843,6 +22373,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21899,6 +22432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -21955,6 +22491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22011,6 +22550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22067,6 +22609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22123,6 +22668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22179,6 +22727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22235,6 +22786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22291,6 +22845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22347,6 +22904,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22403,6 +22963,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22459,6 +23022,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22515,6 +23081,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22571,6 +23140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22627,6 +23199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22683,6 +23258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22739,6 +23317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22795,6 +23376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22851,6 +23435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22907,6 +23494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -22963,6 +23553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23019,6 +23612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23075,6 +23671,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23131,6 +23730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23187,6 +23789,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23243,6 +23848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23299,6 +23907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23355,6 +23966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23411,6 +24025,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23467,6 +24084,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23523,6 +24143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23579,6 +24202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23635,6 +24261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23691,6 +24320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23747,6 +24379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23803,6 +24438,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23859,6 +24497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23915,6 +24556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -23971,6 +24615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24027,6 +24674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24083,6 +24733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24139,6 +24792,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24195,6 +24851,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24251,6 +24910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24307,6 +24969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24363,6 +25028,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24419,6 +25087,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24475,6 +25146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24531,6 +25205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24587,6 +25264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24643,6 +25323,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24699,6 +25382,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24755,6 +25441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24811,6 +25500,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24867,6 +25559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24923,6 +25618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -24979,6 +25677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25035,6 +25736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25091,6 +25795,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25147,6 +25854,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25203,6 +25913,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25259,6 +25972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25315,6 +26031,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25371,6 +26090,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25427,6 +26149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25483,6 +26208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25539,6 +26267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25595,6 +26326,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25651,6 +26385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25707,6 +26444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25763,6 +26503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25819,6 +26562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25875,6 +26621,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -25972,6 +26721,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26000,6 +26752,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26028,6 +26783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26056,6 +26814,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26084,6 +26845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26112,6 +26876,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26140,6 +26907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26168,6 +26938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26196,6 +26969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26224,6 +27000,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26252,6 +27031,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26280,6 +27062,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26308,6 +27093,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26336,6 +27124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26364,6 +27155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26392,6 +27186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26420,6 +27217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26448,6 +27248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26476,6 +27279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26504,6 +27310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26532,6 +27341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26560,6 +27372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26588,6 +27403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26616,6 +27434,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26644,6 +27465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26672,6 +27496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26700,6 +27527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26728,6 +27558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26756,6 +27589,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26784,6 +27620,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26812,6 +27651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26840,6 +27682,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26868,6 +27713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26896,6 +27744,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26924,6 +27775,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26952,6 +27806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -26980,6 +27837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27008,6 +27868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27036,6 +27899,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27064,6 +27930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27092,6 +27961,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27120,6 +27992,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27148,6 +28023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27176,6 +28054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27204,6 +28085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27232,6 +28116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27260,6 +28147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27288,6 +28178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27316,6 +28209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27344,6 +28240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27372,6 +28271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27400,6 +28302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27428,6 +28333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27456,6 +28364,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27484,6 +28395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27512,6 +28426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27540,6 +28457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27568,6 +28488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27596,6 +28519,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27624,6 +28550,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27652,6 +28581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27680,6 +28612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27708,6 +28643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27736,6 +28674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27764,6 +28705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27792,6 +28736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27820,6 +28767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27848,6 +28798,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27876,6 +28829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27904,6 +28860,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27932,6 +28891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27960,6 +28922,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -27988,6 +28953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28016,6 +28984,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28044,6 +29015,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28072,6 +29046,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28100,6 +29077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28128,6 +29108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28156,6 +29139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28184,6 +29170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28212,6 +29201,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28240,6 +29232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28268,6 +29263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28296,6 +29294,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28324,6 +29325,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28352,6 +29356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28380,6 +29387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28408,6 +29418,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28436,6 +29449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28464,6 +29480,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28492,6 +29511,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28520,6 +29542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28548,6 +29573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28576,6 +29604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28604,6 +29635,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28632,6 +29666,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28660,6 +29697,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28688,6 +29728,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28716,6 +29759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28744,6 +29790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28772,6 +29821,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28800,6 +29852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28828,6 +29883,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28856,6 +29914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28884,6 +29945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28912,6 +29976,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28940,6 +30007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28968,6 +30038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -28996,6 +30069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29024,6 +30100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29052,6 +30131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29080,6 +30162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29108,6 +30193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29136,6 +30224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29164,6 +30255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29192,6 +30286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b93d36f6c9f4c45a9e97b178525a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentMaterial: {fileID: 0}
+  RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
+  DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
   IsRepaired: 0
   index: 0
@@ -29865,6 +30962,96 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
     type: 3}
   m_PrefabInstance: {fileID: 1236263585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1257654388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &1257654389 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1257654388}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1258589967
 PrefabInstance:
@@ -31373,6 +32560,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784060498}
   m_CullTransparentMesh: 0
+--- !u!1001 &1787233610
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &1787233611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1787233610}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1803144734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2428833456862036231, guid: e46f571f0acc03c4bb7e816fc71fde45,
@@ -31532,7 +32809,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887748975}
-  m_LocalRotation: {x: 0.000000034651727, y: -0.973249, z: 0.22975291, w: 0.000000008180165}
+  m_LocalRotation: {x: 0.000000027804555, y: -0.973249, z: 0.22975294, w: -0.000000020824919}
   m_LocalPosition: {x: -11.17, y: 6.594, z: 28.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -31646,6 +32923,96 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
   ListenerNumber: 0
+--- !u!1001 &1899734817
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 173514808}
+    m_Modifications:
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.563
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
+      objectReference: {fileID: 0}
+    - target: {fileID: 307456420132624352, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.826
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.614
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516552701410630051, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+        type: 3}
+      propertyPath: m_Name
+      value: LinkStart (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e02bd1887d6dcc479d8db98b2abab1b, type: 3}
+--- !u!4 &1899734818 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2654954727017046100, guid: 4e02bd1887d6dcc479d8db98b2abab1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1899734817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1921843627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32772,6 +34139,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6788218233497560939, guid: e46f571f0acc03c4bb7e816fc71fde45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6926856409455449333, guid: e46f571f0acc03c4bb7e816fc71fde45,
         type: 3}
       propertyPath: m_Layer
@@ -32845,7 +34217,7 @@ PrefabInstance:
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000034651727
+      value: 0.000000027804555
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
@@ -32855,12 +34227,12 @@ PrefabInstance:
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.22975291
+      value: 0.22975294
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000000008180165
+      value: -0.000000020824919
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
