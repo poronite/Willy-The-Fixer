@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PianoComponent : MonoBehaviour
 {
+    [HideInInspector]
     public MeshRenderer ComponentMaterial;
 
     public Material RepairedMaterial;

@@ -12,7 +12,10 @@ public class RepairDestroy : MonoBehaviour
     [SerializeField]
     private Slider QuickTimeSlider = null;
     [SerializeField]
-    private Image SliderKnob = null;
+    private Image SliderHandle = null;
+
+    [SerializeField]
+    private Sprite SliderNormal = null, SliderGlow = null;
 
     private float repairProgress, 
     timeLeft, 
@@ -21,8 +24,10 @@ public class RepairDestroy : MonoBehaviour
 
     private bool fixingFase = false;
     private bool successFase = false;
-    public Animator KeyAnimator;
     private PianoComponent KeyStatus;
+
+    [HideInInspector]
+    public Animator KeyAnimator;
     #endregion
 
     private void Awake()
@@ -33,6 +38,7 @@ public class RepairDestroy : MonoBehaviour
     public void StartKeyMinigame()
     {
         KeyStatus = gameObject.GetComponent<PianoComponent>();
+
         if (!KeyStatus.IsRepaired)
         {
             repairProgress = 0.0f;
@@ -136,14 +142,14 @@ public class RepairDestroy : MonoBehaviour
             timeLeft -= Time.deltaTime * speed;
             QuickTimeSlider.value = Mathf.Lerp(QuickTimeSlider.value, timeLeft, QuickTimeSlider.value / timeLeft);
 
-            //change color of knob to show that button can be pressed
+            //change sprite of handle to show that button can be pressed
             if (fixingFase && (timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd))
             {
-                SliderKnob.color = Color.green;
+                SliderHandle.sprite = SliderGlow;
             }
             else
             {
-                SliderKnob.color = Color.red;
+                SliderHandle.sprite = SliderNormal;
             }
 
             if (successFase == true)
@@ -173,12 +179,10 @@ public class RepairDestroy : MonoBehaviour
     public void SetRepair()
     {
         KeyAnimator.Play("SetRepair", 0);
-        KeyStatus.ComponentMaterial.material = KeyStatus.RepairedMaterial;
     }
 
     public void SetDestroy()
     {
         KeyAnimator.Play("SetDestroy", 0);
-        KeyStatus.ComponentMaterial.material = KeyStatus.DestroyedMaterial;
     }
 }

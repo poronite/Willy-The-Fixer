@@ -166,6 +166,80 @@ Transform:
   m_Father: {fileID: 332865493}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -1.5, y: 0, z: 0}
+--- !u!1 &63944023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63944024}
+  - component: {fileID: 63944026}
+  - component: {fileID: 63944025}
+  m_Layer: 5
+  m_Name: Slider4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &63944024
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63944023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1661157169}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &63944025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63944023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 24a8fc3cb02e18746b3a5fb79b706779, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &63944026
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63944023}
+  m_CullTransparentMesh: 0
 --- !u!1 &90073562
 GameObject:
   m_ObjectHideFlags: 0
@@ -28098,8 +28172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507061
 MonoBehaviour:
@@ -28117,7 +28193,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507062
 BoxCollider:
@@ -28159,8 +28235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507066
 MonoBehaviour:
@@ -28178,7 +28256,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507067
 BoxCollider:
@@ -28220,8 +28298,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507071
 MonoBehaviour:
@@ -28239,7 +28319,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507072
 BoxCollider:
@@ -28281,8 +28361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507076
 MonoBehaviour:
@@ -28300,7 +28382,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507077
 BoxCollider:
@@ -28342,8 +28424,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507081
 MonoBehaviour:
@@ -28361,7 +28445,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507082
 BoxCollider:
@@ -28403,8 +28487,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507086
 MonoBehaviour:
@@ -28422,7 +28508,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507087
 BoxCollider:
@@ -28464,8 +28550,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507091
 MonoBehaviour:
@@ -28483,7 +28571,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507092
 BoxCollider:
@@ -28525,8 +28613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507096
 MonoBehaviour:
@@ -28544,7 +28634,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507097
 BoxCollider:
@@ -28586,8 +28676,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507101
 MonoBehaviour:
@@ -28605,7 +28697,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507102
 BoxCollider:
@@ -28647,8 +28739,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507106
 MonoBehaviour:
@@ -28666,7 +28760,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507107
 BoxCollider:
@@ -28708,8 +28802,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507111
 MonoBehaviour:
@@ -28727,7 +28823,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507112
 BoxCollider:
@@ -28769,8 +28865,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507116
 MonoBehaviour:
@@ -28788,7 +28886,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507117
 BoxCollider:
@@ -28830,8 +28928,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507121
 MonoBehaviour:
@@ -28849,7 +28949,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507122
 BoxCollider:
@@ -28891,8 +28991,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507126
 MonoBehaviour:
@@ -28910,7 +29012,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507127
 BoxCollider:
@@ -28952,8 +29054,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507131
 MonoBehaviour:
@@ -28971,7 +29075,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507132
 BoxCollider:
@@ -29013,8 +29117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507136
 MonoBehaviour:
@@ -29032,7 +29138,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507137
 BoxCollider:
@@ -29074,8 +29180,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507141
 MonoBehaviour:
@@ -29093,7 +29201,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507142
 BoxCollider:
@@ -29135,8 +29243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507146
 MonoBehaviour:
@@ -29154,7 +29264,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507147
 BoxCollider:
@@ -29196,8 +29306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507151
 MonoBehaviour:
@@ -29215,7 +29327,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507152
 BoxCollider:
@@ -29257,8 +29369,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507156
 MonoBehaviour:
@@ -29276,7 +29390,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507157
 BoxCollider:
@@ -29318,8 +29432,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507161
 MonoBehaviour:
@@ -29337,7 +29453,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507162
 BoxCollider:
@@ -29379,8 +29495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507166
 MonoBehaviour:
@@ -29398,7 +29516,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507167
 BoxCollider:
@@ -29440,8 +29558,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507171
 MonoBehaviour:
@@ -29459,7 +29579,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507172
 BoxCollider:
@@ -29501,8 +29621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507176
 MonoBehaviour:
@@ -29520,7 +29642,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507177
 BoxCollider:
@@ -29562,8 +29684,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507181
 MonoBehaviour:
@@ -29581,7 +29705,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507182
 BoxCollider:
@@ -29623,8 +29747,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507186
 MonoBehaviour:
@@ -29642,7 +29768,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507187
 BoxCollider:
@@ -29684,8 +29810,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507191
 MonoBehaviour:
@@ -29703,7 +29831,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507192
 BoxCollider:
@@ -29745,8 +29873,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507196
 MonoBehaviour:
@@ -29764,7 +29894,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507197
 BoxCollider:
@@ -29806,8 +29936,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507201
 MonoBehaviour:
@@ -29825,7 +29957,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507202
 BoxCollider:
@@ -29867,8 +29999,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507206
 MonoBehaviour:
@@ -29886,7 +30020,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507207
 BoxCollider:
@@ -29928,8 +30062,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507211
 MonoBehaviour:
@@ -29947,7 +30083,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507212
 BoxCollider:
@@ -29989,8 +30125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507216
 MonoBehaviour:
@@ -30008,7 +30146,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507217
 BoxCollider:
@@ -30050,8 +30188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507221
 MonoBehaviour:
@@ -30069,7 +30209,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507222
 BoxCollider:
@@ -30111,8 +30251,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507226
 MonoBehaviour:
@@ -30130,7 +30272,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507227
 BoxCollider:
@@ -30172,8 +30314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507231
 MonoBehaviour:
@@ -30191,7 +30335,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507232
 BoxCollider:
@@ -30233,8 +30377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507236
 MonoBehaviour:
@@ -30252,7 +30398,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507237
 BoxCollider:
@@ -30294,8 +30440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507241
 MonoBehaviour:
@@ -30313,7 +30461,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507242
 BoxCollider:
@@ -30355,8 +30503,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507246
 MonoBehaviour:
@@ -30374,7 +30524,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507247
 BoxCollider:
@@ -30416,8 +30566,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507251
 MonoBehaviour:
@@ -30435,7 +30587,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507252
 BoxCollider:
@@ -30477,8 +30629,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507256
 MonoBehaviour:
@@ -30496,7 +30650,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507257
 BoxCollider:
@@ -30538,8 +30692,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507261
 MonoBehaviour:
@@ -30557,7 +30713,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507262
 BoxCollider:
@@ -30599,8 +30755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507266
 MonoBehaviour:
@@ -30618,7 +30776,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507267
 BoxCollider:
@@ -30660,8 +30818,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507271
 MonoBehaviour:
@@ -30679,7 +30839,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507272
 BoxCollider:
@@ -30721,8 +30881,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507276
 MonoBehaviour:
@@ -30740,7 +30902,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507277
 BoxCollider:
@@ -30782,8 +30944,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507281
 MonoBehaviour:
@@ -30801,7 +30965,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507282
 BoxCollider:
@@ -30843,8 +31007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507286
 MonoBehaviour:
@@ -30862,7 +31028,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507287
 BoxCollider:
@@ -30904,8 +31070,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507291
 MonoBehaviour:
@@ -30923,7 +31091,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507292
 BoxCollider:
@@ -30965,8 +31133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507296
 MonoBehaviour:
@@ -30984,7 +31154,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507297
 BoxCollider:
@@ -31026,8 +31196,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507301
 MonoBehaviour:
@@ -31045,7 +31217,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507302
 BoxCollider:
@@ -31087,8 +31259,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507306
 MonoBehaviour:
@@ -31106,7 +31280,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507307
 BoxCollider:
@@ -31148,8 +31322,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507311
 MonoBehaviour:
@@ -31167,7 +31343,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507312
 BoxCollider:
@@ -31209,8 +31385,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507316
 MonoBehaviour:
@@ -31228,7 +31406,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507317
 BoxCollider:
@@ -31270,8 +31448,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507321
 MonoBehaviour:
@@ -31289,7 +31469,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507322
 BoxCollider:
@@ -31331,8 +31511,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507326
 MonoBehaviour:
@@ -31350,7 +31532,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507327
 BoxCollider:
@@ -31392,8 +31574,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507331
 MonoBehaviour:
@@ -31411,7 +31595,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507332
 BoxCollider:
@@ -31453,8 +31637,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507336
 MonoBehaviour:
@@ -31472,7 +31658,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507337
 BoxCollider:
@@ -31514,8 +31700,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507341
 MonoBehaviour:
@@ -31533,7 +31721,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507342
 BoxCollider:
@@ -31575,8 +31763,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507346
 MonoBehaviour:
@@ -31594,7 +31784,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507347
 BoxCollider:
@@ -31636,8 +31826,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507351
 MonoBehaviour:
@@ -31655,7 +31847,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507352
 BoxCollider:
@@ -31697,8 +31889,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507356
 MonoBehaviour:
@@ -31716,7 +31910,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507357
 BoxCollider:
@@ -31758,8 +31952,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507361
 MonoBehaviour:
@@ -31777,7 +31973,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507362
 BoxCollider:
@@ -31819,8 +32015,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507366
 MonoBehaviour:
@@ -31838,7 +32036,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507367
 BoxCollider:
@@ -31880,8 +32078,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507371
 MonoBehaviour:
@@ -31899,7 +32099,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507372
 BoxCollider:
@@ -31941,8 +32141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507376
 MonoBehaviour:
@@ -31960,7 +32162,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507377
 BoxCollider:
@@ -32002,8 +32204,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507381
 MonoBehaviour:
@@ -32021,7 +32225,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507382
 BoxCollider:
@@ -32063,8 +32267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507386
 MonoBehaviour:
@@ -32082,7 +32288,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507387
 BoxCollider:
@@ -32124,8 +32330,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507391
 MonoBehaviour:
@@ -32143,7 +32351,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507392
 BoxCollider:
@@ -32185,8 +32393,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507396
 MonoBehaviour:
@@ -32204,7 +32414,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507397
 BoxCollider:
@@ -32246,8 +32456,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507401
 MonoBehaviour:
@@ -32265,7 +32477,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507402
 BoxCollider:
@@ -32307,8 +32519,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507406
 MonoBehaviour:
@@ -32326,7 +32540,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507407
 BoxCollider:
@@ -32368,8 +32582,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507411
 MonoBehaviour:
@@ -32387,7 +32603,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507412
 BoxCollider:
@@ -32429,8 +32645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507416
 MonoBehaviour:
@@ -32448,7 +32666,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507417
 BoxCollider:
@@ -32490,8 +32708,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507421
 MonoBehaviour:
@@ -32509,7 +32729,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507422
 BoxCollider:
@@ -32551,8 +32771,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507426
 MonoBehaviour:
@@ -32570,7 +32792,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507427
 BoxCollider:
@@ -32612,8 +32834,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507431
 MonoBehaviour:
@@ -32631,7 +32855,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507432
 BoxCollider:
@@ -32673,8 +32897,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507436
 MonoBehaviour:
@@ -32692,7 +32918,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507437
 BoxCollider:
@@ -32734,8 +32960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507441
 MonoBehaviour:
@@ -32753,7 +32981,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507442
 BoxCollider:
@@ -32795,8 +33023,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507446
 MonoBehaviour:
@@ -32814,7 +33044,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507447
 BoxCollider:
@@ -32856,8 +33086,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507451
 MonoBehaviour:
@@ -32875,7 +33107,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507452
 BoxCollider:
@@ -32917,8 +33149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507456
 MonoBehaviour:
@@ -32936,7 +33170,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507457
 BoxCollider:
@@ -32978,8 +33212,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507461
 MonoBehaviour:
@@ -32997,7 +33233,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507462
 BoxCollider:
@@ -33039,8 +33275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507466
 MonoBehaviour:
@@ -33058,7 +33296,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507467
 BoxCollider:
@@ -33100,8 +33338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507471
 MonoBehaviour:
@@ -33119,7 +33359,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507472
 BoxCollider:
@@ -33161,8 +33401,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507476
 MonoBehaviour:
@@ -33180,7 +33422,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507477
 BoxCollider:
@@ -33222,8 +33464,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507481
 MonoBehaviour:
@@ -33241,7 +33485,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507482
 BoxCollider:
@@ -33283,8 +33527,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507486
 MonoBehaviour:
@@ -33302,7 +33548,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507487
 BoxCollider:
@@ -33344,8 +33590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507491
 MonoBehaviour:
@@ -33363,7 +33611,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507492
 BoxCollider:
@@ -33405,8 +33653,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 598374400}
-  SliderKnob: {fileID: 160187405}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderHandle: {fileID: 1900354295}
+  SliderNormal: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  SliderGlow: {fileID: 21300000, guid: dc178623db9e8554aa4c68f9e0cf1246, type: 3}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507496
 MonoBehaviour:
@@ -33424,7 +33674,7 @@ MonoBehaviour:
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
-  IsRepaired: 1
+  IsRepaired: 0
   index: 0
 --- !u!65 &150507497
 BoxCollider:
@@ -35181,7 +35431,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &160187403
+--- !u!1 &175970449
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35189,55 +35439,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 160187404}
-  - component: {fileID: 160187406}
-  - component: {fileID: 160187405}
+  - component: {fileID: 175970450}
+  - component: {fileID: 175970452}
+  - component: {fileID: 175970451}
   m_Layer: 5
-  m_Name: Handle
+  m_Name: Slider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &160187404
+--- !u!224 &175970450
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160187403}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 175970449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 406425345}
-  m_RootOrder: 0
+  m_Father: {fileID: 1661157169}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &160187405
+--- !u!114 &175970451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160187403}
+  m_GameObject: {fileID: 175970449}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 2e40698d94ed8824195eded6fb985a3c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35247,13 +35497,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &160187406
+--- !u!222 &175970452
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160187403}
+  m_GameObject: {fileID: 175970449}
   m_CullTransparentMesh: 0
 --- !u!1 &190950512
 GameObject:
@@ -35378,42 +35628,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 221966791}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &255310065
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255310066}
-  m_Layer: 5
-  m_Name: Fill Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &255310066
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255310065}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 666709380}
-  m_Father: {fileID: 598374399}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &272793406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6431732160597999394, guid: 513675a4f8d8aee43b6e510805cdb839,
@@ -35557,6 +35771,95 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 346993623}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &363967419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363967420}
+  - component: {fileID: 363967421}
+  m_Layer: 5
+  m_Name: QuickTimeSlider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &363967420
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363967419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_Children:
+  - {fileID: 1784753152}
+  - {fileID: 1661157169}
+  - {fileID: 1450002136}
+  m_Father: {fileID: 604074439}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: 667, y: 127}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &363967421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363967419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 0}
+  m_HandleRect: {fileID: 1900354294}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &391253098
 GameObject:
   m_ObjectHideFlags: 0
@@ -35601,42 +35904,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.237915, y: 1, z: 2.9154441}
   m_Center: {x: 1.2167313, y: -0.0000000021211932, z: -0.95772225}
---- !u!1 &406425344
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 406425345}
-  m_Layer: 5
-  m_Name: Handle Slide Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &406425345
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406425344}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 160187404}
-  m_Father: {fileID: 598374399}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &406961780
 GameObject:
   m_ObjectHideFlags: 0
@@ -40534,6 +40801,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &443890805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443890806}
+  - component: {fileID: 443890808}
+  - component: {fileID: 443890807}
+  m_Layer: 5
+  m_Name: Slider1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &443890806
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443890805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1661157169}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &443890807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443890805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d393487c21620c243b6174e2729efcdb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &443890808
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443890805}
+  m_CullTransparentMesh: 0
 --- !u!1 &444428229
 GameObject:
   m_ObjectHideFlags: 0
@@ -40785,95 +41126,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 17.327503, y: 1, z: 2.9154441}
   m_Center: {x: -3.4508705, y: -0.0000000021211932, z: -0.95772225}
---- !u!1 &598374398
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 598374399}
-  - component: {fileID: 598374400}
-  m_Layer: 5
-  m_Name: QuickTimeSlider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &598374399
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598374398}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1508530569}
-  - {fileID: 255310066}
-  - {fileID: 406425345}
-  m_Father: {fileID: 604074439}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 160, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &598374400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598374398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 0
-  m_TargetGraphic: {fileID: 160187405}
-  m_FillRect: {fileID: 666709380}
-  m_HandleRect: {fileID: 160187404}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 1
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &604074435
 GameObject:
   m_ObjectHideFlags: 0
@@ -40965,7 +41217,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 626219975}
-  - {fileID: 598374399}
+  - {fileID: 363967420}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41014,7 +41266,7 @@ PrefabInstance:
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.83
+      value: -22.27
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
@@ -41029,7 +41281,7 @@ PrefabInstance:
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000014690684
+      value: -0.000000021537856
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
@@ -41039,12 +41291,12 @@ PrefabInstance:
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.22975294
+      value: 0.22975291
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000000023920686
+      value: -0.000000005084399
       objectReference: {fileID: 0}
     - target: {fileID: 4595010143943758811, guid: e92ef6ed193f5ef4aba6d534fcb82c18,
         type: 3}
@@ -41294,80 +41546,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 639070994}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &666709379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 666709380}
-  - component: {fileID: 666709382}
-  - component: {fileID: 666709381}
-  m_Layer: 5
-  m_Name: Fill
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &666709380
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666709379}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 255310066}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &666709381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666709379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &666709382
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666709379}
-  m_CullTransparentMesh: 0
 --- !u!1 &684014713
 GameObject:
   m_ObjectHideFlags: 0
@@ -41453,6 +41631,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &751865316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 751865317}
+  - component: {fileID: 751865319}
+  - component: {fileID: 751865318}
+  m_Layer: 5
+  m_Name: Slider5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &751865317
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751865316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1661157169}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &751865318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751865316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c4f585b0f201fe64abc493ac071aea5e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &751865319
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751865316}
+  m_CullTransparentMesh: 0
 --- !u!1 &773315052
 GameObject:
   m_ObjectHideFlags: 0
@@ -41497,6 +41749,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.8039722, y: 1, z: 1}
   m_Center: {x: 2.6295195, y: 0, z: 0}
+--- !u!1 &897159323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897159324}
+  - component: {fileID: 897159326}
+  - component: {fileID: 897159325}
+  m_Layer: 5
+  m_Name: Slider3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &897159324
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897159323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1661157169}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &897159325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897159323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8de2d2da59c3b984ca103b9b44ec7f94, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &897159326
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897159323}
+  m_CullTransparentMesh: 0
 --- !u!1001 &904371180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42181,8 +42507,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051621207}
-  m_LocalRotation: {x: -0.000000014690684, y: -0.973249, z: 0.22975294, w: 0.000000023920686}
-  m_LocalPosition: {x: -24.83, y: -2.045, z: 40.52}
+  m_LocalRotation: {x: -0.000000021537856, y: -0.973249, z: 0.22975291, w: -0.000000005084399}
+  m_LocalPosition: {x: -22.27, y: -2.045, z: 40.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42879,6 +43205,42 @@ Transform:
   m_Father: {fileID: 332865493}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -1.5, y: 0, z: 0}
+--- !u!1 &1450002135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450002136}
+  m_Layer: 5
+  m_Name: HandleSlideArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1450002136
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450002135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1900354294}
+  m_Father: {fileID: 363967420}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.519989, y: 0}
+  m_SizeDelta: {x: -37.08081, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1491321667
 GameObject:
   m_ObjectHideFlags: 0
@@ -42923,80 +43285,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.527044, y: 1, z: 1}
   m_Center: {x: 1.4246817, y: 0, z: 0}
---- !u!1 &1508530568
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1508530569}
-  - component: {fileID: 1508530571}
-  - component: {fileID: 1508530570}
-  m_Layer: 5
-  m_Name: Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1508530569
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508530568}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 598374399}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1508530570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508530568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1508530571
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508530568}
-  m_CullTransparentMesh: 0
 --- !u!1 &1553988908
 GameObject:
   m_ObjectHideFlags: 0
@@ -43072,7 +43360,7 @@ PrefabInstance:
     - target: {fileID: 2428833456862036231, guid: e46f571f0acc03c4bb7e816fc71fde45,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.83
+      value: -22.27
       objectReference: {fileID: 0}
     - target: {fileID: 2428833456862036231, guid: e46f571f0acc03c4bb7e816fc71fde45,
         type: 3}
@@ -43234,6 +43522,66 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1645711910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1661157168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661157169}
+  - component: {fileID: 1661157170}
+  m_Layer: 5
+  m_Name: SliderAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1661157169
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661157168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 443890806}
+  - {fileID: 175970450}
+  - {fileID: 897159324}
+  - {fileID: 63944024}
+  - {fileID: 751865317}
+  m_Father: {fileID: 363967420}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1661157170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661157168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 163fcf2c89b458342b74a08f8c189262, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1717471021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43358,6 +43706,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1784753151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784753152}
+  - component: {fileID: 1784753154}
+  - component: {fileID: 1784753153}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1784753152
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784753151}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363967420}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1, y: -1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1784753153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784753151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ffddaf977b7ee7b458871c8000ff4e0a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1784753154
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784753151}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1796903641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43570,6 +43992,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.45804024, y: 1, z: 1.4827143}
   m_Center: {x: -1.8156767, y: -0.0000000025112978, z: -1.6741092}
+--- !u!1 &1900354293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900354294}
+  - component: {fileID: 1900354296}
+  - component: {fileID: 1900354295}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1900354294
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900354293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1450002136}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 49, y: -72}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1900354295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900354293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e4e9e5043a0464a4588f15b8071f72e8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1900354296
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900354293}
+  m_CullTransparentMesh: 0
 --- !u!1 &1941496740
 GameObject:
   m_ObjectHideFlags: 0

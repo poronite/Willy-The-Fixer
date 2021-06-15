@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b5c4689f635db44950130610581dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSightDistance: 20
+  maxSightDistance: 15
   coneOfVision: 100
   SeeingPlayer: 0
   AwareOfPlayer: 0

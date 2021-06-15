@@ -114,7 +114,7 @@ public class AIActions : MonoBehaviour
 
         //if there are targets everythingDestroyed is false so AI gets a target
         //the AI moves to another scene if 30 pins or keys are destroyed
-        if (!everythingDestroyed || potentialTargets.Count > potentialTargets.Count - limitOfBrokenParts)
+        if (!everythingDestroyed && potentialTargets.Count > potentialTargets.Count - limitOfBrokenParts)
         {
             Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
 

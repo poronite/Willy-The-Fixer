@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
     fadeOutLoadingScreen = 0.0f;
 
     [SerializeField]
-    private GameObject loadingScreen = null, loadingText = null;
+    private GameObject loadingScreen = null, loadingIcon = null;
 
     [SerializeField]
     private CanvasGroup canvasLoadingScreen = null;
@@ -75,7 +75,7 @@ public class Manager : MonoBehaviour
             yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen));
         }
 
-        loadingText.SetActive(true);
+        loadingIcon.SetActive(true);
 
         //start loading
         AsyncOperation operation = SceneManager.LoadSceneAsync(targetScene);
@@ -84,7 +84,7 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        loadingText.SetActive(false);
+        loadingIcon.SetActive(false);
 
         //end loading and start fading out
         yield return StartCoroutine(FadeLoadingScreen(0, fadeOutLoadingScreen));
@@ -181,10 +181,8 @@ public class Manager : MonoBehaviour
                     {
                         components[i].GetComponent<RepairDestroy>().SetRepair();
                     }
-                    else
-                    {
-                        componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
-                    }
+                    
+                    componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
                 }
                 else
                 {
@@ -196,10 +194,8 @@ public class Manager : MonoBehaviour
                     {
                         components[i].GetComponent<RepairDestroy>().SetDestroy();
                     }
-                    else
-                    {
-                        componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
-                    }
+                    
+                    componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
                 }
             }
         }
@@ -217,10 +213,8 @@ public class Manager : MonoBehaviour
                     {
                         components[i].GetComponent<RepairDestroy>().SetRepair();
                     }
-                    else
-                    {
-                        componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
-                    }
+                    
+                    componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
                 }
                 else
                 {
@@ -228,10 +222,8 @@ public class Manager : MonoBehaviour
                     {
                         components[i].GetComponent<RepairDestroy>().SetDestroy();
                     }
-                    else
-                    {
-                        componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
-                    }
+                    
+                    componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
                 }
             }
         }
