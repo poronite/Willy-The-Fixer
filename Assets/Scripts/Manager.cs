@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
     fadeOutLoadingScreen = 0.0f;
 
     [SerializeField]
-    private GameObject loadingScreen = null, loadingIcon = null;
+    private GameObject loadingScreen = null, loadingIcon = null, gameEnd = null;
 
     [SerializeField]
     private CanvasGroup canvasLoadingScreen = null;
@@ -28,11 +28,13 @@ public class Manager : MonoBehaviour
     private bool hasEnteredUpperZone = false;
     public bool[] RepairedPins = new bool[233];
     public GameObject[] Pins = new GameObject[233];
+    public int NumRepairedPins;
     public int NumUpperZoneYamas;
 
     private bool hasEnteredLowerZone = false;
     public bool[] RepairedKeys = new bool[88]; 
     public GameObject[] Keys = new GameObject[88];
+    public int NumRepairedKeys;
     public int NumLowerZoneYamas;
 
     private GameObject[] spawnPoints = new GameObject[2];
@@ -72,7 +74,7 @@ public class Manager : MonoBehaviour
         }
         else
         {
-            yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen));
+            yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen, canvasLoadingScreen));
         }
 
         loadingIcon.SetActive(true);
@@ -87,25 +89,25 @@ public class Manager : MonoBehaviour
         loadingIcon.SetActive(false);
 
         //end loading and start fading out
-        yield return StartCoroutine(FadeLoadingScreen(0, fadeOutLoadingScreen));
+        yield return StartCoroutine(FadeLoadingScreen(0, fadeOutLoadingScreen, canvasLoadingScreen));
 
         loadingScreen.SetActive(false);
     }
 
-    IEnumerator FadeLoadingScreen(float targetValue, float duration)
+    IEnumerator FadeLoadingScreen(float targetValue, float duration, CanvasGroup uiElement)
     {
-        float startValue = canvasLoadingScreen.alpha;
+        float startValue = uiElement.alpha;
         float time = 0;
 
         while (time < duration)
         {
-            canvasLoadingScreen.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
+            uiElement.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
         //this is here to guarantee that the alpha is 1 (or 0) instead of a very close float value
-        canvasLoadingScreen.alpha = targetValue; 
+        uiElement.alpha = targetValue; 
     }
 
     private void OnSceneChange(Scene destinationScene, LoadSceneMode mode)
@@ -115,8 +117,10 @@ public class Manager : MonoBehaviour
             case "MainMenu":
                 //reset just in case player starts a new game
                 hasEnteredUpperZone = false;
+                NumRepairedPins = 0;
                 NumUpperZoneYamas = 2;
                 hasEnteredLowerZone = false;
+                NumRepairedKeys = 0;
                 NumLowerZoneYamas = 2;
                 break;
             case "UpperZonePiano":
@@ -179,7 +183,12 @@ public class Manager : MonoBehaviour
 
                     if (components[i].CompareTag("Key"))
                     {
+                        NumRepairedKeys++;
                         components[i].GetComponent<RepairDestroy>().SetRepair();
+                    }
+                    else
+                    {
+                        NumRepairedPins++;
                     }
                     
                     componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
@@ -239,6 +248,31 @@ public class Manager : MonoBehaviour
                 Instantiate(YamaPrefab, spawnPoints[i].transform);
             }
         }
+    }
+
+    public IEnumerator GameClear()
+    {
+        loadingScreen.SetActive(true);
+
+        gameEnd.SetActive(true);
+        loadingIcon.SetActive(false);
+
+        canvasLoadingScreen.alpha = 0;
+
+        StartCoroutine(FadeLoadingScreen(1, 1.5f, canvasLoadingScreen));
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync("MainMenu");
+        while (!operation.isDone)
+        {
+            yield return null;
+        }
+
+        StartCoroutine(FadeLoadingScreen(0, 1.5f, canvasLoadingScreen));
+
+        gameEnd.SetActive(false);
+        loadingIcon.SetActive(true);
+
+        loadingScreen.SetActive(false);
     }
     #endregion
 

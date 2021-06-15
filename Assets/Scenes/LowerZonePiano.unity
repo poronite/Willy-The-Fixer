@@ -36849,7 +36849,7 @@ RectTransform:
   - {fileID: 626219975}
   - {fileID: 363967420}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -37259,7 +37259,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &751865316
 GameObject:
@@ -40557,45 +40557,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 150506877}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &3513793348989750580
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3513793350580662026, guid: 20223bd3d404fe243b906ff1a01c49c1,
-        type: 3}
-      propertyPath: m_Name
-      value: DroneTest
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513793350580662026, guid: 20223bd3d404fe243b906ff1a01c49c1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513793350580662132, guid: 20223bd3d404fe243b906ff1a01c49c1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513793350580662132, guid: 20223bd3d404fe243b906ff1a01c49c1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513793350580662132, guid: 20223bd3d404fe243b906ff1a01c49c1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513793350580662132, guid: 20223bd3d404fe243b906ff1a01c49c1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 20223bd3d404fe243b906ff1a01c49c1, type: 3}
 --- !u!1 &3601603819506488598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3601603819376957547, guid: 513675a4f8d8aee43b6e510805cdb839,

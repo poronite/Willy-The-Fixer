@@ -8,7 +8,7 @@ public class PianoComponent : MonoBehaviour
     public MeshRenderer ComponentMaterial;
 
     [SerializeField]
-    private Animator WillyAnimator;
+    private Animator WillyAnimator = null;
 
     public Material RepairedMaterial;
     public Material DestroyedMaterial;
@@ -45,6 +45,10 @@ public class PianoComponent : MonoBehaviour
 
         UpdateComponentArray();
 
+        UpdateNumRepaired();
+
+        IsGameWon();
+
         FindObjectOfType<Waypoint>().AssignSuggestion();
     }
 
@@ -55,6 +59,8 @@ public class PianoComponent : MonoBehaviour
         ComponentMaterial.material = DestroyedMaterial;
 
         UpdateComponentArray();
+
+        UpdateNumRepaired();
     }
 
     private void UpdateComponentArray()
@@ -69,6 +75,43 @@ public class PianoComponent : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    private void UpdateNumRepaired()
+    {
+        switch (gameObject.tag)
+        {
+            case "Pin":
+                if (IsRepaired)
+                {
+                    Manager.ManagerInstance.NumRepairedPins++;
+                }
+                else
+                {
+                    Manager.ManagerInstance.NumRepairedPins--;
+                }
+                break;
+            case "Key":
+                if (IsRepaired)
+                {
+                    Manager.ManagerInstance.NumRepairedKeys++;
+                }
+                else
+                {
+                    Manager.ManagerInstance.NumRepairedKeys--;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void IsGameWon()
+    {
+        if (Manager.ManagerInstance.NumRepairedPins == 233 && Manager.ManagerInstance.NumRepairedKeys == 88)
+        {
+            StartCoroutine(Manager.ManagerInstance.GameClear());
         }
     }
 }

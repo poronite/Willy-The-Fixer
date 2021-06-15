@@ -14,7 +14,7 @@ public class RepairDestroy : MonoBehaviour
     [SerializeField]
     private GameObject SliderGlow = null, EKeyPrompt = null, SquareKeyPrompt = null;
     [SerializeField]
-    private Animator WillyAnimator;
+    private Animator WillyAnimator = null;
 
     private float repairProgress, 
     timeLeft, 
