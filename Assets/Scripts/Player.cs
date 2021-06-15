@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     rollForce = 0,
     rollDuration = 0;
 
-    private bool onAir = false,
+    private bool isMoving = false, 
+    onAir = false,
     isRolling = false,
     isOnStrings = false,
     canDescend = true,
@@ -25,12 +26,14 @@ public class Player : MonoBehaviour
     public bool leavingZone = false;
 
     private Rigidbody playerRigidbody;
+
     private Vector2 move;
     private float rollTimer = 0;
     private List<GameObject> nearbyInteractables = new List<GameObject>();
     private GameObject nearestInteractable;
 
     public PlayerInput Input;
+    public Animator WillyAnimator;
     public GameObject TuneMinigameUI;
     public GameObject PauseMenu;
 
@@ -40,7 +43,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        playerRigidbody = gameObject.GetComponent<Rigidbody>();
+        playerRigidbody = gameObject.GetComponent<Rigidbody>();        
         SetInputs();
     }
 
@@ -55,6 +58,7 @@ public class Player : MonoBehaviour
 
         //Movement
         Input.Player.Move.performed += context => move = context.ReadValue<Vector2>();
+
         Input.Player.Move.canceled += context => move = Vector2.zero;
 
         //Jump
@@ -69,8 +73,11 @@ public class Player : MonoBehaviour
         //Interact
         Input.Player.Interact.performed += context =>
         {
-            LastInputDevice = context.control.device.name;
-            Interact();
+            if (!onAir)
+            {
+                LastInputDevice = context.control.device.name;
+                Interact();
+            }
         };
 
         Input.Player.Pause.performed += context =>
@@ -141,23 +148,6 @@ public class Player : MonoBehaviour
             onAir = false;
             isOnStrings = true;
         }
-
-        //catch Yama
-        if (collision.gameObject.CompareTag("AI") && isRolling)
-        {
-            Destroy(collision.gameObject);
-            switch (SceneManager.GetActiveScene().name)
-            {
-                case "UpperZonePiano":
-                    Manager.ManagerInstance.NumUpperZoneYamas--;
-                    break;
-                case "LowerZonePiano":
-                    Manager.ManagerInstance.NumLowerZoneYamas--;
-                    break;
-                default:
-                    break;
-            }            
-        }
     }
 
     private void OnCollisionExit(Collision collision)
@@ -177,6 +167,23 @@ public class Player : MonoBehaviour
             case "Pin":
             case "Key":
                 nearbyInteractables.Add(other.gameObject);
+                break;
+            case "AI":
+                if (isRolling)
+                {
+                    Destroy(other.gameObject);
+                    switch (SceneManager.GetActiveScene().name)
+                    {
+                        case "UpperZonePiano":
+                            Manager.ManagerInstance.NumUpperZoneYamas--;
+                            break;
+                        case "LowerZonePiano":
+                            Manager.ManagerInstance.NumLowerZoneYamas--;
+                            break;
+                        default:
+                            break;
+                    }
+                }
                 break;
             case "ChangePerspective":
                 if (leavingZone == false)
@@ -248,8 +255,16 @@ public class Player : MonoBehaviour
             //rotate the player to the movement direction
             if (movement != Vector3.zero)
             {
+                isMoving = true;
                 playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.3f);
+                //playerRigidbody.rotation = Quaternion.LookRotation(movement);
             }
+            else
+            {
+                isMoving = false;
+            }
+
+            WillyAnimator.SetBool("isMoving", isMoving);
 
             //move the player
             playerRigidbody.AddForce(movement);
@@ -273,6 +288,7 @@ public class Player : MonoBehaviour
     {
         if (!onAir && !isRolling) //can't jump while rolling
         {
+            WillyAnimator.SetTrigger("Jump");            
             playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
@@ -289,7 +305,11 @@ public class Player : MonoBehaviour
         if (playerRigidbody.velocity.y < 0)
         {
             gravity *= fallGravityScale;
+            WillyAnimator.ResetTrigger("Jump"); //the trigger takes too long to reset without this, why???
         }
+
+        WillyAnimator.SetFloat("VelocityY", playerRigidbody.velocity.y);
+        WillyAnimator.SetBool("OnAir", onAir);
 
         playerRigidbody.AddForce(gravity, ForceMode.Acceleration);
     }
@@ -298,6 +318,8 @@ public class Player : MonoBehaviour
     {
         if (!isRolling && !onAir) //can't roll while jumping
         {
+            WillyAnimator.Play("Run", 0);
+            WillyAnimator.SetTrigger("Roll");
             //roll movement
             playerRigidbody.AddForce(new Vector3(-move.x, 0.0f, -move.y) * rollForce, ForceMode.Impulse);
 
@@ -386,7 +408,7 @@ public class Player : MonoBehaviour
 
     private void KeyMinigame()
     {
-        nearestInteractable.GetComponent<RepairDestroy>().StartKeyMinigame();
+        nearestInteractable.GetComponent<RepairDestroy>().StartKeyMinigame(LastInputDevice);
     }
 
     public void PauseGame()

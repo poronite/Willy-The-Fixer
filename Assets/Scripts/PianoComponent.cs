@@ -7,6 +7,9 @@ public class PianoComponent : MonoBehaviour
     [HideInInspector]
     public MeshRenderer ComponentMaterial;
 
+    [SerializeField]
+    private Animator WillyAnimator;
+
     public Material RepairedMaterial;
     public Material DestroyedMaterial;
 
@@ -37,6 +40,8 @@ public class PianoComponent : MonoBehaviour
         IsRepaired = true;
 
         ComponentMaterial.material = RepairedMaterial;
+
+        WillyAnimator.SetTrigger("StopRepair");
 
         UpdateComponentArray();
 

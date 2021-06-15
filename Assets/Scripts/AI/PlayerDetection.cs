@@ -23,7 +23,7 @@ public class PlayerDetection : MonoBehaviour
         Vector3 aiTruePosition = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         Vector3 aiToWilly = (new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z) - aiTruePosition).normalized;
 
-        Debug.DrawRay(aiTruePosition, aiToWilly + new Vector3(0, 0, maxSightDistance), Color.red, Time.deltaTime);
+        //Debug.DrawRay(aiTruePosition, aiToWilly + new Vector3(0, 0, maxSightDistance), Color.red, Time.deltaTime);
 
         if (Physics.Raycast(aiTruePosition, aiToWilly, out hit, maxSightDistance))
         {

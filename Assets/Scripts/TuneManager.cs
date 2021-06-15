@@ -22,7 +22,7 @@ public class TuneManager : MonoBehaviour
     private Image waveImage = null, circleImage = null;
     
     [SerializeField]
-    private Animator waveAnimator = null;
+    private Animator waveAnimator = null, WillyAnimator = null;
 
     private float currentNum, //value that the player will be moving
     rangeNum, //distance between currentNum and targetNum
@@ -45,6 +45,9 @@ public class TuneManager : MonoBehaviour
             //setup the tuning session
             currentNum = Random.Range(minNum, maxNum + 1);
             isCompleted = false;
+
+            WillyAnimator.Play("StartFix", 0);
+            playerInputRef.transform.LookAt(new Vector3(PinStatus.ComponentRealPosition.x, playerInputRef.transform.position.y, PinStatus.ComponentRealPosition.z));
 
             //code to find control scheme in use
             if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
@@ -152,6 +155,7 @@ public class TuneManager : MonoBehaviour
 
         playerInputRef.Input.TuneMinigame.Disable();
 
+        WillyAnimator.SetTrigger("StopRepair");
         if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
         {
             yield return new WaitForSeconds(2.0f);

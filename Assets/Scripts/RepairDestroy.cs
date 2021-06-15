@@ -12,10 +12,9 @@ public class RepairDestroy : MonoBehaviour
     [SerializeField]
     private Slider QuickTimeSlider = null;
     [SerializeField]
-    private Image SliderHandle = null;
-
+    private GameObject SliderGlow = null, EKeyPrompt = null, SquareKeyPrompt = null;
     [SerializeField]
-    private Sprite SliderNormal = null, SliderGlow = null;
+    private Animator WillyAnimator;
 
     private float repairProgress, 
     timeLeft, 
@@ -25,6 +24,9 @@ public class RepairDestroy : MonoBehaviour
     private bool fixingFase = false;
     private bool successFase = false;
     private PianoComponent KeyStatus;
+    
+
+    private string deviceInUse;
 
     [HideInInspector]
     public Animator KeyAnimator;
@@ -35,8 +37,10 @@ public class RepairDestroy : MonoBehaviour
         KeyAnimator = GetComponent<Animator>();
     }
 
-    public void StartKeyMinigame()
+    public void StartKeyMinigame(string device)
     {
+        deviceInUse = device;
+
         KeyStatus = gameObject.GetComponent<PianoComponent>();
 
         if (!KeyStatus.IsRepaired)
@@ -44,6 +48,9 @@ public class RepairDestroy : MonoBehaviour
             repairProgress = 0.0f;
             
             SetInputs();
+
+            WillyAnimator.Play("StartFix", 0);
+            PlayerInputRef.transform.LookAt(new Vector3(KeyStatus.ComponentRealPosition.x, PlayerInputRef.transform.position.y, KeyStatus.ComponentRealPosition.z));
 
             Manager.ManagerInstance.ChangeCameraTarget(gameObject);
             Manager.ManagerInstance.ChangeCameraX(3f);
@@ -100,6 +107,8 @@ public class RepairDestroy : MonoBehaviour
         Manager.ManagerInstance.ChangeCameraX(0f);
         Manager.ManagerInstance.ChangeCameraY(5f);
 
+        WillyAnimator.SetTrigger("StopRepair");
+
         QuickTimeSlider.gameObject.SetActive(false);
         PlayerInputRef.Input.RepairMinigame.Disable();
         PlayerInputRef.Input.Player.Enable();
@@ -142,14 +151,27 @@ public class RepairDestroy : MonoBehaviour
             timeLeft -= Time.deltaTime * speed;
             QuickTimeSlider.value = Mathf.Lerp(QuickTimeSlider.value, timeLeft, QuickTimeSlider.value / timeLeft);
 
-            //change sprite of handle to show that button can be pressed
-            if (fixingFase && (timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd))
+            //activate glow of handle to show that it's time to repair
+            //button sprite also changes to show the player which button to press depending on device
+            if (fixingFase && timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd)
             {
-                SliderHandle.sprite = SliderGlow;
+                SliderGlow.SetActive(true);
+
+                if (deviceInUse == "Mouse" || deviceInUse == "Keyboard")
+                {
+                    EKeyPrompt.SetActive(true);
+                }
+                else
+                {
+                    SquareKeyPrompt.SetActive(true);
+                }
             }
             else
             {
-                SliderHandle.sprite = SliderNormal;
+                SliderGlow.SetActive(false);
+
+                EKeyPrompt.SetActive(false);
+                SquareKeyPrompt.SetActive(false);
             }
 
             if (successFase == true)

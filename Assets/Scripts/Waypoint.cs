@@ -86,6 +86,7 @@ public class Waypoint : MonoBehaviour
     void Update()
     {
         //the one line of code that gets the work done
-        transform.LookAt(repairSuggestionPosition);
+        //in the y axis it's transform.position.y because I want the waypoint always flat
+        transform.LookAt(new Vector3(repairSuggestionPosition.x, transform.position.y, repairSuggestionPosition.z));
     }
 }
