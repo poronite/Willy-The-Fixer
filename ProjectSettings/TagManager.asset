@@ -15,9 +15,9 @@ TagManager:
   - Pin
   - Key
   - SpawnPoint
-  - Pause
   - ChangePerspective
   - PreventDescend
+  - EnemyCount
   layers:
   - Default
   - TransparentFX

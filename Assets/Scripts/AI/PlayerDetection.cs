@@ -38,6 +38,13 @@ public class PlayerDetection : MonoBehaviour
                 //is AI seeing player?
                 if (angle <= coneOfVision / 2)
                 {
+                    Player tutorial = player.GetComponent<Player>();
+
+                    if (tutorial.Tutorial != null && Manager.ManagerInstance.RollTutorialDone == false)
+                    {
+                        tutorial.Tutorial.ActivateTutorial(tutorial.Tutorial.RightMouse, tutorial.Tutorial.Circle);
+                    }
+
                     SeeingPlayer = true;
                     AwareOfPlayer = true;
                 }

@@ -37,6 +37,12 @@ public class Manager : MonoBehaviour
     public int NumRepairedKeys;
     public int NumLowerZoneYamas;
 
+    public bool MovementTutorialDone = false, 
+    RollTutorialDone = false, 
+    JumpTutorialDone = false, 
+    DescendTutorialDone = false, 
+    InteractTutorialDone = false;
+
     private GameObject[] spawnPoints = new GameObject[2];
 
     #endregion
@@ -122,6 +128,11 @@ public class Manager : MonoBehaviour
                 hasEnteredLowerZone = false;
                 NumRepairedKeys = 0;
                 NumLowerZoneYamas = 2;
+                MovementTutorialDone = false;
+                RollTutorialDone = false;
+                JumpTutorialDone = false;
+                DescendTutorialDone = false;
+                InteractTutorialDone = false;
                 break;
             case "UpperZonePiano":
                 //pins
@@ -144,6 +155,10 @@ public class Manager : MonoBehaviour
 
     private void SetupLevel(GameObject[] components, bool[] repairedComponents, bool firstTimeInZone, int numYamas)
     {
+        GameUI enemyCount = GameObject.FindGameObjectWithTag("EnemyCount").transform.GetChild(0).GetComponent<GameUI>();
+
+        enemyCount.UpdateEnemyCountUI(numYamas);
+
         if (!firstTimeInZone) //when entering scene for the first time
         {
             int numBrokenParts = 0;

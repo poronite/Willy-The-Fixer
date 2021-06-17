@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class Player : MonoBehaviour
     public Animator WillyAnimator;
     public GameObject TuneMinigameUI;
     public GameObject PauseMenu;
+    public GameUI EnemyCount;
+    public UITutorial Tutorial;
 
     [HideInInspector]
     public string LastInputDevice;
@@ -43,6 +46,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        CheckDefaultInputDevice();
         playerRigidbody = gameObject.GetComponent<Rigidbody>();        
         SetInputs();
     }
@@ -57,18 +61,48 @@ public class Player : MonoBehaviour
         Input.RepairMinigame.Disable();
 
         //Movement
-        Input.Player.Move.performed += context => move = context.ReadValue<Vector2>();
+        Input.Player.Move.performed += context =>
+        {
+            LastInputDevice = context.control.device.name;
 
-        Input.Player.Move.canceled += context => move = Vector2.zero;
+            if (Tutorial != null)
+            {             
+                Manager.ManagerInstance.MovementTutorialDone = true;
+                Tutorial.DeactivateTutorial(Tutorial.WASD, Tutorial.LeftStick);
+            }
+
+            move = context.ReadValue<Vector2>();
+        };
+
+        Input.Player.Move.canceled += context =>
+        {
+            LastInputDevice = context.control.device.name;
+            move = Vector2.zero;
+        };
 
         //Jump
-        Input.Player.Jump.performed += context => Jump();
+        Input.Player.Jump.performed += context =>
+        {
+            LastInputDevice = context.control.device.name;
+
+            Jump();
+        };
 
         //Roll
-        Input.Player.Roll.performed += context => StartRoll();
+        Input.Player.Roll.performed += context =>
+        {
+            LastInputDevice = context.control.device.name;
+
+            StartRoll();
+        };
 
         //Fall
-        Input.Player.Descend.performed += context => Descend();
+        Input.Player.Descend.performed += context =>
+        {
+            LastInputDevice = context.control.device.name;
+
+            Descend();
+        };
 
         //Interact
         Input.Player.Interact.performed += context =>
@@ -76,12 +110,15 @@ public class Player : MonoBehaviour
             if (!onAir)
             {
                 LastInputDevice = context.control.device.name;
+
                 Interact();
             }
         };
 
         Input.Player.Pause.performed += context =>
         {
+            LastInputDevice = context.control.device.name;
+
             if (SceneManager.GetActiveScene().name != "MainMenu")
             {
                 if (isPaused)
@@ -106,6 +143,20 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         Input.Player.Disable();        
+    }
+
+    private void CheckDefaultInputDevice()
+    {
+        Gamepad gamepad = Gamepad.current;
+
+        if (gamepad != null)
+        {
+            LastInputDevice = "Gamepad";
+        }
+        else
+        {
+            LastInputDevice = "Keyboard";
+        }
     }
 
     #endregion
@@ -145,6 +196,11 @@ public class Player : MonoBehaviour
         //When the player is on the cords
         if (collision.gameObject.CompareTag("Strings"))
         {
+            if (Tutorial != null && canDescend == true && Manager.ManagerInstance.DescendTutorialDone == false)
+            {
+                Tutorial.ActivateTutorial(Tutorial.CTRL, Tutorial.DPadDown);
+            }
+
             onAir = false;
             isOnStrings = true;
         }
@@ -166,7 +222,14 @@ public class Player : MonoBehaviour
         {
             case "Pin":
             case "Key":
-                nearbyInteractables.Add(other.gameObject);
+                if (Tutorial != null && other.gameObject.GetComponent<PianoComponent>().IsRepaired == false && Manager.ManagerInstance.InteractTutorialDone == false)
+                {
+                    Tutorial.ActivateTutorial(Tutorial.E, Tutorial.Square);
+                }
+                if (other.GetComponent<PianoComponent>().IsRepaired == false)
+                {
+                    nearbyInteractables.Add(other.gameObject);
+                }
                 break;
             case "AI":
                 if (isRolling)
@@ -176,9 +239,11 @@ public class Player : MonoBehaviour
                     {
                         case "UpperZonePiano":
                             Manager.ManagerInstance.NumUpperZoneYamas--;
+                            EnemyCount.UpdateEnemyCountUI(Manager.ManagerInstance.NumUpperZoneYamas);
                             break;
                         case "LowerZonePiano":
                             Manager.ManagerInstance.NumLowerZoneYamas--;
+                            EnemyCount.UpdateEnemyCountUI(Manager.ManagerInstance.NumLowerZoneYamas);
                             break;
                         default:
                             break;
@@ -194,6 +259,10 @@ public class Player : MonoBehaviour
                             Manager.ManagerInstance.ChangeCameraY(5f);
                             break;
                         case "BelowStrings":
+                            if (Tutorial != null && Manager.ManagerInstance.JumpTutorialDone == false)
+                            {
+                                Tutorial.ActivateTutorial(Tutorial.Space, Tutorial.X);
+                            }
                             Manager.ManagerInstance.ChangeCameraY(1f);
                             break;
                         default:
@@ -232,7 +301,14 @@ public class Player : MonoBehaviour
         {
             case "Pin":
             case "Key":
-                nearbyInteractables.Remove(other.gameObject);
+                if (nearbyInteractables.Contains(other.gameObject))
+                {
+                    nearbyInteractables.Remove(other.gameObject);
+                }
+                if (Tutorial != null && nearbyInteractables.Count == 0)
+                {
+                    Tutorial.DeactivateTutorial(Tutorial.E, Tutorial.Square);
+                }
                 break;
             case "PreventDescend":
                 canDescend = true;
@@ -288,6 +364,12 @@ public class Player : MonoBehaviour
     {
         if (!onAir && !isRolling) //can't jump while rolling
         {
+            if (Tutorial != null)
+            {                
+                Manager.ManagerInstance.JumpTutorialDone = true;
+                Tutorial.DeactivateTutorial(Tutorial.Space, Tutorial.X);
+            }
+
             WillyAnimator.SetTrigger("Jump");            
             playerRigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
@@ -318,6 +400,12 @@ public class Player : MonoBehaviour
     {
         if (!isRolling && !onAir) //can't roll while jumping
         {
+            if (Tutorial != null)
+            {
+                Manager.ManagerInstance.RollTutorialDone = true;
+                Tutorial.DeactivateTutorial(Tutorial.RightMouse, Tutorial.Circle);
+            }
+
             WillyAnimator.Play("Run", 0);
             WillyAnimator.SetTrigger("Roll");
             //roll movement
@@ -352,6 +440,12 @@ public class Player : MonoBehaviour
     {
         if (isOnStrings && canDescend)
         {
+            if (Tutorial != null)
+            {
+                Manager.ManagerInstance.DescendTutorialDone = true;
+                Tutorial.DeactivateTutorial(Tutorial.CTRL, Tutorial.DPadDown);
+            }
+
             //Same logic as climbing
             Vector3 descendCords = gameObject.transform.position;
             descendCords.y = 0.4f;
@@ -401,6 +495,12 @@ public class Player : MonoBehaviour
     {
         if (!nearestInteractable.GetComponent<PianoComponent>().IsRepaired)
         {
+            if (Tutorial != null)
+            {
+                Manager.ManagerInstance.InteractTutorialDone = true;
+                Tutorial.DeactivateTutorial(Tutorial.E, Tutorial.Square);
+            }
+
             TuneMinigameUI.SetActive(true);
             TuneMinigameUI.GetComponent<TuneManager>().StartTuneMinigame(nearestInteractable);
         }

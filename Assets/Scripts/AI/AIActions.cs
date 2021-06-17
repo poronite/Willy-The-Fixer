@@ -16,16 +16,21 @@ public class AIActions : MonoBehaviour
     [SerializeField]
     private NavMeshAgent agent = null;
 
+    [SerializeField]
+    private Animator YamaAnimator = null;
+
     private bool hiding;
     public bool ReachedTarget;
 
     private Transform AIRenderer;
     private CapsuleCollider AICollider;
+    private GameUI EnemyCountUI;
 
     private List<GameObject> hideHoles = new List<GameObject>();
 
     private void Awake()
     {
+        EnemyCountUI = GameObject.FindGameObjectWithTag("EnemyCount").transform.GetChild(0).GetComponent<GameUI>();
         hideHoles.AddRange(GameObject.FindGameObjectsWithTag("HideHole"));
         AIRenderer = gameObject.transform.GetChild(0);
         AICollider = gameObject.GetComponent<CapsuleCollider>();
@@ -119,6 +124,7 @@ public class AIActions : MonoBehaviour
             Target = potentialTargets[Random.Range(0, potentialTargets.Count)];
 
             agent.SetDestination(Target.GetComponent<PianoComponent>().ComponentRealPosition);
+            YamaAnimator.Play("GoToTarget", 0);
             Task.current.Fail();
         }
         else
@@ -127,7 +133,8 @@ public class AIActions : MonoBehaviour
             List<GameObject> exits = new List<GameObject>();
             exits.AddRange(GameObject.FindGameObjectsWithTag("Exit"));
             Target = exits[Random.Range(0, exits.Count)];
-            agent.SetDestination(Target.transform.position);            
+            agent.SetDestination(Target.transform.position);
+            YamaAnimator.Play("GoToTarget", 0);
             Task.current.Succeed();
         }
     }
@@ -153,6 +160,7 @@ public class AIActions : MonoBehaviour
         transform.LookAt(Target.GetComponent<PianoComponent>().ComponentRealPosition);
 
         //play yama destroy animation
+        YamaAnimator.Play("DestroyTarget", 0);
 
         Task.current.Fail();
     }
@@ -182,6 +190,7 @@ public class AIActions : MonoBehaviour
         }
 
         //stop yama destroy animation
+        YamaAnimator.Play("LookAware", 0);
 
         Task.current.Succeed();
     }
@@ -191,6 +200,8 @@ public class AIActions : MonoBehaviour
     {
         agent.isStopped = false;
         agent.speed = runAwaySpeed;
+
+        YamaAnimator.Play("RunAway", 0);
 
         float distance = Mathf.Infinity;
         int currentHole = 0;
@@ -261,10 +272,12 @@ public class AIActions : MonoBehaviour
                 case "UpperZonePiano":
                     Manager.ManagerInstance.NumUpperZoneYamas--;
                     Manager.ManagerInstance.NumLowerZoneYamas++;
+                    EnemyCountUI.UpdateEnemyCountUI(Manager.ManagerInstance.NumUpperZoneYamas);
                     break;
                 case "LowerZonePiano":
                     Manager.ManagerInstance.NumLowerZoneYamas--;
                     Manager.ManagerInstance.NumUpperZoneYamas++;
+                    EnemyCountUI.UpdateEnemyCountUI(Manager.ManagerInstance.NumLowerZoneYamas);
                     break;
                 default:
                     break;
