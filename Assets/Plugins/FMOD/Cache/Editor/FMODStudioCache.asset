@@ -127,6 +127,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-8269993410807108497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Key Minigame/Repair Complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Key Minigame/Repair Complete
+  guid: b6a286c17af27447affd357b6677cb42
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-7878194954411789357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,15 +206,15 @@ MonoBehaviour:
   m_Name: event:/SFX/Key Minigame/Quick Time Event Success
   m_EditorClassIdentifier: 
   Path: event:/SFX/Key Minigame/Quick Time Event Success
-  guid: f19b68f49c1d71449cb09505d38e8ad2
+  guid: 278da801cb14a04b89f59cda3d0fdc44
   Banks:
   - {fileID: -2977450508564659972}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &-6992216365127826159
 MonoBehaviour:
@@ -212,7 +235,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6976302063788512372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +441,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4778967586541706664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +565,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3920289265969629183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Testing Pin/PinTest
+  m_EditorClassIdentifier: 
+  Name: PinTest
+  Min: -4
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-3860656584280507992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,7 +725,7 @@ MonoBehaviour:
   Path: Assets/AudioFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637595571647280590
+  lastModified: 637595586446601865
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -809,6 +852,26 @@ MonoBehaviour:
     data1: 1522990327
     data2: 727961656
   Exists: 0
+--- !u!114 &-1527355689862549250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1397408549106500774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,11 +947,11 @@ MonoBehaviour:
   Path: Assets/AudioFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637595571647320713
+  lastModified: 637595586446641995
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1514
+    Value: 1502
   Exists: 1
 --- !u!114 &-887132694957184232
 MonoBehaviour:
@@ -995,7 +1058,6 @@ MonoBehaviour:
   - {fileID: 2796832418932645708}
   - {fileID: -7878194954411789357}
   - {fileID: 9118373339458623852}
-  - {fileID: 7863136360438290167}
   - {fileID: -5647662689936756088}
   - {fileID: 6449141800129039931}
   - {fileID: -3109223169353039257}
@@ -1004,12 +1066,13 @@ MonoBehaviour:
   - {fileID: 4222485274162165902}
   - {fileID: -7511389588095561607}
   - {fileID: 2753980118763981792}
+  - {fileID: -8269993410807108497}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2977450508564659972}
   StringsBanks:
   - {fileID: -1240361776517630150}
-  stringsBankWriteTime: 637595571647320713
+  stringsBankWriteTime: 637595586446641995
   cacheVersion: 6
 --- !u!114 &472557282660826098
 MonoBehaviour:
@@ -1113,6 +1176,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &1235236550641086853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1478065005447724750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,6 +1251,26 @@ MonoBehaviour:
   Name: SurfaceType
   Min: 0
   Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &2634240044348265489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Testing Pin/PinTest
+  m_EditorClassIdentifier: 
+  Name: PinTest
+  Min: -4
+  Max: 4
   Default: 0
   ID:
     data1: 0
@@ -1259,7 +1362,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -6992216365127826159}
+  - {fileID: 5763820697479882796}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -1365,7 +1468,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -4884433047291887816}
+  - {fileID: -3920289265969629183}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1588,6 +1691,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5763820697479882796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &5817345081800391807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,6 +2022,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &7015714045999161294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Testing Pin/PinTest
+  m_EditorClassIdentifier: 
+  Name: PinTest
+  Min: -4
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7132393156935441494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2013,8 +2156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Key Minigame/Complete Repair
   guid: 39f08e17f868ab4889f2f4d738ec8e1d
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

@@ -425,6 +425,13 @@ public class Player : MonoBehaviour
                 Tutorial.DeactivateTutorial(Tutorial.RightMouse, Tutorial.Circle);
             }
 
+            FMOD.Studio.EventInstance RollInstance;
+
+            RollInstance = RuntimeManager.CreateInstance("event:/SFX/Characters/Willy/Roll");
+            RollInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+            RollInstance.start();
+            RollInstance.release();
+
             WillyAnimator.Play("Run", 0);
             WillyAnimator.SetTrigger("Roll");
             //roll movement

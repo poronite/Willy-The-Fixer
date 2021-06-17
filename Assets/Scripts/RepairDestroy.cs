@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class RepairDestroy : MonoBehaviour
 {
@@ -82,6 +81,13 @@ public class RepairDestroy : MonoBehaviour
             if (fixingFase && timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd)
             {
                 successFase = true;
+
+                FMOD.Studio.EventInstance quickTimeSuccessInstance;
+
+                quickTimeSuccessInstance = RuntimeManager.CreateInstance("event:/SFX/Key Minigame/Quick Time Event Success");
+                quickTimeSuccessInstance.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+                quickTimeSuccessInstance.start();
+                quickTimeSuccessInstance.release();
             }
             else if (fixingFase && timeLeft > clickableAreaStart && timeLeft < clickableAreaEnd)
             {
@@ -201,6 +207,13 @@ public class RepairDestroy : MonoBehaviour
 
     public void CompleteRepair()
     {
+        FMOD.Studio.EventInstance RepairComplete;
+
+        RepairComplete = RuntimeManager.CreateInstance("event:/SFX/Key Minigame/Repair Complete");
+        RepairComplete.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+        RepairComplete.start();
+        RepairComplete.release();
+
         StopMinigame();
         KeyStatus.RepairComponent();
     }
