@@ -310,11 +310,11 @@ public class Manager : MonoBehaviour
         virCamera.GetCinemachineComponent<CinemachineTransposer>().m_FollowOffset.z = z;
     }
 
-    public void ChangeCameraTarget(GameObject target)
+    public void ChangeCameraTarget(Transform target)
     {
         CinemachineVirtualCamera virCamera = GameObject.FindGameObjectWithTag("VirtualCamera").GetComponent<CinemachineVirtualCamera>();
-        virCamera.Follow = target.transform;
-        virCamera.LookAt = target.transform;
+        virCamera.Follow = target;
+        virCamera.LookAt = target;
     }
 
     #endregion

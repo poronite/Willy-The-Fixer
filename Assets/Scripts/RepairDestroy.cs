@@ -24,7 +24,12 @@ public class RepairDestroy : MonoBehaviour
     private bool fixingFase = false;
     private bool successFase = false;
     private PianoComponent KeyStatus;
-    
+
+    //this is to aim the camera when fixing the Key
+    private Transform KeyCameraTarget = null;
+    //this is to return the camera back to the player after ending minigame
+    [SerializeField]
+    private Transform PlayerHeadCameraTarget = null;
 
     private string deviceInUse;
 
@@ -35,6 +40,11 @@ public class RepairDestroy : MonoBehaviour
     private void Awake()
     {
         KeyAnimator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        KeyCameraTarget = transform.GetChild(transform.childCount - 1);
     }
 
     public void StartKeyMinigame(string device)
@@ -52,9 +62,8 @@ public class RepairDestroy : MonoBehaviour
             WillyAnimator.Play("StartFix", 0);
             PlayerInputRef.transform.LookAt(new Vector3(KeyStatus.ComponentRealPosition.x, PlayerInputRef.transform.position.y, KeyStatus.ComponentRealPosition.z));
 
-            Manager.ManagerInstance.ChangeCameraTarget(gameObject);
-            Manager.ManagerInstance.ChangeCameraX(3f);
-            Manager.ManagerInstance.ChangeCameraY(5f);
+            Manager.ManagerInstance.ChangeCameraTarget(KeyCameraTarget);
+            Manager.ManagerInstance.ChangeCameraY(3.5f);
 
             KeyAnimator.Play("SetDestroy", 0);
 
@@ -103,9 +112,8 @@ public class RepairDestroy : MonoBehaviour
     {
         StopCoroutine("QuickTimeEvent");
 
-        Manager.ManagerInstance.ChangeCameraTarget(PlayerInputRef.gameObject);
-        Manager.ManagerInstance.ChangeCameraX(0f);
-        Manager.ManagerInstance.ChangeCameraY(5f);
+        Manager.ManagerInstance.ChangeCameraTarget(PlayerHeadCameraTarget);
+        Manager.ManagerInstance.ChangeCameraY(1f);
 
         WillyAnimator.SetTrigger("StopRepair");
 

@@ -256,7 +256,7 @@ public class Player : MonoBehaviour
                     switch (other.name)
                     {
                         case "AboveStrings":
-                            Manager.ManagerInstance.ChangeCameraY(5f);
+                            Manager.ManagerInstance.ChangeCameraY(4f);
                             break;
                         case "BelowStrings":
                             if (Tutorial != null && Manager.ManagerInstance.JumpTutorialDone == false)
