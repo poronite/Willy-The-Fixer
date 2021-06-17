@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     public GameObject PauseMenu;
     public GameUI EnemyCount;
     public UITutorial Tutorial;
+    public Footsteps WillyFootsteps;
 
     [HideInInspector]
     public string LastInputDevice;
@@ -182,18 +183,19 @@ public class Player : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        //When the player is on the ground 
-        if (collision.gameObject.CompareTag("Ground"))
+        //When the player is on the ground or strings
+        if (collision.gameObject.CompareTag("WoodFloor") || collision.gameObject.CompareTag("MetalFloor") || collision.gameObject.CompareTag("Strings"))
         {
             float angle = Vector3.Angle(Vector3.up, collision.GetContact(0).normal);
 
             if (angle < groundThreshhold)
             {
+                WillyFootsteps.ChangeSurfaceType(collision.gameObject.tag);
                 onAir = false;
             }
         }
 
-        //When the player is on the cords
+        //When the player is on the strings
         if (collision.gameObject.CompareTag("Strings"))
         {
             if (Tutorial != null && canDescend == true && Manager.ManagerInstance.DescendTutorialDone == false)
@@ -201,7 +203,6 @@ public class Player : MonoBehaviour
                 Tutorial.ActivateTutorial(Tutorial.CTRL, Tutorial.DPadDown);
             }
 
-            onAir = false;
             isOnStrings = true;
         }
     }
@@ -209,7 +210,7 @@ public class Player : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         //When the player jumps from the ground or cords
-        if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Strings") && isOnStrings))
+        if (collision.gameObject.CompareTag("MetalFloor") || collision.gameObject.CompareTag("WoodFloor") || (collision.gameObject.CompareTag("Strings") && isOnStrings))
         {
             onAir = true;
 

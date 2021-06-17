@@ -9,6 +9,7 @@ public class AIActions : MonoBehaviour
 {
     public PlayerDetection Detection;
     public GameObject Target;
+    public Footsteps YamaFootsteps;
 
     [SerializeField]
     private float relaxedSpeed = 0, runAwaySpeed = 0, hidingTime = 0;
@@ -290,6 +291,11 @@ public class AIActions : MonoBehaviour
         {
             ReachedTarget = true;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        YamaFootsteps.ChangeSurfaceType(collision.gameObject.tag);
     }
 
     private IEnumerator TeleportAI()

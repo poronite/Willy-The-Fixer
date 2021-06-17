@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
   - Exit
   - Strings
   - AI
@@ -18,6 +17,8 @@ TagManager:
   - ChangePerspective
   - PreventDescend
   - EnemyCount
+  - MetalFloor
+  - WoodFloor
   layers:
   - Default
   - TransparentFX

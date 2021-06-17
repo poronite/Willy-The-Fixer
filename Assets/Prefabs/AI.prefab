@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Detection: {fileID: 2668663800737681446}
   Target: {fileID: 0}
+  YamaFootsteps: {fileID: 117879415673304914}
   relaxedSpeed: 2
   runAwaySpeed: 4
   hidingTime: 8
@@ -180,6 +181,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &117879415673304914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6896243300828475295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2298cc85e4728854cb66fa6ccdf9c56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6013723251421827790
 PrefabInstance:
   m_ObjectHideFlags: 0

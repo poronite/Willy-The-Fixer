@@ -105,6 +105,9 @@
 		<property name="start">
 			<value>1</value>
 		</property>
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{0c3ae851-c1aa-41bc-afc2-1a8e82c0d2f8}</destination>
 			<destination>{7d235110-509f-4dd1-b24c-fc1daad85d38}</destination>
@@ -117,6 +120,9 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{b3659dea-dfca-4986-8b77-5761c4a6d656}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{69feb50b-1877-4884-af1c-95ca6bb7df6e}</destination>
 			<destination>{074718cd-80d7-444d-975f-144955d7a4e8}</destination>

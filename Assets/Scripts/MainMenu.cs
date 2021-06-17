@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+using FMODUnity;
 
 public class MainMenu : MonoBehaviour
 {
@@ -33,20 +33,20 @@ public class MainMenu : MonoBehaviour
 
             selectedButtonName = buttonName;
 
-            Debug.Log(selectedButtonName);
+            //Debug.Log(selectedButtonName);
         }
     }
 
     public void OnHoverSound()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/UI/ButtonHover");
+        instance = RuntimeManager.CreateInstance("event:/UI/ButtonHover");
         instance.start();
         instance.release();
     }
 
     public void OnGameStartSound()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/UI/NewGame");
+        instance = RuntimeManager.CreateInstance("event:/UI/NewGame");
         instance.start();
         instance.release();
     }

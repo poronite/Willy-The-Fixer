@@ -171,6 +171,7 @@ MonoBehaviour:
   PauseMenu: {fileID: 0}
   EnemyCount: {fileID: 0}
   Tutorial: {fileID: 0}
+  WillyFootsteps: {fileID: 54220014405957732}
   LastInputDevice: 
 --- !u!1 &2588661200045485998
 GameObject:
@@ -313,6 +314,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &54220014405957732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665180713401267817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2298cc85e4728854cb66fa6ccdf9c56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6926856409455449333
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
 using FMODUnity;
 
 public class PauseMenu : MonoBehaviour
@@ -51,7 +48,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OnHoverSound()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/UI/ButtonHover");
+        instance = RuntimeManager.CreateInstance("event:/UI/ButtonHover");
         instance.start();
         instance.release();
     }
