@@ -157,7 +157,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{cb359350-bd10-41df-a2b5-37d52649377f}">
 		<property name="volume">
-			<value>-21</value>
+			<value>-12</value>
 		</property>
 		<property name="name">
 			<value>Drone</value>
@@ -242,7 +242,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{50247495-820a-4ad8-8ec2-6f8b2335c90d}">
 		<property name="volume">
-			<value>1.5</value>
+			<value>6</value>
 		</property>
 		<property name="name">
 			<value>Piano Movement</value>
@@ -268,7 +268,7 @@
 			<value>1500</value>
 		</property>
 		<property name="maximumTimeBetweenSounds">
-			<value>6500</value>
+			<value>16000</value>
 		</property>
 		<relationship name="sound">
 			<destination>{0c1145b4-cc86-440b-ac00-adeec822286c}</destination>
@@ -310,7 +310,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{190f5a19-167a-4f09-bbd4-b63f88cb06e1}">
 		<property name="volume">
-			<value>-10</value>
+			<value>3</value>
 		</property>
 		<property name="name">
 			<value>Wood Creaking</value>
@@ -378,7 +378,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{f2e6a641-5667-4782-94e8-c6a7a5eb18d1}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-3</value>
 		</property>
 		<property name="name">
 			<value>WoodFalling</value>
