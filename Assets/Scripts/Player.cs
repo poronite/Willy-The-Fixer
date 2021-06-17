@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class Player : MonoBehaviour
 {
@@ -244,6 +245,14 @@ public class Player : MonoBehaviour
             case "AI":
                 if (isRolling)
                 {
+                    FMOD.Studio.EventInstance yamaCryInstance;
+
+                    yamaCryInstance = RuntimeManager.CreateInstance("event:/SFX/Characters/Yama/Yama Caught");
+                    yamaCryInstance.set3DAttributes(RuntimeUtils.To3DAttributes(other.gameObject));
+                    yamaCryInstance.start();
+                    yamaCryInstance.release();
+
+
                     Destroy(other.gameObject);
                     switch (SceneManager.GetActiveScene().name)
                     {

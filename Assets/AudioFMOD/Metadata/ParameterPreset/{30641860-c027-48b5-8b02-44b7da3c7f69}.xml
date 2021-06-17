@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="ParameterPreset" id="{30641860-c027-48b5-8b02-44b7da3c7f69}">
 		<property name="name">
-			<value>Tune</value>
+			<value>PinTest</value>
 		</property>
 		<relationship name="folder">
 			<destination>{24925d85-4152-4aab-9d8b-c2416298b009}</destination>
@@ -16,10 +16,10 @@
 			<value>1</value>
 		</property>
 		<property name="minimum">
-			<value>-2</value>
+			<value>-4</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>5</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

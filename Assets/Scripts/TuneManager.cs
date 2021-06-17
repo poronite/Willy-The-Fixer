@@ -2,15 +2,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using FMODUnity;
 
 public class TuneManager : MonoBehaviour
 {
     #region Variables
-
     [SerializeField]
     private float targetNum = 0f, //value that the player must reach to successfully tune the pin
     minNum = 0f, //lower tune limit
-    maxNum = 0f; //upper tune limit
+    maxNum = 0f, //upper tune limit
+    timeSinceLastPinTest = 0f,//time since a piano key was pressed to test the pin
+    pinLevel; //determines how the test pin sound sounds
+
 
     [SerializeField]
     private Player playerInputRef = null;
@@ -31,6 +34,9 @@ public class TuneManager : MonoBehaviour
     private bool isCompleted;
 
     private PianoComponent PinStatus;
+
+    private FMOD.Studio.EventInstance tuningPinInstance;
+    private FMOD.Studio.EventInstance testingPinInstance;
     #endregion
 
 
@@ -62,6 +68,18 @@ public class TuneManager : MonoBehaviour
                 controller.SetActive(true);
                 controller.GetComponent<Animator>().SetInteger("Input", 1);
             }
+
+            //setup and start the sound that will play when tuning the pin (not to confuse with the one used to test the pin)
+            tuningPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Tuning Pin");
+            tuningPinInstance.set3DAttributes(RuntimeUtils.To3DAttributes(PinStatus.gameObject));
+            tuningPinInstance.start();
+
+            //the sound is paused until the player starts tuning
+            //setPaused makes it so that the sound can continue where it was paused
+            tuningPinInstance.setPaused(true);
+
+            //setup the sound that will play once in a while to check the pin of the piano
+            testingPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Testing Pin");
         }
     }
 
@@ -73,10 +91,15 @@ public class TuneManager : MonoBehaviour
         playerInputRef.Input.TuneMinigame.Tune.performed += context =>
         {
             tuneIntensity = context.ReadValue<float>();
+            tuningPinInstance.setPaused(false);
             playerInputRef.LastInputDevice = context.control.device.name;
         };
 
-        playerInputRef.Input.TuneMinigame.Tune.canceled += context => tuneIntensity = 0f;
+        playerInputRef.Input.TuneMinigame.Tune.canceled += context =>
+        {
+            tuneIntensity = 0f;
+            tuningPinInstance.setPaused(true);
+        };
     }
 
     #region TuneGameplay
@@ -117,28 +140,33 @@ public class TuneManager : MonoBehaviour
         else if ((rangeNum >= -50 && rangeNum <= -40) || (rangeNum <= 50 && rangeNum >= 40))
         {
             ChangeColor("#FF0037");
+            pinLevel = Mathf.Clamp(rangeNum, -4, 4);
         }
         else if ((rangeNum >= -40 && rangeNum <= -30) || (rangeNum <= 40 && rangeNum >= 30))
         {
             ChangeColor("#FF3369");
+            pinLevel = Mathf.Clamp(rangeNum, -3, 3);
         }
         else if ((rangeNum >= -30 && rangeNum <= -20) || (rangeNum <= 30 && rangeNum >= 20))
         {
             ChangeColor("#FF668E");
+            pinLevel = Mathf.Clamp(rangeNum, -2, 2);
         }
         else if ((rangeNum >= -20 && rangeNum <= -10) || (rangeNum <= 20 && rangeNum >= 10))
         {
             ChangeColor("#FF99B4");
+            pinLevel = Mathf.Clamp(rangeNum, -1, 1);
         }
         else if ((rangeNum >= -10 && rangeNum <= -1) || (rangeNum <= 10 && rangeNum >= 1))
         {
             ChangeColor("#FFCCD9");
+            pinLevel = 0;
         }
     }
 
     #endregion
 
-    public void ChangeColor(string code) //hex > rgb
+    private void ChangeColor(string code) //hex > rgb
     {
         Color color;
         if (ColorUtility.TryParseHtmlString(code, out color))
@@ -148,11 +176,27 @@ public class TuneManager : MonoBehaviour
         }
     }
 
+    private void TestPin()
+    {
+        timeSinceLastPinTest += Time.deltaTime;
+
+        if (timeSinceLastPinTest >= 10f)
+        {
+            testingPinInstance.setParameterByName("PinTest", pinLevel);
+            testingPinInstance.start();
+            timeSinceLastPinTest = 0f;
+        }
+    }
+
     public IEnumerator EndTuneMinigame()
     {
         Debug.Log("Complete");
 
+        testingPinInstance.start();
+
         playerInputRef.Input.TuneMinigame.Disable();
+        tuningPinInstance.release();
+        testingPinInstance.release();
 
         WillyAnimator.SetTrigger("StopRepair");
         if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
@@ -177,6 +221,8 @@ public class TuneManager : MonoBehaviour
 
     public void Update()
     {
+        TestPin();
+
         Tuning();
 
         TuningVerification();
