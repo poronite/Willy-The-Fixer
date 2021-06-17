@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
     fadeOutLoadingScreen = 0.0f;
 
     [SerializeField]
-    private GameObject loadingScreen = null, loadingIcon = null, gameEnd = null;
+    private GameObject loadingScreen = null, background = null, loadingIcon = null, gameEnd = null;
 
     [SerializeField]
     private CanvasGroup canvasLoadingScreen = null;
@@ -74,11 +74,8 @@ public class Manager : MonoBehaviour
         //activate LoadingScreen gameobject and start fading in
         loadingScreen.SetActive(true);
 
-        if (SceneManager.GetActiveScene().name == "Preload") //this is here because Preload scene is a empty scene
-        {
-            canvasLoadingScreen.alpha = 1;
-        }
-        else
+        //canvas starts with alpha at 1 so no need for fade in
+        if (SceneManager.GetActiveScene().name != "Preload") 
         {
             yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen, canvasLoadingScreen));
         }
@@ -103,7 +100,7 @@ public class Manager : MonoBehaviour
     IEnumerator FadeLoadingScreen(float targetValue, float duration, CanvasGroup uiElement)
     {
         float startValue = uiElement.alpha;
-        float time = 0;
+        float time = 0f;
 
         while (time < duration)
         {
@@ -265,16 +262,26 @@ public class Manager : MonoBehaviour
         }
     }
 
+    //not being used because it's not working
     public IEnumerator GameClear()
     {
         loadingScreen.SetActive(true);
 
+        background.SetActive(false);
         gameEnd.SetActive(true);
         loadingIcon.SetActive(false);
+        canvasLoadingScreen.alpha = 1f;
 
-        canvasLoadingScreen.alpha = 0;
+        Animator gameEndAnimator = gameEnd.GetComponent<Animator>();
 
-        StartCoroutine(FadeLoadingScreen(1, 1.5f, canvasLoadingScreen));
+        gameEndAnimator.Play("FadeIn", 0);
+
+        while (gameEndAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+        {
+            yield return null;
+        }
+
+        //yield return StartCoroutine(FadeLoadingScreen(1, 1.5f, canvasLoadingScreen));
 
         AsyncOperation operation = SceneManager.LoadSceneAsync("MainMenu");
         while (!operation.isDone)
@@ -282,10 +289,19 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        StartCoroutine(FadeLoadingScreen(0, 1.5f, canvasLoadingScreen));
+        gameEndAnimator.Play("FadeOut", 0);
 
+        while (gameEndAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+        {
+            yield return null;
+        }
+
+        //yield return StartCoroutine(FadeLoadingScreen(0, 1.5f, canvasLoadingScreen));
+
+        canvasLoadingScreen.alpha = 0f;
         gameEnd.SetActive(false);
         loadingIcon.SetActive(true);
+        background.SetActive(true);
 
         loadingScreen.SetActive(false);
     }

@@ -212,6 +212,15 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") || (collision.gameObject.CompareTag("Strings") && isOnStrings))
         {
             onAir = true;
+
+            if (collision.gameObject.CompareTag("Strings") && isOnStrings)
+            {
+                if (Tutorial != null)
+                {
+                    Tutorial.DeactivateTutorial(Tutorial.CTRL, Tutorial.DPadDown);
+                }
+            }
+
             isOnStrings = false;
         }
     }

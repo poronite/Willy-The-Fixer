@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{535a5168-56ea-46bb-8370-c8e46107d717}">
 		<property name="name">
-			<value>Yama Cry</value>
+			<value>Yama Caught</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -122,7 +122,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d2efbe8a-4642-4433-b610-27f3b284079c}" />
-	<object class="MultiSound" id="{cb1df501-d1a0-4ea6-963d-c2537879b4ea}" />
+	<object class="MultiSound" id="{cb1df501-d1a0-4ea6-963d-c2537879b4ea}">
+		<relationship name="sounds">
+			<destination>{5c47e422-e707-45eb-8644-a3738cf04e0d}</destination>
+			<destination>{90acc06d-5ae2-4fb7-bd48-c79cc8303fde}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{139485a6-c631-480a-9c7e-6d8913df2d9b}" />
 	<object class="MixerBusEffectChain" id="{672dc5d0-8f17-4dd8-bd92-90bc1e0d3efc}">
 		<relationship name="effects">
@@ -132,5 +137,15 @@
 	<object class="MixerBusPanner" id="{c7837f8b-a40f-4f67-88f7-f6298650b7a1}" />
 	<object class="MixerBusFader" id="{963647bb-b93e-43ae-9307-f7ee8c52f73b}" />
 	<object class="SpatialiserEffect" id="{1558e8a6-5930-4ee3-b1b7-3477d0f67a20}" />
+	<object class="SingleSound" id="{5c47e422-e707-45eb-8644-a3738cf04e0d}">
+		<relationship name="audioFile">
+			<destination>{99728b7d-9cc3-48b3-9919-32ffb83c5400}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{90acc06d-5ae2-4fb7-bd48-c79cc8303fde}">
+		<relationship name="audioFile">
+			<destination>{64598b0e-113e-4c78-ba52-29869913ef76}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{77f2939a-38e7-43d1-a57b-cd6ea3b72f4d}" />
 </objects>

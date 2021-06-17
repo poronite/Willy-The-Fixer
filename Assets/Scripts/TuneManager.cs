@@ -151,7 +151,6 @@ public class TuneManager : MonoBehaviour
     public IEnumerator EndTuneMinigame()
     {
         Debug.Log("Complete");
-        PinStatus.RepairComponent();
 
         playerInputRef.Input.TuneMinigame.Disable();
 
@@ -167,6 +166,8 @@ public class TuneManager : MonoBehaviour
             Gamepad.current.SetMotorSpeeds(0.0f, 0.0f);
             yield return new WaitForSeconds(1.0f);
         }
+
+        PinStatus.RepairComponent();
 
         playerInputRef.Input.Player.Enable();
         gameObject.SetActive(false);

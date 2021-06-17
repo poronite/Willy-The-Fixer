@@ -48,8 +48,6 @@ public class PianoComponent : MonoBehaviour
         UpdateNumRepaired();
 
         IsGameWon();
-
-        FindObjectOfType<Waypoint>().AssignSuggestion();
     }
 
     public void DestroyComponent()
@@ -107,11 +105,16 @@ public class PianoComponent : MonoBehaviour
         }
     }
 
-    private void IsGameWon()
+    private void IsGameWon() //has game ended? If not assign the next Waypoint Suggestion
     {
         if (Manager.ManagerInstance.NumRepairedPins == 233 && Manager.ManagerInstance.NumRepairedKeys == 88)
         {
-            StartCoroutine(Manager.ManagerInstance.GameClear());
+            //StartCoroutine(Manager.ManagerInstance.GameClear());
+            Manager.ManagerInstance.ChangeScene("MainMenu");
+        }
+        else
+        {
+            FindObjectOfType<Waypoint>().AssignSuggestion();
         }
     }
 }

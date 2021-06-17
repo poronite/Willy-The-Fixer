@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 9433462}
   - component: {fileID: 9433464}
   - component: {fileID: 9433463}
+  - component: {fileID: 9433465}
   m_Layer: 0
   m_Name: GameEnd
   m_TagString: Untagged
@@ -155,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00018310547, y: 0}
-  m_SizeDelta: {x: 0.00036621094, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9433463
 MonoBehaviour:
@@ -195,6 +196,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9433461}
   m_CullTransparentMesh: 0
+--- !u!95 &9433465
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9433461}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 041c61256b2072f4d9fc88313c194fc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &158591569
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +262,7 @@ MonoBehaviour:
   fadeInLoadingScreen: 1
   fadeOutLoadingScreen: 1
   loadingScreen: {fileID: 1424846007}
+  background: {fileID: 1606141831}
   loadingIcon: {fileID: 1556551520}
   gameEnd: {fileID: 9433461}
   canvasLoadingScreen: {fileID: 1424846011}
@@ -576,6 +597,11 @@ MonoBehaviour:
   - {fileID: 0}
   NumRepairedKeys: 0
   NumLowerZoneYamas: 0
+  MovementTutorialDone: 0
+  RollTutorialDone: 0
+  JumpTutorialDone: 0
+  DescendTutorialDone: 0
+  InteractTutorialDone: 0
 --- !u!114 &158591572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424846009}
   - component: {fileID: 1424846008}
+  - component: {fileID: 1424846010}
   - component: {fileID: 1424846011}
   m_Layer: 0
   m_Name: LoadingScreen
@@ -827,6 +854,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1424846010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424846007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!225 &1424846011
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1028,8 +1077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00018310547, y: 0}
-  m_SizeDelta: {x: 0.00036621094, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606141833
 MonoBehaviour:
