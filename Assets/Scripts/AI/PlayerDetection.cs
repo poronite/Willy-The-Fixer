@@ -33,7 +33,7 @@ public class PlayerDetection : MonoBehaviour
 
                 float angle = Vector3.Angle(aiToWilly, aiFront);
 
-                Debug.Log(angle);
+                //Debug.Log(angle);
 
                 //is AI seeing player?
                 if (angle <= coneOfVision / 2)

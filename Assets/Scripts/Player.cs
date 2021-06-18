@@ -383,8 +383,6 @@ public class Player : MonoBehaviour
             velocity.y = verticalVelocity;
 
             playerRigidbody.velocity = velocity;
-
-            Debug.Log($"velocity: {playerRigidbody.velocity}");
         }
     }
 
