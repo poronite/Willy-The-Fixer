@@ -20,8 +20,9 @@ public class RepairDestroy : MonoBehaviour
     clickableAreaStart, 
     clickableAreaEnd;
 
-    private bool fixingFase = false;
-    private bool successFase = false;
+    private bool fixingPhase = false;
+    [SerializeField]
+    private bool potentialPhase = false;
     private PianoComponent KeyStatus;
 
     //this is to aim the camera when fixing the Key
@@ -78,9 +79,10 @@ public class RepairDestroy : MonoBehaviour
 
         PlayerInputRef.Input.RepairMinigame.Repair.performed += context => 
         {
-            if (fixingFase && timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd)
+            if (potentialPhase)
             {
-                successFase = true;
+                fixingPhase = false;
+                TriggerRepairPhase();
 
                 FMOD.Studio.EventInstance quickTimeSuccessInstance;
 
@@ -89,16 +91,14 @@ public class RepairDestroy : MonoBehaviour
                 quickTimeSuccessInstance.start();
                 quickTimeSuccessInstance.release();
             }
-            else if (fixingFase && timeLeft > clickableAreaStart && timeLeft < clickableAreaEnd)
+            else if (!potentialPhase)
             {
                 CancelRepair();
             }
         };
-
-        PlayerInputRef.Input.RepairMinigame.Cancel.performed += context => CancelRepair();
     }
 
-    private void TriggerRepairFase()
+    private void TriggerRepairPhase()
     {
         StopCoroutine("QuickTimeEvent");
         QuickTimeSlider.gameObject.SetActive(false);
@@ -110,7 +110,7 @@ public class RepairDestroy : MonoBehaviour
 
     private void CancelRepair()
     {
-        KeyAnimator.Play("SetDestroy", 0);
+        SetDestroy();
         StopMinigame();       
     }
 
@@ -118,17 +118,17 @@ public class RepairDestroy : MonoBehaviour
     {
         StopCoroutine("QuickTimeEvent");
 
+        WillyAnimator.SetTrigger("StopRepair");
+
         Manager.ManagerInstance.ChangeCameraTarget(PlayerHeadCameraTarget);
         Manager.ManagerInstance.ChangeCameraY(1f);
-
-        WillyAnimator.SetTrigger("StopRepair");
 
         QuickTimeSlider.gameObject.SetActive(false);
         PlayerInputRef.Input.RepairMinigame.Disable();
         PlayerInputRef.Input.Player.Enable();
     }
 
-    public void FaseComplete()
+    public void PhaseComplete()
     {
         //get current animation
         AnimatorStateInfo currentAnimation = KeyAnimator.GetCurrentAnimatorStateInfo(0);
@@ -139,7 +139,6 @@ public class RepairDestroy : MonoBehaviour
 
         //stop animation
         KeyAnimator.enabled = false;
-        successFase = false;
 
         //start quicktime event again
         QuickTimeSlider.gameObject.SetActive(true);
@@ -158,7 +157,7 @@ public class RepairDestroy : MonoBehaviour
         clickableAreaEnd = clickableAreaStart - 1f;
 
         //player is able to press button
-        fixingFase = true;
+        fixingPhase = true;
 
         while (timeLeft >= 0)
         {
@@ -167,7 +166,7 @@ public class RepairDestroy : MonoBehaviour
 
             //activate glow of handle to show that it's time to repair
             //button sprite also changes to show the player which button to press depending on device
-            if (fixingFase && timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd)
+            if (fixingPhase && timeLeft <= clickableAreaStart && timeLeft >= clickableAreaEnd)
             {
                 SliderGlow.SetActive(true);
 
@@ -179,6 +178,8 @@ public class RepairDestroy : MonoBehaviour
                 {
                     SquareKeyPrompt.SetActive(true);
                 }
+
+                potentialPhase = true;
             }
             else
             {
@@ -186,21 +187,17 @@ public class RepairDestroy : MonoBehaviour
 
                 EKeyPrompt.SetActive(false);
                 SquareKeyPrompt.SetActive(false);
-            }
 
-            if (successFase == true)
-            {
-                fixingFase = false;
-                TriggerRepairFase();
+                potentialPhase = false;
             }
 
             yield return null;
         }
 
-        if (successFase == false && timeLeft <= 0f)
+        if (timeLeft <= 0f)
         {
             //after x seconds player can't press button
-            fixingFase = false;
+            fixingPhase = false;
             CancelRepair();
         }
     }

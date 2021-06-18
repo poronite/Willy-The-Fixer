@@ -3631,21 +3631,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.45
-    functionName: FaseComplete
+    functionName: PhaseComplete
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.05
-    functionName: FaseComplete
+    functionName: PhaseComplete
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.8833334
-    functionName: FaseComplete
+    functionName: PhaseComplete
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

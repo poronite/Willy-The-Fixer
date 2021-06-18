@@ -80,6 +80,13 @@ public class Player : MonoBehaviour
         {
             LastInputDevice = context.control.device.name;
             move = Vector2.zero;
+
+            if (!onAir)
+            {
+                Vector3 velocity = new Vector3(0, playerRigidbody.velocity.y, 0);
+
+                playerRigidbody.velocity = velocity;
+            }
         };
 
         //Jump
@@ -376,6 +383,8 @@ public class Player : MonoBehaviour
             velocity.y = verticalVelocity;
 
             playerRigidbody.velocity = velocity;
+
+            Debug.Log($"velocity: {playerRigidbody.velocity}");
         }
     }
 

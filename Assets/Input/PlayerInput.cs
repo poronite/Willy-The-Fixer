@@ -823,14 +823,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""Cancel"",
-                    ""type"": ""Button"",
-                    ""id"": ""a91c7c16-79ec-4abe-9adf-a9c7ad2a877c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -853,127 +845,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Repair"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c6e07a11-2381-4744-8fa4-7019f0e1e278"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b7412ffd-1790-418f-a5c7-53dbf514a1ea"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7bf38086-9995-4725-a106-3839259ccb5b"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ed988d72-4757-4ec9-b584-0e7de38e5467"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""71d29e5f-8973-4fe6-87e3-351cbe96cca8"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4da6ee71-0bbb-41bb-8201-8ee124839003"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""181fde40-f2cb-4719-90a0-94ea8cb99d9c"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""51176a09-1b91-4a88-8ca3-36d13cc8c626"",
-                    ""path"": ""<Gamepad>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c440b61e-23f9-4984-be70-ee0c685d1e96"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7f6882e2-0ec9-41de-8035-d8021cf038f1"",
-                    ""path"": ""<Gamepad>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b4c4c50e-2378-46fe-8a89-1d8d5c60c577"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Gamepad"",
-                    ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1069,7 +940,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         // RepairMinigame
         m_RepairMinigame = asset.FindActionMap("RepairMinigame", throwIfNotFound: true);
         m_RepairMinigame_Repair = m_RepairMinigame.FindAction("Repair", throwIfNotFound: true);
-        m_RepairMinigame_Cancel = m_RepairMinigame.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1331,13 +1201,11 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputActionMap m_RepairMinigame;
     private IRepairMinigameActions m_RepairMinigameActionsCallbackInterface;
     private readonly InputAction m_RepairMinigame_Repair;
-    private readonly InputAction m_RepairMinigame_Cancel;
     public struct RepairMinigameActions
     {
         private @PlayerInput m_Wrapper;
         public RepairMinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Repair => m_Wrapper.m_RepairMinigame_Repair;
-        public InputAction @Cancel => m_Wrapper.m_RepairMinigame_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_RepairMinigame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1350,9 +1218,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Repair.started -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
                 @Repair.performed -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
                 @Repair.canceled -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
-                @Cancel.started -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
-                @Cancel.performed -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
-                @Cancel.canceled -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
             }
             m_Wrapper.m_RepairMinigameActionsCallbackInterface = instance;
             if (instance != null)
@@ -1360,9 +1225,6 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Repair.started += instance.OnRepair;
                 @Repair.performed += instance.OnRepair;
                 @Repair.canceled += instance.OnRepair;
-                @Cancel.started += instance.OnCancel;
-                @Cancel.performed += instance.OnCancel;
-                @Cancel.canceled += instance.OnCancel;
             }
         }
     }
@@ -1441,6 +1303,5 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     public interface IRepairMinigameActions
     {
         void OnRepair(InputAction.CallbackContext context);
-        void OnCancel(InputAction.CallbackContext context);
     }
 }

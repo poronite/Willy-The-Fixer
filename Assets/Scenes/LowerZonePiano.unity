@@ -35748,6 +35748,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507061
@@ -35814,6 +35815,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507066
@@ -35880,6 +35882,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507071
@@ -35946,6 +35949,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507076
@@ -36012,6 +36016,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507081
@@ -36078,6 +36083,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507086
@@ -36144,6 +36150,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507091
@@ -36210,6 +36217,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507096
@@ -36276,6 +36284,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507101
@@ -36342,6 +36351,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507106
@@ -36408,6 +36418,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507111
@@ -36474,6 +36485,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507116
@@ -36540,6 +36552,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507121
@@ -36606,6 +36619,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507126
@@ -36672,6 +36686,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507131
@@ -36738,6 +36753,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507136
@@ -36804,6 +36820,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507141
@@ -36870,6 +36887,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507146
@@ -36936,6 +36954,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507151
@@ -37002,6 +37021,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507156
@@ -37068,6 +37088,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507161
@@ -37134,6 +37155,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507166
@@ -37200,6 +37222,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507171
@@ -37266,6 +37289,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507176
@@ -37332,6 +37356,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507181
@@ -37398,6 +37423,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507186
@@ -37464,6 +37490,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507191
@@ -37530,6 +37557,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507196
@@ -37596,6 +37624,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507201
@@ -37662,6 +37691,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507206
@@ -37728,6 +37758,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507211
@@ -37794,6 +37825,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507216
@@ -37860,6 +37892,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507221
@@ -37926,6 +37959,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507226
@@ -37992,6 +38026,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507231
@@ -38058,6 +38093,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507236
@@ -38124,6 +38160,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507241
@@ -38190,6 +38227,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507246
@@ -38256,6 +38294,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507251
@@ -38322,6 +38361,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507256
@@ -38388,6 +38428,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507261
@@ -38454,6 +38495,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507266
@@ -38520,6 +38562,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507271
@@ -38586,6 +38629,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507276
@@ -38652,6 +38696,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507281
@@ -38718,6 +38763,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507286
@@ -38784,6 +38830,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507291
@@ -38850,6 +38897,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507296
@@ -38916,6 +38964,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507301
@@ -38982,6 +39031,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507306
@@ -39048,6 +39098,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507311
@@ -39114,6 +39165,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507316
@@ -39180,6 +39232,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507321
@@ -39246,6 +39299,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507326
@@ -39312,6 +39366,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507331
@@ -39378,6 +39433,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507336
@@ -39444,6 +39500,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507341
@@ -39510,6 +39567,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507346
@@ -39576,6 +39634,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507351
@@ -39642,6 +39701,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507356
@@ -39708,6 +39768,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507361
@@ -39774,6 +39835,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507366
@@ -39840,6 +39902,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507371
@@ -39906,6 +39969,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507376
@@ -39972,6 +40036,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507381
@@ -40038,6 +40103,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507386
@@ -40104,6 +40170,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507391
@@ -40170,6 +40237,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507396
@@ -40236,6 +40304,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507401
@@ -40302,6 +40371,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507406
@@ -40368,6 +40438,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507411
@@ -40434,6 +40505,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507416
@@ -40500,6 +40572,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507421
@@ -40566,6 +40639,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507426
@@ -40632,6 +40706,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507431
@@ -40698,6 +40773,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507436
@@ -40764,6 +40840,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507441
@@ -40830,6 +40907,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507446
@@ -40896,6 +40974,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507451
@@ -40962,6 +41041,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507456
@@ -41028,6 +41108,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507461
@@ -41094,6 +41175,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507466
@@ -41160,6 +41242,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507471
@@ -41226,6 +41309,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507476
@@ -41292,6 +41376,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507481
@@ -41358,6 +41443,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507486
@@ -41424,6 +41510,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507491
@@ -41490,6 +41577,7 @@ MonoBehaviour:
   EKeyPrompt: {fileID: 323748638}
   SquareKeyPrompt: {fileID: 440270789}
   WillyAnimator: {fileID: 1622005306}
+  potentialPhase: 0
   PlayerHeadCameraTarget: {fileID: 1622005304}
   KeyAnimator: {fileID: 0}
 --- !u!114 &150507496
@@ -45560,8 +45648,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051621207}
-  m_LocalRotation: {x: -0.000000030875697, y: -0.9819564, z: 0.18910751, w: -0.000000022215398}
-  m_LocalPosition: {x: -24.92, y: -2.295, z: 40.73}
+  m_LocalRotation: {x: -0.000000028466532, y: -0.98586476, z: 0.16754349, w: -0.000000011618828}
+  m_LocalPosition: {x: -24.92, y: -2.7950003, z: 40.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48590,7 +48678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 4, z: 10}
+  m_FollowOffset: {x: 0, y: 3.5, z: 10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -48663,8 +48751,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4595010143486358722}
-  m_LocalRotation: {x: -0.000000030875697, y: -0.9819564, z: 0.18910751, w: -0.000000022215398}
-  m_LocalPosition: {x: -24.92, y: -2.295, z: 40.73}
+  m_LocalRotation: {x: -0.000000028466532, y: -0.98586476, z: 0.16754349, w: -0.000000011618828}
+  m_LocalPosition: {x: -24.92, y: -2.795, z: 40.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4595010142930763408}
