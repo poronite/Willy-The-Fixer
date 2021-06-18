@@ -16,12 +16,14 @@ public class PauseMenu : MonoBehaviour
         selectedButtonName = "ResumeGameButton";
         EventSystem.current.SetSelectedGameObject(ResumeButton);
         Time.timeScale = 0.0f;
+        PianoMusic.Music.Director.Pause();
         AmbDrone.GetComponent<StudioEventEmitter>().EventInstance.setPaused(true);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1.0f;
+        PianoMusic.Music.Director.Resume();
         AmbDrone.GetComponent<StudioEventEmitter>().EventInstance.setPaused(false);
         gameObject.SetActive(false);
     }

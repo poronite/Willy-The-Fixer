@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using FMODUnity;
+using UnityEngine.Playables;
 
 public class PianoMusic : MonoBehaviour
 {
     public static PianoMusic Music = null;
 
+    public PlayableDirector Director;
     public GameObject ClapsOrigin;
 
     private FMOD.Studio.EventInstance instance;
@@ -60,6 +62,7 @@ public class PianoMusic : MonoBehaviour
 
     public void ClapsTrigger()
     {
+        Debug.Log("Audience Clapped");
         instance = RuntimeManager.CreateInstance("event:/SFX/Characters/Footsteps");
         instance.set3DAttributes(RuntimeUtils.To3DAttributes(ClapsOrigin));
         instance.start();
