@@ -10,7 +10,10 @@ public class PianoMusic : MonoBehaviour
     public PlayableDirector Director;
     public GameObject ClapsOrigin;
 
-    private FMOD.Studio.EventInstance instance;
+    [HideInInspector]
+    public GameObject KeysParent;
+
+    public FMOD.Studio.EventInstance ClapsInstance;
 
     private void Awake()
     {
@@ -18,7 +21,8 @@ public class PianoMusic : MonoBehaviour
         {
             Music = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneChange;
+            ClapsInstance = RuntimeManager.CreateInstance("event:/Amb/Crowd");
+            ClapsInstance.set3DAttributes(RuntimeUtils.To3DAttributes(ClapsOrigin));
         }
         else 
         {
@@ -26,46 +30,27 @@ public class PianoMusic : MonoBehaviour
         }
     }
 
-    //destroy the PianoMusic game object when leaving game to the main menu so that the music doesn't play in the menu
-    private void OnSceneChange(Scene destinationScene, LoadSceneMode mode)
+    public void TriggerKeyAnimation(string keyName)
     {
-        switch (destinationScene.name)
-        {
-            case "MainMenu":
-                Music = null;
-                Destroy(gameObject);
-                break;
-            default:
-                break;
-        }
-    }
-
-    public void TriggerKeyAnimation(GameObject keyRepresentation)
-    {
-        string keyName = keyRepresentation.name;
-
         if (SceneManager.GetActiveScene().name == "LowerZonePiano")
         {
-            GameObject key = GameObject.Find(keyName);
+            GameObject key = KeysParent.transform.Find(keyName).gameObject;
 
             if (key.GetComponent<PianoComponent>().IsRepaired)
             {
                 key.GetComponent<Animator>().Play("playKey", 0);
-                Debug.Log($"Key {keyName} played.");
+                //Debug.Log($"Key {key.name} played.");
             }
         }
         else if(SceneManager.GetActiveScene().name == "UpperZonePiano")
         {
-            Debug.Log($"Key {keyName} played.");
+            //Debug.Log($"Key {keyName} played.");
         }
     }
 
     public void ClapsTrigger()
     {
-        Debug.Log("Audience Clapped");
-        instance = RuntimeManager.CreateInstance("event:/SFX/Characters/Footsteps");
-        instance.set3DAttributes(RuntimeUtils.To3DAttributes(ClapsOrigin));
-        instance.start();
-        instance.release();
+        //Debug.Log("Audience Clapped");
+        ClapsInstance.start();
     }
 }

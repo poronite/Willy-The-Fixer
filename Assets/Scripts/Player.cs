@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     rollForce = 0,
     rollDuration = 0;
 
+    [SerializeField]
+    private GameObject KeysParent = null;
+
     private bool isMoving = false, 
     onAir = false,
     isRolling = false,
@@ -31,6 +34,7 @@ public class Player : MonoBehaviour
 
     private Vector2 move;
     private float rollTimer = 0;
+    private bool isBelowStrings = false;
     private List<GameObject> nearbyInteractables = new List<GameObject>();
     private GameObject nearestInteractable;
 
@@ -51,6 +55,11 @@ public class Player : MonoBehaviour
         CheckDefaultInputDevice();
         playerRigidbody = gameObject.GetComponent<Rigidbody>();        
         SetInputs();
+    }
+
+    private void Start()
+    {
+        PianoMusic.Music.KeysParent = KeysParent;
     }
 
     #region Inputs
@@ -128,18 +137,15 @@ public class Player : MonoBehaviour
         {
             LastInputDevice = context.control.device.name;
 
-            if (SceneManager.GetActiveScene().name != "MainMenu")
+            if (isPaused)
             {
-                if (isPaused)
-                {
-                    isPaused = false;
-                    ResumeGame();
-                }
-                else
-                {
-                    isPaused = true;
-                    PauseGame();
-                }                
+                isPaused = false;
+                ResumeGame();
+            }
+            else
+            {
+                isPaused = true;
+                PauseGame();
             }
         };
     }
@@ -175,7 +181,7 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //When the player jumps to climb the cords
-        if (collision.gameObject.CompareTag("Strings") && gameObject.transform.position.y + 0.7f < 2.0f)
+        if (collision.gameObject.CompareTag("Strings") && isBelowStrings)
         {
             //"Climb" the cords by changing y of the player
             Vector3 climbStrings = gameObject.transform.position;
@@ -282,9 +288,11 @@ public class Player : MonoBehaviour
                     switch (other.name)
                     {
                         case "AboveStrings":
+                            isBelowStrings = false;
                             Manager.ManagerInstance.ChangeCameraY(4f);
                             break;
                         case "BelowStrings":
+                            isBelowStrings = true;
                             if (Tutorial != null && Manager.ManagerInstance.JumpTutorialDone == false)
                             {
                                 Tutorial.ActivateTutorial(Tutorial.Space, Tutorial.X);

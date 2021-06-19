@@ -74,10 +74,14 @@ public class Manager : MonoBehaviour
         //activate LoadingScreen gameobject and start fading in
         loadingScreen.SetActive(true);
 
-        //canvas starts with alpha at 1 so no need for fade in
-        if (SceneManager.GetActiveScene().name != "Preload") 
+        //first boot and exiting to the main menu
+        if (targetScene != "MainMenu") 
         {
             yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen, canvasLoadingScreen));
+        }
+        else
+        {
+            canvasLoadingScreen.alpha = 1;
         }
 
         loadingIcon.SetActive(true);
@@ -119,6 +123,11 @@ public class Manager : MonoBehaviour
         {
             case "MainMenu":
                 //reset just in case player starts a new game
+                if (PianoMusic.Music != null)
+                {
+                    Destroy(PianoMusic.Music.gameObject);
+                }
+
                 hasEnteredUpperZone = false;
                 NumRepairedPins = 0;
                 NumUpperZoneYamas = 2;

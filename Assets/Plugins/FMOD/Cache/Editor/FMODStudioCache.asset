@@ -127,6 +127,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-8504877813720991668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ButtonHover
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ButtonHover
+  guid: 69c1766d43e25749805026ad29bd3c52
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8269993410807108497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +319,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6195550868266142089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Key Minigame/Quick Time Event Success
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Key Minigame/Quick Time Event Success
+  guid: 278da801cb14a04b89f59cda3d0fdc44
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5701713995110318376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +463,26 @@ MonoBehaviour:
   Name: SurfaceType
   Min: 0
   Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-4964635745941286780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Testing Pin/PinTest
+  m_EditorClassIdentifier: 
+  Name: PinTest
+  Min: -4
+  Max: 4
   Default: 0
   ID:
     data1: 0
@@ -579,8 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Characters/Yama/Footsteps
   guid: 500e7cbe0750d54bb2bcd1473246618e
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -648,6 +713,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3385384566963502738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/InsidePiano
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/InsidePiano
+  guid: cc9cd2782349d448aa52ca149dbae82e
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 120000
 --- !u!114 &-3294456495307958693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +836,7 @@ MonoBehaviour:
   Path: Assets/AudioFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637572046251271247
+  lastModified: 637596458310928687
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -829,8 +917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/Wood_Creaking
   guid: c465f624f8815e48b4a1ef93600360d6
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -878,6 +965,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-1989282725597698667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tune Minigame/Tuning Pin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tune Minigame/Tuning Pin
+  guid: 039526e58aed634cadb47b1a7f045525
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 15460
 --- !u!114 &-1594353862654334329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -993,11 +1103,11 @@ MonoBehaviour:
   Path: Assets/AudioFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637572046251271247
+  lastModified: 637596458310978909
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1190
+    Value: 1502
   Exists: 1
 --- !u!114 &-887132694957184232
 MonoBehaviour:
@@ -1033,8 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/drone_test
   guid: cc9cd2782349d448aa52ca149dbae82e
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1042,6 +1151,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 35887
+--- !u!114 &-784204540533697289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/Crowd
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/Crowd
+  guid: 2a9f257581fd2b4f9c230f1f49dd5d11
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 500
+  Length: 0
 --- !u!114 &-742073184503064697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,19 +1257,23 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 5752922161188684260}
   - {fileID: 2796832418932645708}
-  - {fileID: 7251997332091781344}
-  - {fileID: -4241018667841240925}
-  - {fileID: 6725841369389955441}
-  - {fileID: -2398280626470277659}
-  - {fileID: -838148932805137926}
-  - {fileID: 6236306692514959700}
-  - {fileID: 3388747618845574038}
+  - {fileID: -1989282725597698667}
+  - {fileID: -6195550868266142089}
+  - {fileID: -784204540533697289}
+  - {fileID: 2057497199208485217}
+  - {fileID: -8504877813720991668}
+  - {fileID: 5809114990104349734}
+  - {fileID: 7739703864276337688}
+  - {fileID: 8057101138590684164}
+  - {fileID: -3385384566963502738}
+  - {fileID: 4033115175646184485}
+  - {fileID: 642502833676823996}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2977450508564659972}
   StringsBanks:
   - {fileID: -1240361776517630150}
-  stringsBankWriteTime: 637572046251271247
+  stringsBankWriteTime: 637596458310978909
   cacheVersion: 6
 --- !u!114 &472557282660826098
 MonoBehaviour:
@@ -1159,6 +1295,30 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &642502833676823996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Tune Minigame/Testing Pin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Tune Minigame/Testing Pin
+  guid: edf6604cc98e2f4f84ffa09243047a9b
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 9189766888987513469}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &750776497354637264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,6 +1501,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &2057497199208485217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Characters/Yama/Yama Caught
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Characters/Yama/Yama Caught
+  guid: 68515a53ea56bb468370c8e46107d717
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2117802285510683317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,6 +1676,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3268707158273381759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3388747618845574038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,8 +1710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Tune Minigame/Testing Tune
   guid: edf6604cc98e2f4f84ffa09243047a9b
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1616,6 +1818,30 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &4033115175646184485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Characters/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Characters/Footsteps
+  guid: e10cc0b9a3912e44bfed414408127bb4
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4763365376331332314}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4222485274162165902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,6 +1975,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4763365376331332314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/SurfaceType
+  m_EditorClassIdentifier: 
+  Name: SurfaceType
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &4803082777008588987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +2125,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &5809114990104349734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/NewGame
+  m_EditorClassIdentifier: 
+  Path: event:/UI/NewGame
+  guid: a034fa30a2f2b445960e672069a77642
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5817345081800391807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2019,8 +2288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Characters/Willy/Footsteps
   guid: e10cc0b9a3912e44bfed414408127bb4
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2185,8 +2453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/PianoMusic
   guid: ba834d42980424479c3846cfca84e170
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2290,8 +2557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/UI/Main Menu/ButtonPress
   guid: 4c61f5f8484df8429802847dd3260203
-  Banks:
-  - {fileID: -2977450508564659972}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2339,6 +2605,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &7739703864276337688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Key Minigame/Repair Complete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Key Minigame/Repair Complete
+  guid: b6a286c17af27447affd357b6677cb42
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7773733128862558064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,6 +2710,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &8057101138590684164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Key Minigame/Cancel Repair
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Key Minigame/Cancel Repair
+  guid: bbe67ec1d49453468f6d85a19509dfb0
+  Banks:
+  - {fileID: -2977450508564659972}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8103443560048123703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2587,3 +2899,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &9189766888987513469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Testing Pin/PinTest
+  m_EditorClassIdentifier: 
+  Name: PinTest
+  Min: -4
+  Max: 4
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1

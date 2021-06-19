@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     private string selectedButtonName;
 
     private FMOD.Studio.EventInstance instance;
+    private FMOD.Studio.PLAYBACK_STATE clapsPlaybackState;
 
     public GameObject ResumeButton, ExitButton, AmbDrone;
 
@@ -15,23 +16,42 @@ public class PauseMenu : MonoBehaviour
     {
         selectedButtonName = "ResumeGameButton";
         EventSystem.current.SetSelectedGameObject(ResumeButton);
+
         Time.timeScale = 0.0f;
+
         PianoMusic.Music.Director.Pause();
         AmbDrone.GetComponent<StudioEventEmitter>().EventInstance.setPaused(true);
+
+        PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
+        if (clapsPlaybackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        {
+            PianoMusic.Music.ClapsInstance.setPaused(false);
+        }
+        
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1.0f;
+
+        //resume sound except sound dependent on animations
         PianoMusic.Music.Director.Resume();
         AmbDrone.GetComponent<StudioEventEmitter>().EventInstance.setPaused(false);
+
+        PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
+        if (clapsPlaybackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        {
+            PianoMusic.Music.ClapsInstance.setPaused(true);
+        }
+
         gameObject.SetActive(false);
     }
 
     public void ExitToMainMenu()
     {
-        ResumeGame();
+        PianoMusic.Music.ClapsInstance.release();
         Manager.ManagerInstance.ChangeScene("MainMenu");
+        gameObject.SetActive(false);
     }
 
     public void OnHover(Button button)
