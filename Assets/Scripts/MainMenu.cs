@@ -4,9 +4,22 @@ using FMODUnity;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    private CanvasGroup InputBlocker = null;
+
     private string selectedButtonName;
 
     private FMOD.Studio.EventInstance instance;
+
+    [SerializeField]
+    private Sprite playButtonSprite = null, 
+    playButtonGlowSprite = null, 
+    exitButtonSprite = null, 
+    exitButtonGlowSprite = null;
+
+    [SerializeField]
+    private Image playButtonImage = null, 
+    exitButtonImage = null;
 
     private void Start()
     {
@@ -16,10 +29,12 @@ public class MainMenu : MonoBehaviour
     public void Play() 
     {
         Manager.ManagerInstance.ChangeScene("UpperZonePiano");
+        InputBlocker.interactable = false;
     }
 
     public void ExitGame()
     {
+        InputBlocker.interactable = false;
         Application.Quit();
     }
 
@@ -27,13 +42,25 @@ public class MainMenu : MonoBehaviour
     {
         string buttonName = button.gameObject.name;
 
-        if (buttonName != selectedButtonName)
+        if (buttonName != selectedButtonName && InputBlocker.interactable == true)
         {
             OnHoverSound();
 
             selectedButtonName = buttonName;
 
-            //Debug.Log(selectedButtonName);
+            switch (selectedButtonName)
+            {
+                case "PlayButton":
+                    playButtonImage.sprite = playButtonGlowSprite;
+                    exitButtonImage.sprite = exitButtonSprite;
+                    break;
+                case "ExitButton":
+                    exitButtonImage.sprite = exitButtonGlowSprite;
+                    playButtonImage.sprite = playButtonSprite;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

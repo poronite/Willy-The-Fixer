@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 78194665}
   - component: {fileID: 78194664}
   - component: {fileID: 78194663}
+  - component: {fileID: 78194667}
   m_Layer: 5
   m_Name: KeyMinigameCanvas
   m_TagString: Untagged
@@ -339,6 +340,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &78194667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78194662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ba65604e63ba547bccb83b10cf1f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1622005305}
+  PlayerHeadCameraTarget: {fileID: 1622005304}
+  WillyAnimator: {fileID: 1622005306}
+  QuickTimeSlider: {fileID: 363967421}
+  SliderGlow: {fileID: 1270463976}
+  EKeyPrompt: {fileID: 323748638}
+  SquareKeyPrompt: {fileID: 440270789}
+  quickTimeEventSpeed: 2
+  maxTimeLeft: 5
 --- !u!1 &140037538 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3214680616391067801, guid: 513675a4f8d8aee43b6e510805cdb839,
@@ -35736,27 +35758,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1102051107344277723, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7284393884137410138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35770,10 +35771,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507062
@@ -35803,27 +35805,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1413371661433501262, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9014553037689171384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35837,10 +35818,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507067
@@ -35870,27 +35852,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -9092770527313676767, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 667361729647217595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35904,10 +35865,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507072
@@ -35937,27 +35899,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6988334845515806548, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4355431754873407970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35971,10 +35912,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507077
@@ -36004,27 +35946,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2097392619574934865, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5268216969547534788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36038,10 +35959,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507082
@@ -36071,27 +35993,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1099759741784253122, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381900963801666602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36105,10 +36006,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507087
@@ -36138,27 +36040,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2409330831432419464, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5347209982060126927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36172,10 +36053,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507092
@@ -36205,27 +36087,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -861436047129010292, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8530145422731744851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36239,10 +36100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507097
@@ -36272,27 +36134,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 856955147551581917, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5329525523392810780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36306,10 +36147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507102
@@ -36339,27 +36181,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 805982799906540038, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370102405724551061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36373,10 +36194,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507107
@@ -36406,27 +36228,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6072773186089992684, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6887423594691850552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36440,10 +36241,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507112
@@ -36473,27 +36275,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7274832182892821170, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7140044993663743598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36507,10 +36288,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507117
@@ -36540,27 +36322,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8201902316212828956, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696767710844376050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36574,10 +36335,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507122
@@ -36607,27 +36369,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4626463523700372107, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8115175145861617294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36641,10 +36382,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507127
@@ -36674,27 +36416,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4267859795932652827, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4451877301257005573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36708,10 +36429,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507132
@@ -36741,27 +36463,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1084139914260805844, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3756555960826234441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36775,10 +36476,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507137
@@ -36808,27 +36510,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6838198983149510770, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1040504286713314358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36842,10 +36523,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507142
@@ -36875,27 +36557,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8221388336629621908, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3638980124271956622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36909,10 +36570,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507147
@@ -36942,27 +36604,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3612031119709808231, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4845950087960947608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36976,10 +36617,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507152
@@ -37009,27 +36651,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4043662581466960154, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729309155017360585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37043,10 +36664,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507157
@@ -37076,27 +36698,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6372890156853060266, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3179205589364340342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37110,10 +36711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507162
@@ -37143,27 +36745,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6440867651743010507, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095785458477643942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37177,10 +36758,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507167
@@ -37210,27 +36792,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4191555843484614998, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6172023085245513949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37244,10 +36805,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507172
@@ -37277,27 +36839,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8990582069398379694, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7530133362288567346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37311,10 +36852,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507177
@@ -37344,27 +36886,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3391814157755344719, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9026095024457784840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37378,10 +36899,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507182
@@ -37411,27 +36933,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2070444823264013436, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4590690480392075740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37445,10 +36946,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507187
@@ -37478,27 +36980,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3938680224142070076, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7214916372952121204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37512,10 +36993,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507192
@@ -37545,27 +37027,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3628821527860215555, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5702055608815184038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37579,10 +37040,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507197
@@ -37612,27 +37074,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -197749735736047990, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201298330562437883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37646,10 +37087,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507202
@@ -37679,27 +37121,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6419671742268697049, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851773781575640642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37713,10 +37134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507207
@@ -37746,27 +37168,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2633633890536435084, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557737326442959106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37780,10 +37181,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507212
@@ -37813,27 +37215,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5528295513944960850, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4817009068060989951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37847,10 +37228,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507217
@@ -37880,27 +37262,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3115405115822802557, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3181810125940851282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37914,10 +37275,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507222
@@ -37947,27 +37309,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1108026597780576635, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5866917929964734855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37981,10 +37322,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507227
@@ -38014,27 +37356,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7291087030311489740, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220216161677643177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38048,10 +37369,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507232
@@ -38081,27 +37403,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1394870617829570621, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3672872591871379656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38115,10 +37416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507237
@@ -38148,27 +37450,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4813061489116349262, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8593168244895903240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38182,10 +37463,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507242
@@ -38215,27 +37497,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4790066145182199392, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134500798648395263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38249,10 +37510,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507247
@@ -38282,27 +37544,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5843300030729269382, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7621554970885386507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38316,10 +37557,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507252
@@ -38349,27 +37591,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2584343895222212754, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49661279173011507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38383,10 +37604,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507257
@@ -38416,27 +37638,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7093427674857478458, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340861041931974009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38450,10 +37651,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507262
@@ -38483,27 +37685,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3900406366884903516, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7720351545774865370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38517,10 +37698,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507267
@@ -38550,27 +37732,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3366520741583241977, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3143578676100341208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38584,10 +37745,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507272
@@ -38617,27 +37779,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7850756104442520633, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501486373828435155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38651,10 +37792,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507277
@@ -38684,27 +37826,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8556528191681525197, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493449600472820753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38718,10 +37839,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507282
@@ -38751,27 +37873,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6959845305338615652, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789928331224831550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38785,10 +37886,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507287
@@ -38818,27 +37920,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6946584320876287153, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4544317581680496231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38852,10 +37933,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507292
@@ -38885,27 +37967,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5352144035601046551, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3228252749375547981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38919,10 +37980,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507297
@@ -38952,27 +38014,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -310724315247524341, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2997619453721904148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38986,10 +38027,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507302
@@ -39019,27 +38061,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7971301756689314673, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487064168751013637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39053,10 +38074,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507307
@@ -39086,27 +38108,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3095723851028647339, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2766035044931714570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39120,10 +38121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507312
@@ -39153,27 +38155,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2393472479245767354, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385801336826034799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39187,10 +38168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507317
@@ -39220,27 +38202,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2272723776445580326, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2879046227543365506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39254,10 +38215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507322
@@ -39287,27 +38249,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6079364382707102644, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045954110936669048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39321,10 +38262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507327
@@ -39354,27 +38296,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6314937198931416090, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512009531211227468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39388,10 +38309,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507332
@@ -39421,27 +38343,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1010298009741152200, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414485202834790992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39455,10 +38356,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507337
@@ -39488,27 +38390,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2831471103487625213, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4688091111454504352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39522,10 +38403,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507342
@@ -39555,27 +38437,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3313801722201893710, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718525011705866677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39589,10 +38450,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507347
@@ -39622,27 +38484,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 72738439368166428, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010492477501049604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39656,10 +38497,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507352
@@ -39689,27 +38531,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -297041285139046304, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210665725323188521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39723,10 +38544,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507357
@@ -39756,27 +38578,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5708807843768303551, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3759141280894224378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39790,10 +38591,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507362
@@ -39823,27 +38625,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4102177463409461332, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3601603819506488598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39857,10 +38638,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507367
@@ -39890,27 +38672,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4036216019040343013, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724824651515154365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39924,10 +38685,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507372
@@ -39957,27 +38719,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5549456802139514564, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3502414732443457474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39991,10 +38732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507377
@@ -40024,27 +38766,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8192333199073311452, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8180116945378558104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40058,10 +38779,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507382
@@ -40091,27 +38813,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8831838907412882736, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700275462865828245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40125,10 +38826,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507387
@@ -40158,27 +38860,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6012856225092369963, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948208134196943221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40192,10 +38873,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507392
@@ -40225,27 +38907,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -655295126082474370, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2743822633027650480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40259,10 +38920,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507397
@@ -40292,27 +38954,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7720181761311349874, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6921615445170588025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40326,10 +38967,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507402
@@ -40359,27 +39001,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1491409557027006354, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208390949767562792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40393,10 +39014,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507407
@@ -40426,27 +39048,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4020467734421839564, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5240372073911050808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40460,10 +39061,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507412
@@ -40493,27 +39095,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8536698494201444243, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380407518202270879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40527,10 +39108,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507417
@@ -40560,27 +39142,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2984251037594047307, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8262539336582853218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40594,10 +39155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507422
@@ -40627,27 +39189,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8780563997056450163, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57735032742955993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40661,10 +39202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507427
@@ -40694,27 +39236,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8476578622535250603, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3197419700985683009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40728,10 +39249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507432
@@ -40761,27 +39283,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6181298378053142573, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420059423183503770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40795,10 +39296,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507437
@@ -40828,27 +39330,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2497634986386824109, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8802851566734110592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40862,10 +39343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507442
@@ -40895,27 +39377,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7155757169528667362, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282144848490217440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40929,10 +39390,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507447
@@ -40962,27 +39424,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3488409069077695378, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7632499850951241481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40996,10 +39437,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507452
@@ -41029,27 +39471,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3678222738551855671, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2774392490747848422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41063,10 +39484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507457
@@ -41096,27 +39518,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6060060357335719609, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4700028532456504158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41130,10 +39531,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507462
@@ -41163,27 +39565,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1925019062486492315, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6674817696530808136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41197,10 +39578,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507467
@@ -41230,27 +39612,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8902780745861191763, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5970764256269014338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41264,10 +39625,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507472
@@ -41297,27 +39659,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1983915463455302477, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832403721782575532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41331,10 +39672,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507477
@@ -41364,27 +39706,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2885381020727668519, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880951035162215929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41398,10 +39719,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507482
@@ -41431,27 +39753,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7745829151399411429, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6531904302688918494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41465,10 +39766,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507487
@@ -41498,27 +39800,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -370653312990099931, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2242817940509750302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41532,10 +39813,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507492
@@ -41565,27 +39847,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6823572924268778726, guid: 513675a4f8d8aee43b6e510805cdb839, type: 3}
---- !u!114 &150507495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7928843420171252884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6141344db0fdfd147a564d0441f8ec67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerInputRef: {fileID: 1622005305}
-  QuickTimeSlider: {fileID: 363967421}
-  SliderGlow: {fileID: 1270463976}
-  EKeyPrompt: {fileID: 323748638}
-  SquareKeyPrompt: {fileID: 440270789}
-  WillyAnimator: {fileID: 1622005306}
-  potentialPhase: 0
-  PlayerHeadCameraTarget: {fileID: 1622005304}
-  KeyAnimator: {fileID: 0}
 --- !u!114 &150507496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41599,10 +39860,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1622005306}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: c2905808787db8b42ad71eaaf0bc4691, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: 9864e44cc9833b04b8ac41228af9c912, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 78194667}
   IsRepaired: 0
   index: 0
 --- !u!65 &150507497
@@ -46981,6 +45243,11 @@ PrefabInstance:
       propertyPath: KeysParent
       value: 
       objectReference: {fileID: 150506878}
+    - target: {fileID: 2428833456862036230, guid: e46f571f0acc03c4bb7e816fc71fde45,
+        type: 3}
+      propertyPath: KeyMinigameUI
+      value: 
+      objectReference: {fileID: 78194662}
     - target: {fileID: 2428833456862036231, guid: e46f571f0acc03c4bb7e816fc71fde45,
         type: 3}
       propertyPath: m_LocalPosition.x

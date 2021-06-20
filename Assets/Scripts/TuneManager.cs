@@ -33,7 +33,7 @@ public class TuneManager : MonoBehaviour
 
     private bool isCompleted;
 
-    private PianoComponent PinStatus;
+    private PianoComponent PinStatus = null;
 
     private FMOD.Studio.EventInstance tuningPinInstance;
     private FMOD.Studio.EventInstance testingPinInstance;
@@ -44,43 +44,40 @@ public class TuneManager : MonoBehaviour
     {
         PinStatus = pin.GetComponent<PianoComponent>();
 
-        if (!PinStatus.IsRepaired)
+        SetInputs();
+        
+        //setup the tuning session
+        currentNum = Random.Range(minNum, maxNum + 1);
+        isCompleted = false;
+        
+        WillyAnimator.Play("StartFix", 0);
+        playerInputRef.transform.LookAt(new Vector3(PinStatus.ComponentRealPosition.x, playerInputRef.transform.position.y, PinStatus.ComponentRealPosition.z));
+        
+        //code to find control scheme in use
+        if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
         {
-            SetInputs();
-
-            //setup the tuning session
-            currentNum = Random.Range(minNum, maxNum + 1);
-            isCompleted = false;
-
-            WillyAnimator.Play("StartFix", 0);
-            playerInputRef.transform.LookAt(new Vector3(PinStatus.ComponentRealPosition.x, playerInputRef.transform.position.y, PinStatus.ComponentRealPosition.z));
-
-            //code to find control scheme in use
-            if (playerInputRef.LastInputDevice == "Keyboard" || playerInputRef.LastInputDevice == "Mouse")
-            {
-                controller.SetActive(false);
-                mouse.SetActive(true);
-                mouse.GetComponent<Animator>().SetInteger("Input", 0);
-            }
-            else
-            {
-                mouse.SetActive(false);
-                controller.SetActive(true);
-                controller.GetComponent<Animator>().SetInteger("Input", 1);
-            }
-
-            //setup and start the sound that will play when tuning the pin (not to confuse with the one used to test the pin)
-            tuningPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Tuning Pin");
-            tuningPinInstance.set3DAttributes(RuntimeUtils.To3DAttributes(PinStatus.gameObject));
-            tuningPinInstance.start();
-
-            //the sound is paused until the player starts tuning
-            //setPaused makes it so that the sound can continue where it was paused
-            tuningPinInstance.setPaused(true);
-
-            //setup the sound that will play once in a while to check the pin of the piano
-            testingPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Testing Pin");
+            controller.SetActive(false);
+            mouse.SetActive(true);
+            mouse.GetComponent<Animator>().SetInteger("Input", 0);
         }
+        else
+        {
+            mouse.SetActive(false);
+            controller.SetActive(true);
+            controller.GetComponent<Animator>().SetInteger("Input", 1);
+        }
+        
+        //setup and start the sound that will play when tuning the pin (not to confuse with the one used to test the pin)
+        tuningPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Tuning Pin");
+        tuningPinInstance.set3DAttributes(RuntimeUtils.To3DAttributes(PinStatus.gameObject));
+        tuningPinInstance.start();
+        
+        //the sound is paused until the player starts tuning
+        //setPaused makes it so that the sound can continue where it was paused
+        tuningPinInstance.setPaused(true);
+        
+        //setup the sound that will play once in a while to check the pin of the piano
+        testingPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Testing Pin");
     }
 
     private void SetInputs()

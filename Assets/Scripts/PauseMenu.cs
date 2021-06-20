@@ -51,7 +51,7 @@ public class PauseMenu : MonoBehaviour
     {
         PianoMusic.Music.ClapsInstance.release();
         Manager.ManagerInstance.ChangeScene("MainMenu");
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     public void OnHover(Button button)

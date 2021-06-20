@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     public PlayerInput Input;
     public Animator WillyAnimator;
     public GameObject TuneMinigameUI;
+    public GameObject KeyMinigameUI;
     public GameObject PauseMenu;
     public GameUI EnemyCount;
     public UITutorial Tutorial;
@@ -549,7 +550,7 @@ public class Player : MonoBehaviour
 
     private void KeyMinigame()
     {
-        nearestInteractable.GetComponent<RepairDestroy>().StartKeyMinigame(LastInputDevice);
+        KeyMinigameUI.GetComponent<KeyMinigame>().StartKeyMinigame(nearestInteractable, LastInputDevice);
     }
 
     public void PauseGame()

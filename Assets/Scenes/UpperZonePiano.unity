@@ -25139,10 +25139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119193
@@ -25199,10 +25200,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119197
@@ -25259,10 +25261,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119201
@@ -25319,10 +25322,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119205
@@ -25379,10 +25383,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119209
@@ -25439,10 +25444,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119213
@@ -25499,10 +25505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119217
@@ -25559,10 +25566,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119221
@@ -25619,10 +25627,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119225
@@ -25679,10 +25688,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119229
@@ -25739,10 +25749,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119233
@@ -25799,10 +25810,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119237
@@ -25859,10 +25871,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119241
@@ -25919,10 +25932,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119245
@@ -25979,10 +25993,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119249
@@ -26039,10 +26054,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119253
@@ -26099,10 +26115,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119257
@@ -26159,10 +26176,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119261
@@ -26219,10 +26237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119265
@@ -26279,10 +26298,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119269
@@ -26339,10 +26359,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119273
@@ -26399,10 +26420,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119277
@@ -26459,10 +26481,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119281
@@ -26519,10 +26542,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119285
@@ -26579,10 +26603,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119289
@@ -26639,10 +26664,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119293
@@ -26699,10 +26725,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119297
@@ -26759,10 +26786,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119301
@@ -26819,10 +26847,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119305
@@ -26879,10 +26908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119309
@@ -26939,10 +26969,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119313
@@ -26999,10 +27030,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119317
@@ -27059,10 +27091,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119321
@@ -27119,10 +27152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119325
@@ -27179,10 +27213,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119329
@@ -27239,10 +27274,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119333
@@ -27299,10 +27335,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119337
@@ -27359,10 +27396,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119341
@@ -27419,10 +27457,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119345
@@ -27479,10 +27518,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119349
@@ -27539,10 +27579,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119353
@@ -27599,10 +27640,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119357
@@ -27659,10 +27701,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119361
@@ -27719,10 +27762,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119365
@@ -27779,10 +27823,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119369
@@ -27839,10 +27884,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119373
@@ -27899,10 +27945,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119377
@@ -27959,10 +28006,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119381
@@ -28019,10 +28067,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119385
@@ -28079,10 +28128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119389
@@ -28139,10 +28189,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119393
@@ -28199,10 +28250,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119397
@@ -28259,10 +28311,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119401
@@ -28319,10 +28372,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119405
@@ -28379,10 +28433,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119409
@@ -28439,10 +28494,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119413
@@ -28499,10 +28555,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119417
@@ -28559,10 +28616,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119421
@@ -28619,10 +28677,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119425
@@ -28679,10 +28738,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119429
@@ -28739,10 +28799,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119433
@@ -28799,10 +28860,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119437
@@ -28859,10 +28921,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119441
@@ -28919,10 +28982,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119445
@@ -28979,10 +29043,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119449
@@ -29039,10 +29104,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119453
@@ -29099,10 +29165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119457
@@ -29159,10 +29226,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119461
@@ -29219,10 +29287,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119465
@@ -29279,10 +29348,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119469
@@ -29339,10 +29409,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119473
@@ -29399,10 +29470,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119477
@@ -29459,10 +29531,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119481
@@ -29519,10 +29592,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119485
@@ -29579,10 +29653,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119489
@@ -29639,10 +29714,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119493
@@ -29699,10 +29775,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119497
@@ -29759,10 +29836,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119501
@@ -29819,10 +29897,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119505
@@ -29879,10 +29958,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119509
@@ -29939,10 +30019,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119513
@@ -29999,10 +30080,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119517
@@ -30059,10 +30141,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119521
@@ -30119,10 +30202,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119525
@@ -30179,10 +30263,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119529
@@ -30239,10 +30324,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119533
@@ -30299,10 +30385,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119537
@@ -30359,10 +30446,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119541
@@ -30419,10 +30507,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119545
@@ -30479,10 +30568,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119549
@@ -30539,10 +30629,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119553
@@ -30599,10 +30690,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119557
@@ -30659,10 +30751,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119561
@@ -30719,10 +30812,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119565
@@ -30779,10 +30873,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119569
@@ -30839,10 +30934,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119573
@@ -30899,10 +30995,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119577
@@ -30959,10 +31056,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119581
@@ -31019,10 +31117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119585
@@ -31079,10 +31178,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119589
@@ -31139,10 +31239,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119593
@@ -31199,10 +31300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119597
@@ -31259,10 +31361,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119601
@@ -31319,10 +31422,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119605
@@ -31379,10 +31483,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119609
@@ -31439,10 +31544,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119613
@@ -31499,10 +31605,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119617
@@ -31559,10 +31666,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119621
@@ -31619,10 +31727,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119625
@@ -31679,10 +31788,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119629
@@ -31739,10 +31849,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119633
@@ -31799,10 +31910,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119637
@@ -31859,10 +31971,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119641
@@ -31919,10 +32032,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119645
@@ -31979,10 +32093,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119649
@@ -32039,10 +32154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119653
@@ -32099,10 +32215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!64 &1024119657
@@ -32200,10 +32317,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119664
@@ -32232,10 +32350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119666
@@ -32264,10 +32383,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119668
@@ -32296,10 +32416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119670
@@ -32328,10 +32449,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119672
@@ -32360,10 +32482,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119674
@@ -32392,10 +32515,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119676
@@ -32424,10 +32548,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119678
@@ -32456,10 +32581,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119680
@@ -32488,10 +32614,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119682
@@ -32520,10 +32647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119684
@@ -32552,10 +32680,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119686
@@ -32584,10 +32713,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119688
@@ -32616,10 +32746,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119690
@@ -32648,10 +32779,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119692
@@ -32680,10 +32812,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119694
@@ -32712,10 +32845,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119696
@@ -32744,10 +32878,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119698
@@ -32776,10 +32911,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119700
@@ -32808,10 +32944,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119702
@@ -32840,10 +32977,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119704
@@ -32872,10 +33010,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119706
@@ -32904,10 +33043,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119708
@@ -32936,10 +33076,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119710
@@ -32968,10 +33109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119712
@@ -33000,10 +33142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119714
@@ -33032,10 +33175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119716
@@ -33064,10 +33208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119718
@@ -33096,10 +33241,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119720
@@ -33128,10 +33274,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119722
@@ -33160,10 +33307,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119724
@@ -33192,10 +33340,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119726
@@ -33224,10 +33373,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119728
@@ -33256,10 +33406,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119730
@@ -33288,10 +33439,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119732
@@ -33320,10 +33472,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119734
@@ -33352,10 +33505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119736
@@ -33384,10 +33538,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119738
@@ -33416,10 +33571,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119740
@@ -33448,10 +33604,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119742
@@ -33480,10 +33637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119744
@@ -33512,10 +33670,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119746
@@ -33544,10 +33703,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119748
@@ -33576,10 +33736,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119750
@@ -33608,10 +33769,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119752
@@ -33640,10 +33802,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119754
@@ -33672,10 +33835,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119756
@@ -33704,10 +33868,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119758
@@ -33736,10 +33901,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119760
@@ -33768,10 +33934,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119762
@@ -33800,10 +33967,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119764
@@ -33832,10 +34000,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119766
@@ -33864,10 +34033,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119768
@@ -33896,10 +34066,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119770
@@ -33928,10 +34099,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119772
@@ -33960,10 +34132,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119774
@@ -33992,10 +34165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119776
@@ -34024,10 +34198,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119778
@@ -34056,10 +34231,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119780
@@ -34088,10 +34264,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119782
@@ -34120,10 +34297,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119784
@@ -34152,10 +34330,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119786
@@ -34184,10 +34363,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119788
@@ -34216,10 +34396,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119790
@@ -34248,10 +34429,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119792
@@ -34280,10 +34462,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119794
@@ -34312,10 +34495,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119796
@@ -34344,10 +34528,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119798
@@ -34376,10 +34561,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119800
@@ -34408,10 +34594,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119802
@@ -34440,10 +34627,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119804
@@ -34472,10 +34660,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119806
@@ -34504,10 +34693,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119808
@@ -34536,10 +34726,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119810
@@ -34568,10 +34759,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119812
@@ -34600,10 +34792,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119814
@@ -34632,10 +34825,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119816
@@ -34664,10 +34858,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119818
@@ -34696,10 +34891,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119820
@@ -34728,10 +34924,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119822
@@ -34760,10 +34957,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119824
@@ -34792,10 +34990,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119826
@@ -34824,10 +35023,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119828
@@ -34856,10 +35056,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119830
@@ -34888,10 +35089,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119832
@@ -34920,10 +35122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119834
@@ -34952,10 +35155,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119836
@@ -34984,10 +35188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119838
@@ -35016,10 +35221,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119840
@@ -35048,10 +35254,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119842
@@ -35080,10 +35287,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119844
@@ -35112,10 +35320,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119846
@@ -35144,10 +35353,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119848
@@ -35176,10 +35386,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119850
@@ -35208,10 +35419,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119852
@@ -35240,10 +35452,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119854
@@ -35272,10 +35485,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119856
@@ -35304,10 +35518,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119858
@@ -35336,10 +35551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119860
@@ -35368,10 +35584,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119862
@@ -35400,10 +35617,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119864
@@ -35432,10 +35650,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119866
@@ -35464,10 +35683,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119868
@@ -35496,10 +35716,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119870
@@ -35528,10 +35749,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119872
@@ -35560,10 +35782,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119874
@@ -35592,10 +35815,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119876
@@ -35624,10 +35848,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119878
@@ -35656,10 +35881,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119880
@@ -35688,10 +35914,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119882
@@ -35720,10 +35947,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119884
@@ -35752,10 +35980,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119886
@@ -35784,10 +36013,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119888
@@ -35816,10 +36046,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119890
@@ -35848,10 +36079,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119892
@@ -35880,10 +36112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentMaterial: {fileID: 0}
-  WillyAnimator: {fileID: 1268232240}
+  KeyAnimator: {fileID: 0}
   RepairedMaterial: {fileID: 2100000, guid: b1d186fedf13d0c459c619fdb95fbb9a, type: 2}
   DestroyedMaterial: {fileID: 2100000, guid: d2a3a8c5861a9914984e126717c02936, type: 2}
   ComponentRealPosition: {x: 0, y: 0, z: 0}
+  KeyMinigameUI: {fileID: 0}
   IsRepaired: 0
   index: 0
 --- !u!65 &1024119894
@@ -36419,7 +36652,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160803047}
-  m_LocalRotation: {x: 0.000000036933454, y: -0.9819564, z: 0.18910751, w: 0.000000023382015}
+  m_LocalRotation: {x: 0.000000036933475, y: -0.9819564, z: 0.18910751, w: 0.000000023382016}
   m_LocalPosition: {x: -11.17, y: 6.344, z: 28.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -39654,7 +39887,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887748975}
-  m_LocalRotation: {x: 0.000000036933454, y: -0.9819564, z: 0.18910751, w: 0.000000023382015}
+  m_LocalRotation: {x: 0.000000036933475, y: -0.9819564, z: 0.18910751, w: 0.000000023382016}
   m_LocalPosition: {x: -11.17, y: 6.344, z: 28.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

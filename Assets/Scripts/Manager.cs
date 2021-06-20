@@ -81,6 +81,7 @@ public class Manager : MonoBehaviour
         }
         else
         {
+            Debug.Log("a");
             canvasLoadingScreen.alpha = 1;
         }
 
@@ -109,7 +110,7 @@ public class Manager : MonoBehaviour
         while (time < duration)
         {
             uiElement.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
-            time += Time.deltaTime;
+            time += Time.fixedDeltaTime;
             yield return null;
         }
 
@@ -205,7 +206,7 @@ public class Manager : MonoBehaviour
                     if (components[i].CompareTag("Key"))
                     {
                         NumRepairedKeys++;
-                        components[i].GetComponent<RepairDestroy>().SetRepair();
+                        components[i].GetComponent<PianoComponent>().SetRepair();
                     }
                     else
                     {
@@ -222,7 +223,7 @@ public class Manager : MonoBehaviour
 
                     if (components[i].CompareTag("Key"))
                     {
-                        components[i].GetComponent<RepairDestroy>().SetDestroy();
+                        components[i].GetComponent<PianoComponent>().SetDestroy();
                     }
                     
                     componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
@@ -241,7 +242,7 @@ public class Manager : MonoBehaviour
                 {
                     if (components[i].CompareTag("Key"))
                     {
-                        components[i].GetComponent<RepairDestroy>().SetRepair();
+                        components[i].GetComponent<PianoComponent>().SetRepair();
                     }
                     
                     componentStats.ComponentMaterial.material = componentStats.RepairedMaterial;
@@ -250,7 +251,7 @@ public class Manager : MonoBehaviour
                 {
                     if (components[i].CompareTag("Key"))
                     {
-                        components[i].GetComponent<RepairDestroy>().SetDestroy();
+                        components[i].GetComponent<PianoComponent>().SetDestroy();
                     }
                     
                     componentStats.ComponentMaterial.material = componentStats.DestroyedMaterial;
@@ -270,9 +271,24 @@ public class Manager : MonoBehaviour
             }
         }
     }
+    #endregion
+
+    #region Victory
+    public void IsGameWon() //has game ended? If not assign the next Waypoint Suggestion
+    {
+        if (NumRepairedPins == 233 && NumRepairedKeys == 88)
+        {
+            //StartCoroutine(Manager.ManagerInstance.GameClear());
+            ChangeScene("MainMenu");
+        }
+        else
+        {
+            FindObjectOfType<Waypoint>().AssignSuggestion();
+        }
+    }
 
     //not being used because it's not working
-    public IEnumerator GameClear()
+    private IEnumerator GameClear()
     {
         loadingScreen.SetActive(true);
 

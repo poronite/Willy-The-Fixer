@@ -126,7 +126,6 @@ public class AIActions : MonoBehaviour
 
             agent.SetDestination(Target.GetComponent<PianoComponent>().ComponentRealPosition);
             YamaAnimator.Play("GoToTarget", 0);
-            Task.current.Fail();
         }
         else
         {
@@ -136,8 +135,9 @@ public class AIActions : MonoBehaviour
             Target = exits[Random.Range(0, exits.Count)];
             agent.SetDestination(Target.transform.position);
             YamaAnimator.Play("GoToTarget", 0);
-            Task.current.Succeed();
         }
+
+        Task.current.Fail();
     }
 
     [Task]
@@ -183,7 +183,7 @@ public class AIActions : MonoBehaviour
         //destroy component
         if (target.CompareTag("Key"))
         {
-            target.gameObject.GetComponent<RepairDestroy>().KeyAnimator.Play("Destroy", 0);
+            target.gameObject.GetComponent<PianoComponent>().KeyAnimator.Play("Destroy", 0);
         }
         else
         {
@@ -286,8 +286,14 @@ public class AIActions : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
 
-        if (other.gameObject == Target)
+    
+    private void OnTriggerStay(Collider other)
+    {
+        //AI got stuck sometimes when this was inside OnTriggerEnter,
+        //probably because they assigned the target while already inside the trigger collider
+        if (!ReachedTarget && other.gameObject == Target)
         {
             ReachedTarget = true;
         }

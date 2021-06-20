@@ -92,7 +92,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: de11758002208cd4f94b3625a5d3208f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResumeButton: {fileID: 670364947758454420}
   ExitButton: {fileID: 670364948307884404}
+  AmbDrone: {fileID: 0}
 --- !u!1 &670364947758454420
 GameObject:
   m_ObjectHideFlags: 0
