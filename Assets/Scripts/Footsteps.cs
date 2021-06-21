@@ -3,6 +3,7 @@ using FMODUnity;
 
 public class Footsteps : MonoBehaviour
 {
+    [SerializeField]
     private float currentFloorMaterial;
 
     private FMOD.Studio.EventInstance instance;

@@ -310,6 +310,8 @@ public class Player : MonoBehaviour
 
                 Input.Player.Disable();
 
+                Manager.ManagerInstance.ChangeCameraTarget(null);
+
                 switch (SceneManager.GetActiveScene().name)
                 {
                     case "UpperZonePiano":
@@ -321,6 +323,8 @@ public class Player : MonoBehaviour
                     default:
                         break;
                 }
+
+                WillyAnimator.gameObject.SetActive(false); //deactivate the model
                 break;
             case "PreventDescend":
                 canDescend = false;
@@ -367,8 +371,8 @@ public class Player : MonoBehaviour
             if (movement != Vector3.zero)
             {
                 isMoving = true;
-                playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.3f);
-                //playerRigidbody.rotation = Quaternion.LookRotation(movement);
+                playerRigidbody.rotation = Quaternion.Slerp(playerRigidbody.rotation, Quaternion.LookRotation(movement), 0.5f);
+                
             }
             else
             {

@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
         PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
         if (clapsPlaybackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
-            PianoMusic.Music.ClapsInstance.setPaused(false);
+            PianoMusic.Music.ClapsInstance.setPaused(true);
         }
         
     }
@@ -41,7 +41,7 @@ public class PauseMenu : MonoBehaviour
         PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
         if (clapsPlaybackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
-            PianoMusic.Music.ClapsInstance.setPaused(true);
+            PianoMusic.Music.ClapsInstance.setPaused(false);
         }
 
         gameObject.SetActive(false);

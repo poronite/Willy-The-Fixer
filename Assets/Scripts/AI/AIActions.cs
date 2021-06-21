@@ -299,8 +299,9 @@ public class AIActions : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
+        Debug.Log(collision.gameObject.tag);
         YamaFootsteps.ChangeSurfaceType(collision.gameObject.tag);
     }
 

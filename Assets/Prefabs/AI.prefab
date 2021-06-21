@@ -49,9 +49,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.21776924
-  m_Height: 0.750181
+  m_Height: 0.7494186
   m_Direction: 1
-  m_Center: {x: 0, y: 0.3741136, z: 0}
+  m_Center: {x: 0, y: 0.3744948, z: 0}
 --- !u!65 &3673813198138424897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2298cc85e4728854cb66fa6ccdf9c56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentFloorMaterial: 1
 --- !u!1001 &6013723251421827790
 PrefabInstance:
   m_ObjectHideFlags: 0
