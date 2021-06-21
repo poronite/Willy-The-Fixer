@@ -774,6 +774,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""8fc01c10-2d4c-4793-80e6-51428a2b55e0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -809,6 +817,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""action"": ""Tune"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eab154bb-1f32-47ee-ba2c-b8894a349ddb"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0360f9e1-e2af-4432-be6c-7abcbffc9169"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -820,6 +850,14 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""name"": ""Repair"",
                     ""type"": ""Button"",
                     ""id"": ""cd93e7f2-6635-4e82-ab51-d2cddc5e99eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""4c794a6b-c21c-41ed-9b95-cdc6fa56a62e"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -845,6 +883,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Repair"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae779523-23a0-4582-90d6-cdf269522a28"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fbc9718e-b198-4baa-a518-098e8e16f533"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -937,9 +997,11 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         // TuneMinigame
         m_TuneMinigame = asset.FindActionMap("TuneMinigame", throwIfNotFound: true);
         m_TuneMinigame_Tune = m_TuneMinigame.FindAction("Tune", throwIfNotFound: true);
+        m_TuneMinigame_Cancel = m_TuneMinigame.FindAction("Cancel", throwIfNotFound: true);
         // RepairMinigame
         m_RepairMinigame = asset.FindActionMap("RepairMinigame", throwIfNotFound: true);
         m_RepairMinigame_Repair = m_RepairMinigame.FindAction("Repair", throwIfNotFound: true);
+        m_RepairMinigame_Cancel = m_RepairMinigame.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1168,11 +1230,13 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputActionMap m_TuneMinigame;
     private ITuneMinigameActions m_TuneMinigameActionsCallbackInterface;
     private readonly InputAction m_TuneMinigame_Tune;
+    private readonly InputAction m_TuneMinigame_Cancel;
     public struct TuneMinigameActions
     {
         private @PlayerInput m_Wrapper;
         public TuneMinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Tune => m_Wrapper.m_TuneMinigame_Tune;
+        public InputAction @Cancel => m_Wrapper.m_TuneMinigame_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_TuneMinigame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1185,6 +1249,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Tune.started -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnTune;
                 @Tune.performed -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnTune;
                 @Tune.canceled -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnTune;
+                @Cancel.started -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_TuneMinigameActionsCallbackInterface.OnCancel;
             }
             m_Wrapper.m_TuneMinigameActionsCallbackInterface = instance;
             if (instance != null)
@@ -1192,6 +1259,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Tune.started += instance.OnTune;
                 @Tune.performed += instance.OnTune;
                 @Tune.canceled += instance.OnTune;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
             }
         }
     }
@@ -1201,11 +1271,13 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputActionMap m_RepairMinigame;
     private IRepairMinigameActions m_RepairMinigameActionsCallbackInterface;
     private readonly InputAction m_RepairMinigame_Repair;
+    private readonly InputAction m_RepairMinigame_Cancel;
     public struct RepairMinigameActions
     {
         private @PlayerInput m_Wrapper;
         public RepairMinigameActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Repair => m_Wrapper.m_RepairMinigame_Repair;
+        public InputAction @Cancel => m_Wrapper.m_RepairMinigame_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_RepairMinigame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1218,6 +1290,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Repair.started -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
                 @Repair.performed -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
                 @Repair.canceled -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnRepair;
+                @Cancel.started -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_RepairMinigameActionsCallbackInterface.OnCancel;
             }
             m_Wrapper.m_RepairMinigameActionsCallbackInterface = instance;
             if (instance != null)
@@ -1225,6 +1300,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Repair.started += instance.OnRepair;
                 @Repair.performed += instance.OnRepair;
                 @Repair.canceled += instance.OnRepair;
+                @Cancel.started += instance.OnCancel;
+                @Cancel.performed += instance.OnCancel;
+                @Cancel.canceled += instance.OnCancel;
             }
         }
     }
@@ -1299,9 +1377,11 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     public interface ITuneMinigameActions
     {
         void OnTune(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
     public interface IRepairMinigameActions
     {
         void OnRepair(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }

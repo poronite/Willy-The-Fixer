@@ -100,6 +100,15 @@ public class KeyMinigame : MonoBehaviour
                 }
             }
         };
+
+        Player.Input.RepairMinigame.Cancel.performed += context =>
+        {
+            if (onQuickTimeEvent)
+            {
+                EndKeyMinigame();
+                KeyStatus.SetDestroy();
+            }
+        };
     }
 
     #endregion

@@ -110,7 +110,7 @@ public class Manager : MonoBehaviour
         while (time < duration)
         {
             uiElement.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
-            time += Time.fixedDeltaTime;
+            time += Time.deltaTime;
             yield return null;
         }
 

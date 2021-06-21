@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f97523d3208cb74ab95d65bab2eb16b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInLoadingScreen: 5
-  fadeOutLoadingScreen: 5
+  fadeInLoadingScreen: 1
+  fadeOutLoadingScreen: 1
   loadingScreen: {fileID: 1424846007}
   background: {fileID: 1606141831}
   loadingIcon: {fileID: 1556551520}

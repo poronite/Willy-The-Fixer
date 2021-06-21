@@ -78,6 +78,8 @@ public class TuneManager : MonoBehaviour
         
         //setup the sound that will play once in a while to check the pin of the piano
         testingPinInstance = RuntimeManager.CreateInstance("event:/SFX/Tune Minigame/Testing Pin");
+
+        timeSinceLastPinTest = 0f;
     }
 
     private void SetInputs()
@@ -96,6 +98,17 @@ public class TuneManager : MonoBehaviour
         {
             tuneIntensity = 0f;
             tuningPinInstance.setPaused(true);
+        };
+
+        playerInputRef.Input.TuneMinigame.Cancel.performed += context => 
+        {
+            playerInputRef.Input.TuneMinigame.Disable();
+            tuningPinInstance.release();
+            testingPinInstance.release();
+
+            WillyAnimator.SetTrigger("StopRepair");
+            playerInputRef.Input.Player.Enable();
+            gameObject.SetActive(false);
         };
     }
 
