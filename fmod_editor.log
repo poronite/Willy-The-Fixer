@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000016BB552CE38 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002691DC4EF58 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,226 +15,12 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking001', format=5, channels=2, frequency=48000, lengthbytes=15232, lengthpcm=81311, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.186019.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking007', format=5, channels=2, frequency=48000, lengthbytes=36640, lengthpcm=150019, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.164289.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking002', format=5, channels=2, frequency=48000, lengthbytes=19552, lengthpcm=88800, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.256239.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking008', format=5, channels=2, frequency=48000, lengthbytes=29856, lengthpcm=177839, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.047015.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking003', format=5, channels=2, frequency=48000, lengthbytes=17344, lengthpcm=97631, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.199057.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodFalling', format=5, channels=2, frequency=48000, lengthbytes=17952, lengthpcm=74349, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.382246.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking005', format=5, channels=2, frequency=48000, lengthbytes=47232, lengthpcm=194431, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.145136.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='PianoMoving002', format=5, channels=2, frequency=48000, lengthbytes=24064, lengthpcm=137682, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.107062.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking004', format=5, channels=2, frequency=48000, lengthbytes=17984, lengthpcm=90342, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.217221.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='WoodCreaking006', format=5, channels=2, frequency=48000, lengthbytes=62432, lengthpcm=243255, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.157153.
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000068259FF0D8
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFEFC4D7B10
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFEFC4D7AE0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFEFC4D7BE0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFEFC4D7CA0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000016BB552E158
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='PianoMoving001', format=5, channels=2, frequency=48000, lengthbytes=60352, lengthpcm=296656, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.126437.
-[LOG] SystemI::createSound                     : filename = Assets/AudioFMOD/Build/Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 0000016BB7766958 : node = 0000016C15463670
-[LOG] SystemI::createSound                     : add node to async list : head = 00000169FBD907E8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000016BB7766958
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/AudioFMOD/Build/Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2087136
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 44160
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000016C15463780
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='background_drone', format=5, channels=2, frequency=48000, lengthbytes=1132800, lengthpcm=5760000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.229188.
-[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000016BB7766958
-[LOG] SoundI::release                          :  (0000016BDAD54C28)
-[LOG] SoundI::release                          :     WoodCreaking001 (0000016BB59E2468)
-[LOG] SoundI::release                          :  (0000016BDAD55A88)
-[LOG] SoundI::release                          :     WoodCreaking002 (0000016BB59E3308)
-[LOG] SoundI::release                          :  (0000016BDAD554C8)
-[LOG] SoundI::release                          :     WoodCreaking003 (0000016BB59E27A8)
-[LOG] SoundI::release                          :  (0000016BDAD53DC8)
-[LOG] SoundI::release                          :     WoodCreaking004 (0000016BB59DF888)
-[LOG] SoundI::release                          :  (0000016BDAD547D8)
-[LOG] SoundI::release                          :     WoodCreaking005 (0000016BB59E2E28)
-[LOG] SoundI::release                          :  (0000016BDAD561B8)
-[LOG] SoundI::release                          :     WoodCreaking006 (0000016BB59DFA28)
-[LOG] SoundI::release                          :  (0000016BDAD56608)
-[LOG] SoundI::release                          :     WoodCreaking007 (0000016BB59E1288)
-[LOG] SoundI::release                          :  (0000016BDAD544F8)
-[LOG] SoundI::release                          :     WoodCreaking008 (0000016BB59DF548)
-[LOG] SoundI::release                          :  (0000016BDAD55078)
-[LOG] SoundI::release                          :     PianoMoving001 (0000016BB59DFBC8)
-[LOG] SoundI::release                          :  (0000016BDAD54948)
-[LOG] SoundI::release                          :     PianoMoving002 (0000016BB59DF6E8)
-[LOG] SoundI::release                          :  (0000016BDAD55D68)
-[LOG] SoundI::release                          :     WoodFalling (0000016BB59E2AE8)
-[LOG] SoundI::release                          : background_drone (0000016BB7766958)
-[LOG] SoundI::release                          :     background_drone (0000016BB5613A08)
-[LOG] SoundI::release                          :     background_drone (0000016BB77671C8)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -242,5 +28,3 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.

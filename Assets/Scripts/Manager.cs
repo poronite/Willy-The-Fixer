@@ -173,6 +173,7 @@ public class Manager : MonoBehaviour
         switch (destinationScene.name)
         {
             case "MainMenu":
+                Cursor.lockState = CursorLockMode.None;
                 //reset just in case player starts a new game
                 if (PianoMusic.Music != null)
                 {
@@ -195,6 +196,7 @@ public class Manager : MonoBehaviour
                 break;
             case "UpperZonePiano":
                 //pins
+                Cursor.lockState = CursorLockMode.Locked;
                 GameObject.FindGameObjectsWithTag("Pin").CopyTo(Pins, 0);
                 SetupLevel(Pins, RepairedPins, hasEnteredUpperZone, NumUpperZoneYamas);
 

@@ -27,7 +27,8 @@ public class PauseMenu : MonoBehaviour
         {
             PianoMusic.Music.ClapsInstance.setPaused(true);
         }
-        
+
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void ResumeGame()
@@ -43,6 +44,8 @@ public class PauseMenu : MonoBehaviour
         {
             PianoMusic.Music.ClapsInstance.setPaused(false);
         }
+
+        Cursor.lockState = CursorLockMode.Locked;
 
         gameObject.SetActive(false);
     }

@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
                 Tutorial.DeactivateTutorial(Tutorial.WASD, Tutorial.LeftStick);
             }
 
-            move = context.ReadValue<Vector2>();
+            move = context.ReadValue<Vector2>();            
         };
 
         Input.Player.Move.canceled += context =>
@@ -323,8 +323,6 @@ public class Player : MonoBehaviour
                     default:
                         break;
                 }
-
-                WillyAnimator.gameObject.SetActive(false); //deactivate the model
                 break;
             case "PreventDescend":
                 canDescend = false;
