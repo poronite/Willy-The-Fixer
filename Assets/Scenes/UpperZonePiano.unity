@@ -36652,7 +36652,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160803047}
-  m_LocalRotation: {x: 0.000000030425763, y: -0.9819564, z: 0.18910752, w: -0.000000010409818}
+  m_LocalRotation: {x: 0.000000030425763, y: -0.9819564, z: 0.18910752, w: -0.00000001040982}
   m_LocalPosition: {x: -11.17, y: 6.344, z: 28.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -39887,7 +39887,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887748975}
-  m_LocalRotation: {x: 0.000000030425763, y: -0.9819564, z: 0.18910752, w: -0.000000010409818}
+  m_LocalRotation: {x: 0.000000030425763, y: -0.9819564, z: 0.18910752, w: -0.00000001040982}
   m_LocalPosition: {x: -11.17, y: 6.344, z: 28.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -41436,7 +41436,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.122
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -41491,7 +41491,7 @@ GameObject:
   - component: {fileID: 2392522541011502240}
   m_Layer: 0
   m_Name: PianoMusic
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

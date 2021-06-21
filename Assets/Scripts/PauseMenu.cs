@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
         AmbDrone.GetComponent<StudioEventEmitter>().EventInstance.setPaused(true);
 
         PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
-        if (clapsPlaybackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        if (clapsPlaybackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
             PianoMusic.Music.ClapsInstance.setPaused(false);
         }
@@ -39,7 +39,7 @@ public class PauseMenu : MonoBehaviour
         AmbDrone.GetComponent<StudioEventEmitter>().EventInstance.setPaused(false);
 
         PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
-        if (clapsPlaybackState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+        if (clapsPlaybackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
         {
             PianoMusic.Music.ClapsInstance.setPaused(true);
         }
@@ -49,9 +49,11 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitToMainMenu()
     {
+        Manager.ManagerInstance.EndGame = true;
         Time.timeScale = 1.0f;
-        PianoMusic.Music.ClapsInstance.release();
+        PianoMusic.Music.Director.Resume();
         Manager.ManagerInstance.ChangeScene("MainMenu");
+        gameObject.SetActive(false);
     }
 
     public void OnHover(Button button)

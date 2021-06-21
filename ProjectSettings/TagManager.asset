@@ -19,6 +19,7 @@ TagManager:
   - EnemyCount
   - MetalFloor
   - WoodFloor
+  - Music
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,9 @@ public class Manager : MonoBehaviour
     #region Variables
     [SerializeField]
     private float fadeInLoadingScreen = 0.0f,
-    fadeOutLoadingScreen = 0.0f;
+    fadeOutLoadingScreen = 0.0f,
+    fadeInEndGame = 0.0f,
+    fadeOutEndGame = 0.0f;
 
     [SerializeField]
     private GameObject loadingScreen = null, background = null, loadingIcon = null, gameEnd = null;
@@ -37,11 +39,13 @@ public class Manager : MonoBehaviour
     public int NumRepairedKeys;
     public int NumLowerZoneYamas;
 
-    public bool MovementTutorialDone = false, 
-    RollTutorialDone = false, 
-    JumpTutorialDone = false, 
-    DescendTutorialDone = false, 
-    InteractTutorialDone = false;
+    public bool MovementTutorialDone = false,
+    RollTutorialDone = false,
+    JumpTutorialDone = false,
+    DescendTutorialDone = false,
+    InteractTutorialDone = false,
+    EndGame = false,
+    WinGame = false;
 
     private GameObject[] spawnPoints = new GameObject[2];
 
@@ -74,18 +78,31 @@ public class Manager : MonoBehaviour
         //activate LoadingScreen gameobject and start fading in
         loadingScreen.SetActive(true);
 
-        //first boot and exiting to the main menu
+        //starting a new game or going through upper and lower zone piano
         if (targetScene != "MainMenu") 
         {
+            gameEnd.SetActive(false);
+            background.SetActive(true);
             yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen, canvasLoadingScreen));
+            loadingIcon.SetActive(true);
         }
         else
         {
-            Debug.Log("a");
-            canvasLoadingScreen.alpha = 1;
+            if (!WinGame) //if exit game to the main menu
+            {
+                gameEnd.SetActive(false);
+                background.SetActive(true);
+                yield return StartCoroutine(FadeLoadingScreen(1, fadeInLoadingScreen, canvasLoadingScreen));
+                loadingIcon.SetActive(true);
+            }
+            else //if piano is fixed
+            {
+                gameEnd.SetActive(true);
+                background.SetActive(false);
+                yield return StartCoroutine(FadeLoadingScreen(1, fadeInEndGame, canvasLoadingScreen));
+                loadingIcon.SetActive(false);
+            }
         }
-
-        loadingIcon.SetActive(true);
 
         //start loading
         AsyncOperation operation = SceneManager.LoadSceneAsync(targetScene);
@@ -94,10 +111,18 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
+        //end loading and start fading out
         loadingIcon.SetActive(false);
 
-        //end loading and start fading out
-        yield return StartCoroutine(FadeLoadingScreen(0, fadeOutLoadingScreen, canvasLoadingScreen));
+        if (!WinGame) //normal fade out
+        {
+            yield return StartCoroutine(FadeLoadingScreen(0, fadeOutLoadingScreen, canvasLoadingScreen));
+        }
+        else //piano is fixed fade out
+        {
+            yield return StartCoroutine(FadeLoadingScreen(0, fadeOutEndGame, canvasLoadingScreen));
+        }
+        
 
         loadingScreen.SetActive(false);
     }
@@ -106,16 +131,41 @@ public class Manager : MonoBehaviour
     {
         float startValue = uiElement.alpha;
         float time = 0f;
+        AudioSource music = null;
+
+        if (EndGame) //music will be fade out when ending game, regardless of winning or ending through pause menu
+        {
+            music = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+
+            //if audience is clapping fade out (doesn't work, probably because the object gets destroyed mid way)
+            FMOD.Studio.PLAYBACK_STATE clapsPlaybackState;
+
+            PianoMusic.Music.ClapsInstance.getPlaybackState(out clapsPlaybackState);
+            if (clapsPlaybackState == FMOD.Studio.PLAYBACK_STATE.PLAYING)
+            {
+                PianoMusic.Music.ClapsInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                PianoMusic.Music.ClapsInstance.release();
+            }
+        }
 
         while (time < duration)
         {
+            if (EndGame)
+            {
+                music.volume = Mathf.Lerp(1, 0, time / duration);
+            }
             uiElement.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
 
-        //this is here to guarantee that the alpha is 1 (or 0) instead of a very close float value
-        uiElement.alpha = targetValue; 
+        //this is here to guarantee that the alpha (and the volume if ending game) is 1 (or 0) instead of a very close float value
+        uiElement.alpha = targetValue;
+
+        if (EndGame)
+        {
+            music.volume = 0;
+        }
     }
 
     private void OnSceneChange(Scene destinationScene, LoadSceneMode mode)
@@ -140,6 +190,8 @@ public class Manager : MonoBehaviour
                 JumpTutorialDone = false;
                 DescendTutorialDone = false;
                 InteractTutorialDone = false;
+                EndGame = false;
+                WinGame = false;
                 break;
             case "UpperZonePiano":
                 //pins
@@ -278,57 +330,14 @@ public class Manager : MonoBehaviour
     {
         if (NumRepairedPins == 233 && NumRepairedKeys == 88)
         {
-            //StartCoroutine(Manager.ManagerInstance.GameClear());
+            EndGame = true;
+            WinGame = true;
             ChangeScene("MainMenu");
         }
         else
         {
             FindObjectOfType<Waypoint>().AssignSuggestion();
         }
-    }
-
-    //not being used because it's not working
-    private IEnumerator GameClear()
-    {
-        loadingScreen.SetActive(true);
-
-        background.SetActive(false);
-        gameEnd.SetActive(true);
-        loadingIcon.SetActive(false);
-        canvasLoadingScreen.alpha = 1f;
-
-        Animator gameEndAnimator = gameEnd.GetComponent<Animator>();
-
-        gameEndAnimator.Play("FadeIn", 0);
-
-        while (gameEndAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
-        {
-            yield return null;
-        }
-
-        //yield return StartCoroutine(FadeLoadingScreen(1, 1.5f, canvasLoadingScreen));
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync("MainMenu");
-        while (!operation.isDone)
-        {
-            yield return null;
-        }
-
-        gameEndAnimator.Play("FadeOut", 0);
-
-        while (gameEndAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
-        {
-            yield return null;
-        }
-
-        //yield return StartCoroutine(FadeLoadingScreen(0, 1.5f, canvasLoadingScreen));
-
-        canvasLoadingScreen.alpha = 0f;
-        gameEnd.SetActive(false);
-        loadingIcon.SetActive(true);
-        background.SetActive(true);
-
-        loadingScreen.SetActive(false);
     }
     #endregion
 

@@ -261,6 +261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInLoadingScreen: 1
   fadeOutLoadingScreen: 1
+  fadeInEndGame: 2
+  fadeOutEndGame: 2
   loadingScreen: {fileID: 1424846007}
   background: {fileID: 1606141831}
   loadingIcon: {fileID: 1556551520}
@@ -602,6 +604,8 @@ MonoBehaviour:
   JumpTutorialDone: 0
   DescendTutorialDone: 0
   InteractTutorialDone: 0
+  EndGame: 0
+  WinGame: 0
 --- !u!114 &158591572
 MonoBehaviour:
   m_ObjectHideFlags: 0
