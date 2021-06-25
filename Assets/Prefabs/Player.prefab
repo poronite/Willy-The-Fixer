@@ -56,7 +56,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2428833456862036231}
   - component: {fileID: -2005055806983300592}
-  - component: {fileID: 5440115531174874187}
   - component: {fileID: 8763472641065831939}
   - component: {fileID: 2428833456862036233}
   - component: {fileID: 2428833456862036230}
@@ -95,24 +94,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.98495287
+  m_Radius: 0.083331905
+  m_Height: 0.6901656
   m_Direction: 1
-  m_Center: {x: 0, y: 0.47817644, z: 0}
---- !u!136 &5440115531174874187
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2428833456862036227}
-  m_Material: {fileID: 13400000, guid: bccf2f33ce1080b42a63f19287043e94, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.11
-  m_Height: 0.94450855
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.50795424, z: 0}
+  m_Center: {x: -0.0021397844, y: 0.3307828, z: 0.0038232654}
 --- !u!54 &8763472641065831939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5102,6 +5087,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!136 &4032744620526974511
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665180713401267817}
+  m_Material: {fileID: 13400000, guid: bccf2f33ce1080b42a63f19287043e94, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15200377
+  m_Height: 0.81465864
+  m_Direction: 1
+  m_Center: {x: -0.0008947253, y: 0.5728792, z: 0.0048640966}
 --- !u!95 &4067203295961669417
 Animator:
   serializedVersion: 3
@@ -5588,6 +5587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Willy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a92058a0c41383a49a7abd9a22e89ff1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1337425258097116263, guid: a92058a0c41383a49a7abd9a22e89ff1,
         type: 3}

@@ -21,11 +21,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject KeysParent = null;
 
-    private bool isMoving = false, 
+    private bool isMoving = false,
     onAir = false,
     isRolling = false,
     isOnStrings = false,
     canDescend = true,
+    canClimb = true,
     isPaused = false;
 
     public bool leavingZone = false;
@@ -49,6 +50,10 @@ public class Player : MonoBehaviour
 
     [HideInInspector]
     public string LastInputDevice;
+
+    private float catchYamaTime = 0.0f;
+    private float catchYamaCooldown = 0.5f;
+    private bool caughtYama = false;
     #endregion
 
     private void Awake()
@@ -182,7 +187,7 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //When the player jumps to climb the cords
-        if (collision.gameObject.CompareTag("Strings") && isBelowStrings)
+        if (collision.gameObject.CompareTag("Strings") && isBelowStrings && canClimb)
         {
             //"Climb" the cords by changing y of the player
             Vector3 climbStrings = gameObject.transform.position;
@@ -193,6 +198,37 @@ public class Player : MonoBehaviour
             climbStrings = playerRigidbody.velocity;
             climbStrings.y = 0.0f;
             playerRigidbody.velocity = climbStrings;
+        }
+
+        if (collision.gameObject.CompareTag("AI"))
+        {
+            if (isRolling && !caughtYama)
+            {
+                caughtYama = true;
+
+                FMOD.Studio.EventInstance yamaCryInstance;
+
+                yamaCryInstance = RuntimeManager.CreateInstance("event:/SFX/Characters/Yama/Yama Caught");
+                yamaCryInstance.set3DAttributes(RuntimeUtils.To3DAttributes(collision.gameObject));
+                yamaCryInstance.start();
+                yamaCryInstance.release();
+
+
+                Destroy(collision.gameObject);
+                switch (SceneManager.GetActiveScene().name)
+                {
+                    case "UpperZonePiano":
+                        Manager.ManagerInstance.NumUpperZoneYamas--;
+                        EnemyCount.UpdateEnemyCountUI(Manager.ManagerInstance.NumUpperZoneYamas);
+                        break;
+                    case "LowerZonePiano":
+                        Manager.ManagerInstance.NumLowerZoneYamas--;
+                        EnemyCount.UpdateEnemyCountUI(Manager.ManagerInstance.NumLowerZoneYamas);
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 
@@ -256,33 +292,6 @@ public class Player : MonoBehaviour
                     nearbyInteractables.Add(other.gameObject);
                 }
                 break;
-            case "AI":
-                if (isRolling)
-                {
-                    FMOD.Studio.EventInstance yamaCryInstance;
-
-                    yamaCryInstance = RuntimeManager.CreateInstance("event:/SFX/Characters/Yama/Yama Caught");
-                    yamaCryInstance.set3DAttributes(RuntimeUtils.To3DAttributes(other.gameObject));
-                    yamaCryInstance.start();
-                    yamaCryInstance.release();
-
-
-                    Destroy(other.gameObject);
-                    switch (SceneManager.GetActiveScene().name)
-                    {
-                        case "UpperZonePiano":
-                            Manager.ManagerInstance.NumUpperZoneYamas--;
-                            EnemyCount.UpdateEnemyCountUI(Manager.ManagerInstance.NumUpperZoneYamas);
-                            break;
-                        case "LowerZonePiano":
-                            Manager.ManagerInstance.NumLowerZoneYamas--;
-                            EnemyCount.UpdateEnemyCountUI(Manager.ManagerInstance.NumLowerZoneYamas);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                break;
             case "ChangePerspective":
                 if (leavingZone == false)
                 {
@@ -310,6 +319,8 @@ public class Player : MonoBehaviour
 
                 Input.Player.Disable();
 
+                WillyAnimator.gameObject.GetComponent<CapsuleCollider>().enabled = false; //just so this doesn't trigger twice
+
                 Manager.ManagerInstance.ChangeCameraTarget(null);
 
                 switch (SceneManager.GetActiveScene().name)
@@ -326,6 +337,9 @@ public class Player : MonoBehaviour
                 break;
             case "PreventDescend":
                 canDescend = false;
+                break;
+            case "PreventClimb":
+                canClimb = false;
                 break;
             default:
                 break;
@@ -349,6 +363,9 @@ public class Player : MonoBehaviour
                 break;
             case "PreventDescend":
                 canDescend = true;
+                break;
+            case "PreventClimb":
+                canClimb = true;
                 break;
             default:
                 break;
@@ -566,10 +583,26 @@ public class Player : MonoBehaviour
         PauseMenu.GetComponent<PauseMenu>().ResumeGame();
     }
 
+    private void hasCaughtYama()
+    {
+        if (caughtYama)
+        {
+            catchYamaTime += Time.deltaTime;
+        }
+
+        if (catchYamaTime >= catchYamaCooldown)
+        {
+            catchYamaTime = 0.0f;
+            caughtYama = false;
+        }
+    }
+
     #endregion
 
     private void FixedUpdate()
     {
+        hasCaughtYama(); //this is because the OnCollisionEnter is triggering twice
+
         EndDash();
 
         Movement();
